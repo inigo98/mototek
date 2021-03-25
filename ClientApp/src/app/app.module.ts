@@ -31,6 +31,7 @@ import { AdminReportesComponent } from './admin-reportes/admin-reportes.componen
 import { AdminAgregarProductosComponent } from './admin-agregar-productos/admin-agregar-productos.component';
 import { AdminAgregarCategoriasComponent } from './admin-agregar-categorias/admin-agregar-categorias.component';
 import { AdminUsuariosComponent } from './admin-usuarios/admin-usuarios.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -60,16 +61,24 @@ import { AdminUsuariosComponent } from './admin-usuarios/admin-usuarios.componen
     AdminReportesComponent,
     AdminAgregarProductosComponent,
     AdminAgregarCategoriasComponent,
-    AdminUsuariosComponent
+    AdminUsuariosComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
     HttpClientModule,
     FormsModule,
     RouterModule.forRoot([
-      { path: '', component: HomeComponent, pathMatch: 'full' },
+      { path: '', component: InicioComponent, pathMatch: 'full' },
       { path: 'counter', component: CounterComponent },
       { path: 'fetch-data', component: FetchDataComponent },
+      { path: 'inicio', component: InicioComponent },
+      { path: 'footer', component: FooterComponent },
+      { path: 'login', component: LoginComponent },
+      { path: 'registro', component: RegistroComponent },
+      { path: 'contacto', component: ContactoComponent },
+      { path: 'privacidad', component: PrivacidadComponent },
+      { path: 'producto', component: ProductoComponent },
     ])
   ],
   providers: [],

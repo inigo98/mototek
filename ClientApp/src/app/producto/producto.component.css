@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.imagen{
+    width: 50%;
+
+}
+
+
+
+.contenedordescripcion {
+  padding: 60px 0;
+  width: 100%;
+  max-width: 1000px;
+  overflow: hidden;
+}
+
+.contenedordescripcion p {
+  padding: 0px 0px 30px 15px;
+  font-weight: 300;
+  text-align: justify;
+}
+
+.titulo {
+  color: indigo;
+  font-size: 30px;
+  text-align: left;
+  margin-bottom: 60px;
+}
+
+
+
+.contenedor-prodsimilares {
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+  margin-bottom: 60px;
+}
+
+  .contenedor-prodsimilares ul {
+    display: flex;
+    padding: 0;
+    width: 200%;
+  }
+
+  .contenedor-prodsimilares li {
+    width: 20%;
+    list-style: none;
+  }
+
+  .contenedor-prodsimilares img {
+    width: 50%;
+  }
+

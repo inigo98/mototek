@@ -1,0 +1,151 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.contenedor-media{
+  width: 95%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.contenedor-media ul {
+  display: flex;
+  padding: 0;
+  width: 400%;
+  animation: cambio 20s infinite alternate linear;
+}
+
+.contenedor-media li {
+  width: 100%;
+  list-style: none;
+}
+
+.contenedor-media img {
+  width: 100%;
+}
+
+@keyframes cambio {
+  0% {
+    margin-left: 0;
+  }
+
+  20% {
+    margin-left: 0;
+  }
+
+  25% {
+    margin-left: -100%;
+  }
+
+  45% {
+    margin-left: -100%;
+  }
+
+  50% {
+    margin-left: -200%;
+  }
+
+  70% {
+    margin-left: -200%;
+  }
+
+  75% {
+    margin-left: -300%;
+  }
+
+  100% {
+    margin-left: -300%;
+  }
+}
+
+
+
+
+
+.contenedornosotros {
+  padding: 60px 0;
+  width: 100%;
+  max-width: 1000px;
+  overflow: hidden;
+}
+
+  .contenedornosotros p {
+    padding: 0px 0px 30px 15px;
+    font-weight: 300;
+    text-align: justify;
+  }
+
+.titulo{
+    color: indigo;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.contenedor-mision{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.imagen-mision{
+    width: 48%;
+    height: 300px;
+}
+
+.texto-mision{
+    width: 48%;
+}
+
+.contenedor-vision {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.imagen-vision {
+  width: 48%;
+  height: 300px;
+}
+
+.texto-vision {
+  width: 48%;
+}
+
+.imagen-mision .texto mision{
+    width: 48%;
+}
+
+.imagen-vision .texto vision {
+  width: 48%;
+}
+
+.texto-mision p {
+  padding: 0px 0px 30px 15px;
+  font-weight: 300;
+  text-align: justify;
+}
+
+.texto-vision p {
+  padding: 30px 15px 0px 0px;
+  font-weight: 300;
+  text-align: justify;
+}
+
+.marcas{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.marca{
+    width: 60%;
+    margin-bottom: 10px;
+}
+
+.marca > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}

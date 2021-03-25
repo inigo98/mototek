@@ -1,1 +1,41 @@
-<p>contacto works!</p>
+<section class="contenedorcontacto">
+  <h2 class="titulo"> Contacto</h2>
+  <div class="contenedor-contacto">
+    <div class="formulario-contacto">
+      <form class="custom-form" method="post">
+        <h3>Envíanos un mensaje</h3>
+        <input type="text"
+               [(ngModel)]="text"
+               name="name"
+               placeholder="Nombre"
+               required="required" />
+        <input type="text"
+               [(ngModel)]="text"
+               name="lastname"
+               placeholder="Apellido"
+               required="required" />
+        <input type="email"
+               [(ngModel)]="email"
+               name="email"
+               placeholder="Correro"
+               required="required" />
+        <input type="number"
+               [(ngModel)]="number"
+               name="phone"
+               placeholder="Telefono"
+               required="required" />
+        <input type="text"
+               [(ngModel)]="text"
+               name="mensaje"
+               placeholder="Mensaje"
+               required="required" />
+        <button type="submit" (click)="login()">Enviar</button>
+      </form>
+    </div>
+    <div class="mapa">
+      <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3733.7228686514945!2d-103.38329138469489!3d20.64014990630597!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xfd1fda55d64b6757!2sTeam%20Mototec!5e0!3m2!1ses-419!2smx!4v1616349427963!5m2!1ses-419!2smx" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      <a href="tel:+523338115213">Teléfono: 33 3811 5213</a>
+      <p>teammototec@yahoo.com</p>
+    </div>
+  </div>
+</section>
