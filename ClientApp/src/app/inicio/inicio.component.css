@@ -1,7 +1,9 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
 }
 
 .contenedor-media{
@@ -104,7 +106,7 @@
 }
 
 .imagen-vision {
-  width: 48%;
+  width: 40%;
   height: 300px;
 }
 
@@ -130,6 +132,10 @@
   padding: 30px 15px 0px 0px;
   font-weight: 300;
   text-align: justify;
+}
+
+.Contenedormarcas{
+    margin-bottom: 4rem;
 }
 
 .marcas{

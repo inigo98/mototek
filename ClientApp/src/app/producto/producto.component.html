@@ -1,21 +1,39 @@
 
-<section class="contenedorproducto">
-  <h2 class="titulo">Producto</h2>
-  <div class="imagen">
+<section class="contenedorproducto contenedorproducto-responsive">
+  <h2 class="titulo titulo-responsive">Producto</h2>
+  <div class="imagen imagen-responsive">
     <img src="../../assets/productos/disco de freno.jpg" alt="" class="imagen-producto"/>
   </div>
-  <div class="info">
-    <input type="number"/>
-    <select>
-      <option>Jalisco</option>
-      <option>Colima</option>
-    </select>
+  <div class="info info-responsive">
+    <div class="precio precio-responsive">
+      <p>Precio</p>
+      <h3>$345.00</h3>
+    </div>
+    <div class="cantidad cantidad-responsive">
+      <input type="number"
+             placeholder="Cantidad"/>
+      <a class="addcarrito addcarrito-responsive" [routerLink]="['/']">Agregar a carrito</a>
+    </div>
+    <div class="stock stock-responsive">
+      <p>stock disponible</p>
+    </div>
+    <div class="favoritos favoritos-responsive">
+      <select class="esta esta-responsive">
+        <option>Jalisco</option>
+        <option>Colima</option>
+      </select>
+      <a class="addfavoritos addfavoritos-responsive" [routerLink]="['/']">Agregar a favoritos</a>
+    </div>
+    <div class="envio envio-responsive">
+      <p>Calcular envío</p>
+      <p>$345.00</p>
+    </div>
   </div>
 </section>
 
-<section class="contenedorcaracteristicas">
-  <h2 class="titulo">Características Principales</h2>
-  <div class="contenedor-caracteristicas">
+<section class="contenedorcaracteristicas contenedorcaracteristicas-responsive">
+  <h2 class="titulo titulo-responsive">Características Principales</h2>
+  <div class="contenedor-caracteristicas contenedor-caracteristicas-responsive">
     <table>
       <tr>
         <th>Marca</th>
@@ -33,38 +51,38 @@
   </div>
 </section>
 
-<section class="contenedordescripcion">
-  <h2 class="titulo">Descripción</h2>
-  <div class="contenedor-descripcion">
-    <div class="texto-descripcion">
+<section class="contenedordescripcion contenedordescripcion-responsive">
+  <h2 class="titulo titulo-responsive">Descripción</h2>
+  <div class="contenedor-descripcion contenedor-descripcion-responsive">
+    <div class="texto-descripcion texto-descripcion-responsive">
       <p>Quisque accumsan auctor euismod. Morbi ullamcorper ligula sed vulputate fringilla. Aliquam dignissim sem quam, vel accumsan felis sodales sed. Suspendisse laoreet massa ante, sed lacinia massa pretium ac. Quisque lacinia lacus quis magna dapibus, sit amet malesuada nibh posuere. Praesent id interdum metus. Phasellus venenatis porta dignissim. Nam auctor eget turpis nec dictum. Aenean porttitor velit tellus, non dapibus massa mollis quis. Pellentesque ac elit ante. Etiam aliquam, enim sed ornare vestibulum, ante sapien ullamcorper massa, molestie facilisis urna magna eget nibh. Integer sit amet nunc non libero suscipit mattis.</p>
     </div>
   </div>
 </section>
 
-<div class="contenedor-prodsimilares">
-  <h2 class="titulo">Productos similares</h2>
+<div class="contenedor-prodsimilares contenedor-prodsimilares-responsive">
+  <h2 class="titulo titulo-responsive">Productos similares</h2>
   <ul>
     <li>
-      <img src="../../assets/productos/disco de freno.jpg" alt="">
+      <a class="imgcategoria imgcategoria-responsive" href="/producto"><img class="imgprod imgprod-responsive" src="../../assets/productos/disco de freno.jpg"></a>
     </li>
     <li>
-      <img src="../../assets/productos/disco de freno.jpg" alt="">
+      <a class="imgcategoria imgcategoria-responsive" href="/producto"><img class="imgprod imgprod-responsive" src="../../assets/productos/disco de freno.jpg"></a>
     </li>
     <li>
-      <img src="../../assets/productos/disco de freno.jpg" alt="">
+      <a class="imgcategoria imgcategoria-responsive" href="/producto"><img class="imgprod imgprod-responsive" src="../../assets/productos/disco de freno.jpg"></a>
     </li>
     <li>
-      <img src="../../assets/productos/disco de freno.jpg" alt="">
+      <a class="imgcategoria imgcategoria-responsive" href="/producto"><img class="imgprod imgprod-responsive" src="../../assets/productos/disco de freno.jpg"></a>
     </li>
     <li>
-      <img src="../../assets/productos/disco de freno.jpg" alt="">
+      <a class="imgcategoria imgcategoria-responsive" href="/producto"><img class="imgprod imgprod-responsive imgprod-responsive" src="../../assets/productos/disco de freno.jpg"></a>
     </li>
     <li>
-      <img src="../../assets/productos/disco de freno.jpg" alt="">
+      <a class="imgcategoria imgcategoria-responsive" href="/producto"><img class="imgprod imgprod-responsive" src="../../assets/productos/disco de freno.jpg"></a>
     </li>
     <li>
-      <img src="../../assets/productos/disco de freno.jpg" alt="">
+      <a class="imgcategoria imgcategoria-responsive" href="/producto"><img class="imgprod imgprod-responsive" src="../../assets/productos/disco de freno.jpg"></a>
     </li>
   </ul>
 </div>

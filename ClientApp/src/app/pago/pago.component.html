@@ -1,1 +1,44 @@
-<p>pago works!</p>
+<h3>Elige método de pago</h3>
+<section class="seccion seccion-responsive">
+
+  
+  <div class="left left-responsive">
+    <div class="paypal paypal-responsive">
+      <label><input class="ch ch-responsive" type="radio" name="Check">          Paypal</label>
+      
+    </div>
+    <div class="transferencia">
+      <label><input class="ch ch-responsive" type="radio" name="Check">          Tranferencia</label>
+    </div>
+  </div>
+
+  <div class="right right-responsive">
+    <div class="inforesumen inforesumen-responsive">
+      <div class="resumencompra recumencompra-responsive">
+        <h5>Resumen de compra</h5>
+      </div>
+      <div class="montos montos-responsive">
+        <table>
+          <tr>
+            <td>Productos (3)</td>
+            <td>$900.00</td>
+          </tr>
+          <tr>
+            <td>Envío</td>
+            <td>$100.00</td>
+          </tr>
+        </table>
+      </div>
+      <div class="total total-responsive">
+        <p>Total</p>
+        <p>$1,000.00</p>
+      </div>
+    </div>
+   </div>
+
+
+</section>
+
+<div class="botoncontinuar botoncontinuar-responsive">
+  <a class="botoncont botoncont-responsive" [routerLink]="['/despues-compra']">Continuar</a>
+</div>

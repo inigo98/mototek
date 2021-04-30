@@ -1,6 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 
 /* Provide sufficient contrast against white background */
+header{
+    background-color: black;
+}
+
+.navbar-brand {
+  color: white;
+}
+
 a {
   color: #0366d6;
 }
@@ -13,4 +21,12 @@ code {
   color: #fff;
   background-color: #1b6ec2;
   border-color: #1861ac;
+}
+.bodybackground {
+  background: rgb(122,25,121)!important;
+  background: linear-gradient(0deg, rgba(122,25,121,1) 0%, rgba(64,191,79,1) 100%)!important;
+}
+
+body{
+    background: transparent;
 }

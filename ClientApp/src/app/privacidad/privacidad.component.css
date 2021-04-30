@@ -4,14 +4,14 @@
   box-sizing: border-box;
 }
 
-.contenedorterminos {
+.contenedorprivacidad {
   padding: 60px 0;
   width: 100%;
   max-width: 1000px;
   overflow: hidden;
 }
 
- .contenedorterminos p {
+ .contenedorprivacidad p {
   padding: 0px 0px 30px 15px;
   font-weight: 300;
   text-align: justify;
@@ -24,27 +24,6 @@
   margin-bottom: 60px;
 }
 
-.contenedoraviso{
+.contenedorprivacidad{
     padding-bottom: 50px;
 }
-
-.contenedor-aviso {
-  display: flex;
-  justify-content: space-evenly;
-}
-
-
-.imagen-aviso {
-  width: 48%;
-  height: 300px;
-}
-
-.texto-aviso {
-  width: 48%;
-}
-
- .texto-aviso p {
-    padding: 0px 0px 30px 15px;
-    font-weight: 300;
-    text-align: justify;
- }

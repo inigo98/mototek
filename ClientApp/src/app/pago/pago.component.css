@@ -1,0 +1,184 @@
+.seccion {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+.h3 {
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+.left {
+  width: 65%;
+  border: 2px solid black;
+  padding-top: 20px;
+  padding-bottom: 15px;
+  border-radius: 20px;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+.paypal {
+  border-bottom: solid 2px black;
+  padding: 15px;
+  width: 100%;
+}
+.transferencia {
+  padding: 15px;  
+  width: 100%;
+}
+.ch{
+    font-size: 100px;
+}
+
+.right {
+  width: 25%;
+  border: 2px solid black;
+  border-radius: 20px;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  padding-top: 20px;
+  padding-bottom: 15px;
+
+}
+
+.inforesumen {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+.resumencompra {
+  border-bottom: solid 2px black;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  width: 100%;
+}
+
+.montos {
+  border-bottom: solid 2px black;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  width: 100%;
+}
+
+  .montos table {
+    width: 100%;
+  }
+
+.total {
+  width: 100%;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+.botoncontinuar {
+  padding: 25px;
+}
+.botoncont {
+  box-shadow: inset 0px 1px 0px 0px #caefab;
+  background: linear-gradient(to bottom, #77d42a 5%, #5cb811 100%);
+  background-color: #77d42a;
+  border-radius: 6px;
+  border: 1px solid #268a16;
+  display: inline-block;
+  cursor: pointer;
+  color: #306108;
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 6px 24px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #aade7c;
+  align-content: center;
+}
+  .botoncont:hover {
+    background: linear-gradient(to bottom, #68a54b 5%, #74ad5a 100%);
+    background-color: #68a54b;
+  }
+  .botoncont:active {
+    position: relative;
+    top: 1px;
+  }

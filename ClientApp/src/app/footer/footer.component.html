@@ -1,59 +1,54 @@
-<footer class="footer">
-  <div class="contenedor-footer">
-    <div class="row">
-      <div class="content-foo">
+
+
+<footer class="footer footer-responsive">
+  <div class="contenedor-footer contenedor-footer-responsive">
+    <div class="row row-responsive">
+      <div class="content-foo content-foo-responsive">
         <h4>Team Mototec</h4>
         <ul>
           <li><a href="tel:+523338115213">Llamanos</a></li>
-          <li class="nav-item" [routerLinkActive]="['link-active']">
-            <a class="nav-link text-gray" [routerLink]="['/privacidad']">Política de privacidad</a>
+          <li class="nav-item nav-item-responsive" [routerLinkActive]="['link-active']">
+            <a class="nav-link nav-link-responsive text-gray" [routerLink]="['/contacto']">Contacto</a>
           </li>
-          <li class="nav-item" [routerLinkActive]="['link-active']">
-            <a class="nav-link text-gray" [routerLink]="['/contacto']">Av. Cozumel #2970, Col. Jardines de la cruz, Guadalajara, Jal.</a>
+          <li class="nav-item nav-item-responsive" [routerLinkActive]="['link-active']">
+            <a class="nav-link nav-link-responsive text-gray" [routerLink]="['/contacto']">teammototec@yahoo.com</a>
           </li>
-          <li><p>teammototec@yahoo.com</p></li>
+          <li class="nav-item nav-item-responsive" [routerLinkActive]="['link-active']">
+            <a class="nav-link nav-link-responsive text-gray" [routerLink]="['/']">Preguntas frecuentes</a>
+          </li>
         </ul>
       </div>
-      <div class="content-foo">
+      <div class="content-foo content-foo-responsive">
         <h4>Estamos en contacto contigo</h4>
         <ul>
-          <li><a class="logo-footer" href="/inicio"><img class="logo" src="../../assets/LOGO TEAMMOTOTEC.jpg"></a></li>
+          <li><a class="logo-footer logo-footer-responsive" href="/inicio"><img class="logo" src="../../assets/LOGO TEAMMOTOTEC.png"></a></li>
         </ul>
 
       </div>
-      <div class="content-foo">
+      <div class="content-foo content-foo-responsive">
         <h4>Políticas y terminos</h4>
         <ul>
-          <li class="nav-item" [routerLinkActive]="['link-active']">
-            <a class="nav-link text-gray" [routerLink]="['/privacidad']">Términos y condiciones</a>
+          <li class="nav-item nav-item-responsive" [routerLinkActive]="['link-active']">
+            <a class="nav-link nav-link-responsive text-gray" [routerLink]="['/terminos']">Términos y condiciones</a>
           </li>
-          <li class="nav-item" [routerLinkActive]="['link-active']">
-            <a class="nav-link text-gray" [routerLink]="['/']">Políticas de devolución</a>
+          <li class="nav-item nav-item-responsive" [routerLinkActive]="['link-active']">
+            <a class="nav-link nav-link-responsive text-gray" [routerLink]="['/']">Políticas de devolución</a>
           </li>
-          <li class="nav-item" [routerLinkActive]="['link-active']">
-            <a class="nav-link text-gray" [routerLink]="['/']">Facturación</a>
+          <li class="nav-item nav-item-responsive" [routerLinkActive]="['link-active']">
+            <a class="nav-link nav-link-responsive text-gray" [routerLink]="['/']">Facturación</a>
           </li>
-          <li class="nav-item" [routerLinkActive]="['link-active']">
-            <a class="nav-link text-gray" [routerLink]="['/privacidad']">Términos y condiciones</a>
-          </li>
-          <li class="nav-item" [routerLinkActive]="['link-active']">
-            <a class="nav-link text-gray" [routerLink]="['/privacidad']">Aviso de privacidad</a>
-          </li>
-          <li class="nav-item" [routerLinkActive]="['link-active']">
-            <a class="nav-link text-gray" [routerLink]="['/']">Preguntas frecuentes</a>
+          <li class="nav-item nav-item-responsive" [routerLinkActive]="['link-active']">
+            <a class="nav-link nav-link-responsive text-gray" [routerLink]="['/privacidad']">Aviso de privacidad</a>
           </li>
         </ul>
       </div>
 
-      <div class="content-foo">
-        <h4>Envíanos un mensaje</h4>
-        <ul>
-          <li><a href="">Términos y condiciones</a></li>
-          <li><a href="">Políticas de devolución</a></li>
-          <li><a href="">Facturación</a></li>
-          <li><a href="">Aviso de provacidad</a></li>
-          <li><a href="">Preguntas frecuentes</a></li>
-        </ul>
+      <div class="content-foo content-foo-responsive">
+        <h4>Síguenos</h4>
+        <div class="social-links social-links-responsive">
+          <a [routerLink]="['/']"><img class="facebook facebook-responsive" src="../../assets/Iconos/facebook.png"></a>
+          <a [routerLink]="['/']"><img class="whatsapp whatsapp-responsive" src="../../assets/Iconos/whatsapp.png"></a>
+        </div>
       </div>
 
     </div>

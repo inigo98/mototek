@@ -1,1 +1,72 @@
-<p>detalle-compra works!</p>
+<section class="seccion seccion-responsive">
+
+  <div class="left left-responsive">
+    <div class="direccionenvio direccionenvio-responsive">
+      <h3>Dirección de envío</h3>
+      <div class="datosenvio datosenvio-responsive">
+        <div class="dato dato-responsive">
+          <p>CP: 44950</p>
+          <p>Calle isla caimán #2915</p>
+          <p>Dilan Reyes Martinez</p>
+        </div>
+        <div class="botones botones-responsive">
+          <a [routerLink]="['/']">Editar</a>
+          <p>  o  </p>
+          <a [routerLink]="['/']">Elegir otra</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="productosp  productosp-responsive">
+      <h3>Productos</h3>
+      <div class="productos productos-responsive">
+        <div class="producto producto-responsive">
+          <img class="prod prod-responsive" src="../../assets/productos/disco de freno.jpg" />
+          <p class="nombre nombre-responsive">Discos de freno</p>
+          <p class="precio precio-responsive">$300.00</p>
+        </div>
+        <div class="producto producto-responsive">
+          <img class="prod prod-responsive" src="../../assets/productos/disco de freno.jpg" />
+          <p class="nombre nombre-responsive">Discos de freno</p>
+          <p class="precio precio-responsive">$300.00</p>
+        </div>
+        <div class="producto producto-responsive">
+          <img class="prod prod-responsive" src="../../assets/productos/disco de freno.jpg" />
+          <p class="nombre nombre-responsive">Discos de freno</p>
+          <p class="precio precio-responsive">$300.00</p>
+        </div>
+      </div>
+    </div>
+    <div class="costoenvio costoenvio-responsive">
+      <p>Coste de envío</p>
+      <p>$100.00</p>
+    </div>
+  </div>
+  <div class="right right-responsive">
+    <div class="inforesumen inforesumen-responsive">
+      <div class="resumencompra resumencompra-responsive">
+        <h5>Resumen de compra</h5>
+      </div>
+      <div class="montos montos-responsive">
+        <table>
+          <tr>
+            <td>Productos (3)</td>
+            <td>$900.00</td>
+          </tr>
+          <tr>
+            <td>Envío</td>
+            <td>$100.00</td>
+          </tr>
+        </table>
+      </div>
+      <div class="total total-responsive">
+        <p>Total</p>
+        <p>$1,000.00</p>
+      </div>
+    </div>
+    <div class="botonpago botonpago-responsive">
+      <a class="botonpagar botonpagar-responsive" [routerLink]="['/pago']">Ir a pagar</a>
+    </div>
+  </div>
+
+</section>
