@@ -2,35 +2,35 @@
   <form class="custom-form custom-form-responsive" method="post">
     <h1>Registrarse</h1>
     <input type="email"
-           [(ngModel)]="email"
            name="email"
            placeholder="Correro"
-           required="required" />
+           required="required"
+           (change)="valueUpdate($event.srcElement.value, 'email')"/>
     <input type="password"
-           [(ngModel)]="password"
            name="password"
            placeholder="Contraseña"
-           required="required" />
+           required="required"
+           (change)="valueUpdate($event.srcElement.value, 'pass')" />
     <input type="text"
-           [(ngModel)]="text"
            name="name"
            placeholder="Nombre"
-           required="required" />
+           required="required"
+           (change)="valueUpdate($event.srcElement.value, 'nombre')" />
     <input type="text"
-           [(ngModel)]="text"
            name="lastname"
            placeholder="Apellido"
-           required="required" />
+           required="required" 
+           (change)="valueUpdate($event.srcElement.value, 'apellido')"/>
     <input type="text"
-           [(ngModel)]="text"
            name="username"
            placeholder="Nombre de usuario"
-           required="required" />
+           required="required" 
+           (change)="valueUpdate($event.srcElement.value, 'usuario')"/>
     <input type="text"
-           [(ngModel)]="number"
            name="phone"
            placeholder="Telefono"
-           required="required" />
-    <button type="submit" (click)="registrarse()">Registrarse</button>
+           required="required" 
+           (change)="valueUpdate($event.srcElement.value, 'phone')"/>
+    <button type="submit" (click)="checkMail()">Registrarse</button>
   </form>
 </div>

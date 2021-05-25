@@ -5,31 +5,31 @@
       <form class="custom-form custom-form-responsive" method="post">
         <h3>Envíanos un mensaje</h3>
         <input type="text"
-               [(ngModel)]="text"
                name="name"
                placeholder="Nombre"
-               required="required" />
+               required="required"
+               (change)="change($event.srcElement.value, 'nombre')"/>
         <input type="text"
-               [(ngModel)]="text"
                name="lastname"
                placeholder="Apellido"
-               required="required" />
+               required="required" 
+               (change)="change($event.srcElement.value, 'apellido')"/>
         <input type="email"
-               [(ngModel)]="email"
                name="email"
-               placeholder="Correro"
-               required="required" />
+               placeholder="Correo"
+               required="required" 
+               (change)="change($event.srcElement.value, 'email')"/>
         <input type="text"
-               [(ngModel)]="number"
                name="phone"
                placeholder="Telefono"
-               required="required" />
+               required="required" 
+               (change)="change($event.srcElement.value, 'phone')"/>
         <input type="text"
-               [(ngModel)]="text"
                name="mensaje"
                placeholder="Mensaje"
-               required="required" />
-        <button type="submit" (click)="login()">Enviar</button>
+               required="required" 
+               (change)="change($event.srcElement.value, 'mensaje')"/>
+        <button type="submit" (click)="contacto()">Enviar</button>
       </form>
     </div>
     <div class="mapa mapa-responsive">

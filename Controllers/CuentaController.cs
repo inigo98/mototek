@@ -38,8 +38,8 @@ namespace mototek.Controllers
         }
 
         // GET api/Cuenta/5
-        [HttpGet("{id}")]
-        public IActionResult Get(int id)
+        [HttpGet("{name}")]
+        public IActionResult Get(string name)
         {
             Respuesta resp = new Respuesta();
             resp.status = "Error";
@@ -48,8 +48,8 @@ namespace mototek.Controllers
             {
                 using (DB_A6ED12_testmototekDBContext db = new DB_A6ED12_testmototekDBContext())
                 {
-                    var idSearch = new SqlParameter("Id", id);
-                    Cuenta data = db.Cuentas.FromSqlRaw("Select * from cuentas where IdCuentas = @Id", idSearch)
+                    var idSearch = new SqlParameter("name", name);
+                    Cuenta data = db.Cuentas.FromSqlRaw("Select * from cuentas where Nombre = @name", idSearch)
                         .FirstOrDefault();
                     resp.status = "Ok";
                     resp.message = "Success";
@@ -136,7 +136,7 @@ namespace mototek.Controllers
 
                     SqlParameter[] sqlParamsLogs = new SqlParameter[]
                     {
-                        new SqlParameter("@IDUSER", "12345"),
+                        new SqlParameter("@IDUSER", value.usuario),
                         new SqlParameter("@TABLE", "Cuentas"),
                         new SqlParameter("@FIELD", value.campo),
                         new SqlParameter("@ANTERIOR", ""),

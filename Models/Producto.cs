@@ -16,9 +16,14 @@ namespace mototek.Models
         public string Descripcion { get; set; }
         public string Precio { get; set; }
         public long? NumeroDeVisitas { get; set; }
-        public long? IdImagen { get; set; }
+        public string? IdImagen { get; set; }
         public bool? BloquearProducto { get; set; }
         public DateTime? FechaDeCreacion { get; set; }
         public DateTime? FechaDeModificacion { get; set; }
+        public string? IdVehiculoText { get; set; }
+        public string? IdMarcaText { get; set; }
+        public string? IdModeloText { get; set; }
+        public string? IdAnoText { get; set; }
+        public long? Stock { get; set; }
     }
 }

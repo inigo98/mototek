@@ -32,6 +32,7 @@ import { AdminAgregarProductosComponent } from './admin-agregar-productos/admin-
 import { AdminAgregarCategoriasComponent } from './admin-agregar-categorias/admin-agregar-categorias.component';
 import { AdminUsuariosComponent } from './admin-usuarios/admin-usuarios.component';
 import { FooterComponent } from './footer/footer.component';
+import { AdminComponent } from './admin/admin.component';
 
 @NgModule({
   declarations: [
@@ -62,34 +63,35 @@ import { FooterComponent } from './footer/footer.component';
     AdminAgregarProductosComponent,
     AdminAgregarCategoriasComponent,
     AdminUsuariosComponent,
-    FooterComponent
+    FooterComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
     HttpClientModule,
     FormsModule,
     RouterModule.forRoot([
-      { path: '', component: InicioComponent, pathMatch: 'full' },
-      { path: 'counter', component: CounterComponent },
-      { path: 'fetch-data', component: FetchDataComponent },
-      { path: 'inicio', component: InicioComponent },
-      { path: 'footer', component: FooterComponent },
-      { path: 'login', component: LoginComponent },
-      { path: 'registro', component: RegistroComponent },
-      { path: 'contacto', component: ContactoComponent },
-      { path: 'privacidad', component: PrivacidadComponent },
-      { path: 'producto', component: ProductoComponent },
-      { path: 'terminos', component: TerminosComponent },
-      { path: 'historial', component: HistorialComponent },
-      { path: 'favoritos', component: FavoritoComponent },
-      { path: 'carrito', component: CarritoComponent },
-      { path: 'productos', component: ProductosComponent },
-      { path: 'categorias', component: CategoriasComponent },
-      { path: 'detalle-compra', component: DetalleCompraComponent },
-      { path: 'pago', component: PagoComponent },
-      { path: 'configuracion', component: ConfiguracionesComponent },
-      { path: 'despues-compra', component: DespuesCompraComponent },
-    ])
+    { path: '', component: InicioComponent, pathMatch: 'full' },
+    { path: 'counter', component: CounterComponent },
+    { path: 'fetch-data', component: FetchDataComponent },
+    { path: 'inicio', component: InicioComponent },
+    { path: 'login', component: LoginComponent },
+    { path: 'registro', component: RegistroComponent },
+    { path: 'contacto', component: ContactoComponent },
+    { path: 'privacidad', component: PrivacidadComponent },
+    { path: 'producto/:id', component: ProductoComponent },
+    { path: 'terminos', component: TerminosComponent },
+    { path: 'historial', component: HistorialComponent },
+    { path: 'favoritos', component: FavoritoComponent },
+    { path: 'carrito', component: CarritoComponent },
+    { path: 'productos', component: ProductosComponent },
+    // { path: 'categorias', component: CategoriasComponent },
+    { path: 'detalle-compra', component: DetalleCompraComponent },
+    { path: 'pago', component: PagoComponent },
+    { path: 'admin', component: AdminComponent },
+    { path: 'configuracion', component: ConfiguracionesComponent },
+    { path: 'despues-compra', component: DespuesCompraComponent },
+], { relativeLinkResolution: 'legacy' })
   ],
   providers: [],
   bootstrap: [AppComponent]

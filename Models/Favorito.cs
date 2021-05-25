@@ -9,7 +9,7 @@ namespace mototek.Models
     {
         public long IdFavoritos { get; set; }
         public long? IdUsuario { get; set; }
-        public string ListaDeFavoritos { get; set; }
+        public long? ListaDeFavoritos { get; set; }
         public DateTime? FechaDeCreacion { get; set; }
         public DateTime? FechaDeModificacion { get; set; }
     }

@@ -2,120 +2,39 @@
   <h4>Busca lo que necesitas</h4>
   <div class="buscador buscador-responsive">
     <label for="tiposvehiculos">Tipo de vehículo</label>
-    <select id="tiposvehiculos" name="tiposvehiculos">
-      <option value="scooter">Scooter</option>
-      <option value="offroad">Off-Road</option>
-      <option value="Street">Street</option>
-      <option value="sportandgp">Sport & GP</option>
+    <select id="tiposvehiculos" name="tiposvehiculos" (change)="filterProductos($event.srcElement.value, 'listaIdVehiculo')">
+      <option *ngFor="let vehiculo of vehiculos" [value]="vehiculo.idVehiculo">{{vehiculo.nombreDeVehiculo}}</option>
     </select>
   </div>
 
   <div class="buscador buscador-responsive">
     <label for="marca">Marca</label>
-    <select id="marca" name="marca">
-      <option value="yamaha">Yamaha</option>
-      <option value="honda">Honda</option>
-      <option value="kawazaki">Kawasaki</option>
+    <select id="marca" name="marca" (change)="filterProductos($event.srcElement.value, 'listaIdMarca')">
+      <option *ngFor="let marca of marcas" [value]="marca.idMarca">{{marca.nombreDeMarca}}</option>
     </select>
   </div>
 
   <div class="buscador buscador-responsive">
     <label for="modelo">Modelo</label>
-    <select id="modelo" name="modelo">
-      <option value="c125abs">C 125 ABS</option>
-      <option value="c70">C 70</option>
-      <option value="cb1000">CB 1000</option>
+    <select id="modelo" name="modelo" (change)="filterProductos($event.srcElement.value, 'listaIdModelo')">
+      <option *ngFor="let modelo of modelos" [value]="modelo.idModelo">{{modelo.nombreDeModelo}}</option>
     </select>
   </div>
 
   <div class="buscador buscador-responsive">
     <label for="año">Año</label>
-    <select id="año" name="año">
-      <option value="2019">2019</option>
-      <option value="2020">2020</option>
-      <option value="2021">2021</option>
+    <select id="año" name="año" (change)="filterProductos($event.srcElement.value, 'listaIdAno')">
+      <option *ngFor="let ano of anos" [value]="ano.idAnos">{{ano.nombreDeAno}}</option>
     </select>
   </div>
 
 
   <div class="productos productos-responsive">
-    <div class="producto producto-responsive">
-      <h5>Disco de freno</h5>
-      <a class="imgcategoria imgcategoria-responsive" href="/producto"><img class="imgprod imgprod-responsive" src="../../assets/productos/disco de freno.jpg"></a>
+    <div class="producto producto-responsive" *ngFor="let producto of productos">
+      <h5>{{producto.nombreDeProducto}}</h5>
+      <a *ngIf="producto.idImagen == null" class="imgcategoria imgcategoria-responsive" [routerLink]="['/producto', producto.idProducto]"><img class="imgprod imgprod-responsive" src="../../assets/productos/disco de freno.jpg"></a>
+      <a *ngIf="producto.idImagen != null" class="imgcategoria imgcategoria-responsive" [routerLink]="['/producto', producto.idProducto]"><img class="imgprod imgprod-responsive" [src]="producto.idImagen"></a>
     </div>
-
-
-    <div class="producto producto-responsive">
-      <h5>Disco de freno</h5>
-      <a class="imgcategoria imgcategoria-responsive" href="/producto"><img class="imgprod imgprod-responsive" src="../../assets/productos/disco de freno.jpg"></a>
-    </div>
-
-    <div class="producto producto-responsive">
-      <h5>Disco de freno</h5>
-      <a class="imgcategoria imgcategoria-responsive" href="/producto"><img class="imgprod imgprod-responsive" src="../../assets/productos/disco de freno.jpg"></a>
-    </div>
-
-    <div class="producto producto-responsive">
-      <h5>Disco de freno</h5>
-      <a class="imgcategoria imgcategoria-responsive" href="/producto"><img class="imgprod imgprod-responsive" src="../../assets/productos/disco de freno.jpg"></a>
-    </div>
-
-    <div class="producto producto-responsive">
-      <h5>Disco de freno</h5>
-      <a class="imgcategoria imgcategoria-responsive" href="/producto"><img class="imgprod imgprod-responsive" src="../../assets/productos/disco de freno.jpg"></a>
-    </div>
-
-    <div class="producto producto-responsive">
-      <h5>Disco de freno</h5>
-      <a class="imgcategoria imgcategoria-responsive" href="/producto"><img class="imgprod imgprod-responsive" src="../../assets/productos/disco de freno.jpg"></a>
-    </div>
-
-    <div class="producto producto-responsive">
-      <h5>Disco de freno</h5>
-      <a class="imgcategoria imgcategoria-responsive" href="/producto"><img class="imgprod imgprod-responsive" src="../../assets/productos/disco de freno.jpg"></a>
-    </div>
-
-    <div class="producto producto-responsive">
-      <h5>Disco de freno</h5>
-      <a class="imgcategoria imgcategoria-responsive" href="/producto"><img class="imgprod imgprod-responsive" src="../../assets/productos/disco de freno.jpg"></a>
-    </div>
-
-    <div class="producto producto-responsive">
-      <h5>Disco de freno</h5>
-      <a class="imgcategoria imgcategoria-responsive" href="/producto"><img class="imgprod imgprod-responsive" src="../../assets/productos/disco de freno.jpg"></a>
-    </div>
-
-    <div class="producto producto-responsive">
-      <h5>Disco de freno</h5>
-      <a class="imgcategoria imgcategoria-responsive" href="/producto"><img class="imgprod imgprod-responsive" src="../../assets/productos/disco de freno.jpg"></a>
-    </div>
-
-    <div class="producto producto-responsive">
-      <h5>Disco de freno</h5>
-      <a class="imgcategoria imgcategoria-responsive" href="/producto"><img class="imgprod imgprod-responsive" src="../../assets/productos/disco de freno.jpg"></a>
-    </div>
-
-    <div class="producto producto-responsive">
-      <h5>Disco de freno</h5>
-      <a class="imgcategoria imgcategoria-responsive" href="/producto"><img class="imgprod imgprod-responsive" src="../../assets/productos/disco de freno.jpg"></a>
-    </div>
-
-    <div class="producto producto-responsive">
-      <h5>Disco de freno</h5>
-      <a class="imgcategoria imgcategoria-responsive" href="/producto"><img class="imgprod imgcategoria-responsive" src="../../assets/productos/disco de freno.jpg"></a>
-    </div>
-
-    <div class="producto producto-responsive">
-      <h5>Disco de freno</h5>
-      <a class="imgcategoria imgcategoria-responsive" href="/producto"><img class="imgprod imgprod-responsive" src="../../assets/productos/disco de freno.jpg"></a>
-    </div>
-
-    <div class="producto producto-responsive">
-      <h5>Disco de freno</h5>
-      <a class="imgcategoria imgcategoria-responsive" href="/producto"><img class="imgprod imgprod-responsive" src="../../assets/productos/disco de freno.jpg"></a>
-    </div>
-
-
   </div>
 
 

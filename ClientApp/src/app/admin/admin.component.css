@@ -1,0 +1,133 @@
+.morado {
+  background-color: #762576;
+  color: white;
+}
+
+.producto {
+  border: 2px solid green;
+  padding: 30px;
+  margin: 2px;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-align-content: space-around;
+  -ms-flex-line-pack: distribute;
+  align-content: space-around;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.nombreprod {
+  width: 40%;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+
+
+.eliminar {
+  width: 20%;
+}
+
+.elim {
+  box-shadow: inset 0px 1px 0px 0px #f5978e;
+  background: linear-gradient(to bottom, #f24537 5%, #c62d1f 100%);
+  background-color: #f24537;
+  border-radius: 6px;
+  border: 1px solid #d02718;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 6px 24px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #810e05;
+}
+
+  .elim:hover {
+    background: linear-gradient(to bottom, #c62d1f 5%, #f24537 100%);
+    background-color: #c62d1f;
+  }
+
+  .elim:active {
+    position: relative;
+    top: 1px;
+  }
+
+
+
+/* Style the tab */
+.tab {
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  width: 10%;
+  height: 550px;
+}
+
+  /* Style the buttons inside the tab */
+  .tab button {
+    display: block;
+    background-color: inherit;
+    color: black;
+    padding: 12px 16px;
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 17px;
+  }
+
+    /* Change background color of buttons on hover */
+    .tab button:hover {
+      background-color: #ddd;
+    }
+
+    /* Create an active/current "tab button" class */
+    .tab button.active {
+      background-color: #ccc;
+    }
+
+/* Style the tab content */
+.tabcontent {
+  padding: 0px 12px;
+  border: 1px solid #ccc;
+  width: 90%;
+  border-left: none;
+  height: 550px;
+  overflow-y: auto;
+}
+.flex{
+    display: flex;
+}

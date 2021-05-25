@@ -1,7 +1,7 @@
 <section class="contenedorcarrito contenedorcarrito-responsive">
   <h2 class="titulo titulo-responsive">Carrito</h2>
 
-  <div class="filaproducto filaproducto-responsive">
+  <div class="filaproducto filaproducto-responsive" *ngFor="let producto of productos">
     <div class="check check-responsive">
       <label class="container container-responsive">
         <input type="checkbox" checked="checked">
@@ -10,83 +10,30 @@
     </div>
     <div class="producto producto-responsive">
       <div class="img img-responsive">
-        <img class="imgprod imgprod-responsive" src="../../assets/productos/disco de freno.jpg" />
+        <img *ngIf="producto.imageUrl === null" src="../../assets/productos/disco de freno.jpg" alt="" class="imagen-producto" />
+        <img *ngIf="producto.imageUrl !== null" [src]="producto.imageUrl" alt="" class="imagen-producto" />
       </div>
       <div class="nombreprod nombreprod-responsive">
-        <h4>Disco de freno</h4>
-        <p>Discos necesarios para crear la fricción necesaria para detener la rotación o el avance de las ruedas.</p>
+        <h4>{{producto.nombreDeCarrito}}</h4>
+        <p>{{producto.descripcion}}</p>
       </div>
       <div class="verproducto verproducto-responsive">
-        <input type="number" />
+        <input type="number" [placeholder]="producto.cantidad" (change)="cambio($event.srcElement.value, producto)"/>
         <p>Disponibles: 10</p>
       </div>
       <div class="precio-eliminar precio-eliminar-responsive">
-        <h4>$350.00</h4>
-        <a class="elim elim-responsive" [routerLink]="['/']">Eliminar</a>
-      </div>
-    </div>
-  </div>
-
-
-  <div class="filaproducto filaproducto-responsive">
-    <div class="check check-responsive">
-      <label class="container container-responsive">
-        <input type="checkbox" checked="checked">
-        <span class="checkmark"></span>
-      </label>
-    </div>
-    <div class="producto producto-responsive">
-      <div class="img img-responsive">
-        <img class="imgprod imgprod-responsive" src="../../assets/productos/disco de freno.jpg" />
-      </div>
-      <div class="nombreprod nombreprod-responsive">
-        <h4>Disco de freno</h4>
-        <p>Discos necesarios para crear la fricción necesaria para detener la rotación o el avance de las ruedas.</p>
-      </div>
-      <div class="verproducto verproducto-responsive">
-        <input type="number" />
-        <p>Disponibles: 10</p>
-      </div>
-      <div class="precio-eliminar precio-eliminar-responsive">
-        <h4>$350.00</h4>
-        <a class="elim elim-responsive" [routerLink]="['/']">Eliminar</a>
-      </div>
-    </div>
-  </div>
-
-
-  <div class="filaproducto filaproducto-responsive">
-    <div class="check check-responsive">
-      <label class="container container-responsive">
-        <input type="checkbox" checked="checked">
-        <span class="checkmark checkmark-responsive"></span>
-      </label>
-    </div>
-    <div class="producto producto-responsive">
-      <div class="img img-responsive">
-        <img class="imgprod imgprod-responsive" src="../../assets/productos/disco de freno.jpg" />
-      </div>
-      <div class="nombreprod nombreprod-responsive">
-        <h4>Disco de freno</h4>
-        <p>Discos necesarios para crear la fricción necesaria para detener la rotación o el avance de las ruedas.</p>
-      </div>
-      <div class="verproducto verproducto-responsive">
-        <input type="number" />
-        <p>Disponibles: 10</p>
-      </div>
-      <div class="precio-eliminar precio-eliminar-responsive">
-        <h4>$350.00</h4>
-        <a class="elim elim-responsive" [routerLink]="['/']">Eliminar</a>
+        <h4>{{producto.subtotal}}</h4>
+        <a class="elim elim-responsive" (click)="eliminar(producto.idCarrito)">Eliminar</a>
       </div>
     </div>
   </div>
 
   <div class="totalcomprar totalcomprar-responsive">
     <div class="total total-responsive">
-      <h4>TOTAL $1,050.00</h4>
+      <h4>TOTAL ${{totalCarrito}}</h4>
     </div>
     <div class="comprar comprar-responsive">
-      <a class="comp comp-responsive" [routerLink]="['/detalle-compra']">Comprar</a>
+      <a class="comp comp-responsive" (click)="comprar()">Comprar</a>
     </div>
   </div>
 </section>

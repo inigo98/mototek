@@ -91,8 +91,6 @@ namespace mototek.Models
 
                 entity.Property(e => e.FechaDeModificacion).HasColumnType("datetime");
 
-                entity.Property(e => e.ListaDeProductos).HasColumnType("text");
-
                 entity.Property(e => e.NombreDeCarrito).HasMaxLength(50);
 
                 entity.Property(e => e.Subtotal).HasMaxLength(255);
@@ -100,6 +98,8 @@ namespace mototek.Models
                 entity.Property(e => e.Total).HasMaxLength(255);
 
                 entity.Property(e => e.TotalEnvio).HasMaxLength(255);
+
+                entity.Property(e => e.imageUrl).HasMaxLength(255);
             });
 
             modelBuilder.Entity<Cuenta>(entity =>
@@ -149,6 +149,8 @@ namespace mototek.Models
                 entity.Property(e => e.Precio).HasMaxLength(50);
 
                 entity.Property(e => e.TiempoDeEntrega).HasMaxLength(50);
+
+                entity.Property(e => e.Estado).HasMaxLength(50);
             });
 
             modelBuilder.Entity<Estado>(entity =>
@@ -173,8 +175,6 @@ namespace mototek.Models
                 entity.Property(e => e.FechaDeCreacion).HasColumnType("datetime");
 
                 entity.Property(e => e.FechaDeModificacion).HasColumnType("datetime");
-
-                entity.Property(e => e.ListaDeFavoritos).HasColumnType("text");
             });
 
             modelBuilder.Entity<Historial>(entity =>
@@ -187,7 +187,9 @@ namespace mototek.Models
 
                 entity.Property(e => e.FechaDeModificacion).HasColumnType("datetime");
 
-                entity.Property(e => e.ListaDeProducto).HasColumnType("text");
+                entity.Property(e => e.ImageUrl).HasColumnType("text");
+
+                entity.Property(e => e.NombreProducto).HasColumnType("text");
             });
 
             modelBuilder.Entity<Imagene>(entity =>
@@ -273,6 +275,14 @@ namespace mototek.Models
                 entity.Property(e => e.NombreDeProducto).HasMaxLength(50);
 
                 entity.Property(e => e.Precio).HasMaxLength(255);
+
+                entity.Property(e => e.IdAnoText).HasColumnType("text");
+
+                entity.Property(e => e.IdMarcaText).HasColumnType("text");
+
+                entity.Property(e => e.IdModeloText).HasColumnType("text");
+
+                entity.Property(e => e.IdVehiculoText).HasColumnType("text");
             });
 
             modelBuilder.Entity<Role>(entity =>

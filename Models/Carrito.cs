@@ -16,7 +16,8 @@ namespace mototek.Models
         public string Subtotal { get; set; }
         public string TotalEnvio { get; set; }
         public bool? Activo { get; set; }
-        public string ListaDeProductos { get; set; }
+        public string? imageUrl { get; set; }
+        public long? cantidad { get; set; }
         public DateTime? FechaDeCreacion { get; set; }
         public DateTime? FechaDeModificacion { get; set; }
     }

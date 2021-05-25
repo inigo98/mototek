@@ -208,5 +208,37 @@ namespace mototek.Controllers
                 return BadRequest(resp);
             }
         }
+
+        // POST api/GETUSUARIO
+        [HttpPost("{id}")]
+        public IActionResult Post([FromBody] auxiliar value, int id)
+        {
+            Respuesta resp = new Respuesta();
+            resp.status = "Error";
+            resp.data = null;
+            try
+            {
+                using (DB_A6ED12_testmototekDBContext db = new DB_A6ED12_testmototekDBContext())
+                {
+                    SqlParameter[] sqlParams = new SqlParameter[]
+                    {
+                        new SqlParameter("@CORREO", value.key1),
+                        new SqlParameter("@PASS", value.key2),
+                    };
+                    Usuario data = db.Usuarios.FromSqlRaw("Select * from Usuarios where Correo = @CORREO AND Contrasena = @PASS", sqlParams)
+                        .FirstOrDefault();
+                    resp.status = "Ok";
+                    resp.message = "Success";
+                    resp.data = data;
+                    return Ok(resp);
+                }
+            }
+            catch (Exception message)
+            {
+                resp.message = message.Message;
+                return BadRequest(resp);
+            }
+        }
+
     }
 }

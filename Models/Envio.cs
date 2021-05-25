@@ -13,5 +13,6 @@ namespace mototek.Models
         public string TiempoDeEntrega { get; set; }
         public DateTime? FechaDeCreacion { get; set; }
         public DateTime? FechaDeModificacion { get; set; }
+        public string? Estado { get; set; }
     }
 }

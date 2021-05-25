@@ -1,0 +1,188 @@
+<section class="seccion seccion-responsive flex">
+  <div class="tab">
+    <button class="tablinks" (click)="openCity($event, 'roles')" id="defaultOpen">Roles</button>
+    <button class="tablinks" (click)="openCity($event, 'usuarios')">Usuarios</button>
+    <button class="tablinks" (click)="openCity($event, 'cuentas')">Cuentas</button>
+    <button class="tablinks" (click)="openCity($event, 'productos')">Productos</button>
+    <button class="tablinks" (click)="openCity($event, 'envios')">Envios</button>
+    <button class="tablinks" (click)="openCity($event, 'anos')">Años</button>
+    <button class="tablinks" (click)="openCity($event, 'marcas')">Marcas</button>
+    <button class="tablinks" (click)="openCity($event, 'modelos')">Modelos</button>
+    <button class="tablinks" (click)="openCity($event, 'vehiculos')">Vehiculos</button>
+    <button class="tablinks" (click)="openCity($event, 'logs')">Logs</button>
+    <button class="tablinks" (click)="openCity($event, 'reportes')">Reportes</button>
+  </div>
+
+  <div id="roles" class="tabcontent">
+    <div class="producto producto-responsive">
+      <h3>Roles</h3>
+      <p><button class="w3-button morado">Agregar</button></p>
+    </div>
+    <div class="producto producto-responsive" *ngFor="let aux of rol">
+      <div class="nombreprod nombreprod-responsive">
+        <h4>{{aux.idRol}}</h4>
+        <p>{{aux.nombre}}</p>
+      </div>
+      <div class="eliminar eliminar-responsive">
+        <!--<a class="elim elim-responsive" (click)="eliminarrol(producto.idRol)">Eliminar</a>-->
+      </div>
+    </div>
+  </div>
+
+  <div id="usuarios" class="tabcontent">
+    <div class="producto producto-responsive">
+      <h3>Usuarios</h3>
+      <p><button class="w3-button morado">Agregar</button></p>
+    </div>
+    <div class="producto producto-responsive" *ngFor="let aux of usuario">
+      <div class="nombreprod nombreprod-responsive">
+        <h4>{{aux.idUsuario}}</h4>
+        <p>{{aux.nombre}}</p>
+      </div>
+      <div class="eliminar eliminar-responsive">
+        <a class="elim elim-responsive" (click)="bloquearusuario(aux.idUsuario)">Bloquear</a>
+      </div>
+      <div class="eliminar eliminar-responsive">
+        <a class="elim elim-responsive" (click)="desbloquearusuario(aux.idUsuario)">Desbloquear</a>
+      </div>
+      <div class="eliminar eliminar-responsive">
+        <a class="elim elim-responsive" (click)="eliminarusuario(aux.idUsuario)">Eliminar</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="cuentas" class="tabcontent">
+    <div class="producto producto-responsive">
+      <h3>Cuentas</h3>
+      <p><button class="w3-button morado">Agregar</button></p>
+    </div>
+    <div class="producto producto-responsive" *ngFor="let aux of cuenta">
+      <div class="nombreprod nombreprod-responsive">
+        <h4>{{aux.idCuentas}}</h4>
+        <p>{{aux.nombre}}</p>
+        <input type="text" [placeholder]="aux.descripcion" (change)="cambiarCuenta($event.srcElement.value, aux.idCuentas)" />
+      </div>
+      <div class="eliminar eliminar-responsive">
+        <!--<a class="elim elim-responsive" (click)="eliminarrol(producto.idRol)">Eliminar</a>-->
+      </div>
+    </div>
+  </div>
+
+  <div id="productos" class="tabcontent">
+    <div class="producto producto-responsive">
+      <h3>Producto</h3>
+      <p><button class="w3-button morado">Agregar</button></p>
+    </div>
+    <div class="producto producto-responsive" *ngFor="let aux of producto">
+      <div class="nombreprod nombreprod-responsive">
+        <h4>{{aux.idProducto}}</h4>
+        <p>{{aux.nombreDeProducto}}</p>
+      </div>
+      <div class="eliminar eliminar-responsive">
+        <a class="elim elim-responsive" (click)="eliminarproducto(aux.idProducto)">Eliminar</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="envios" class="tabcontent">
+    <div class="producto producto-responsive">
+      <h3>Envios</h3>
+      <p><button class="w3-button morado">Agregar</button></p>
+    </div>
+    <div class="producto producto-responsive" *ngFor="let aux of envio">
+      <div class="nombreprod nombreprod-responsive">
+        <h4>{{aux.idEnvio}}</h4>
+        <p>{{aux.estado}}</p>
+      </div>
+      <div class="eliminar eliminar-responsive">
+        <a class="elim elim-responsive" (click)="eliminarenvio(aux.idEnvio)">Eliminar</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="anos" class="tabcontent">
+    <div class="producto producto-responsive">
+      <h3>Años</h3>
+      <p><button class="w3-button morado">Agregar</button></p>
+    </div>
+    <div class="producto producto-responsive" *ngFor="let aux of anos">
+      <div class="nombreprod nombreprod-responsive">
+        <h4>{{aux.idAnos}}</h4>
+        <p>{{aux.nombreDeAno}}</p>
+      </div>
+      <div class="eliminar eliminar-responsive">
+        <a class="elim elim-responsive" (click)="eliminaranos(aux.idAnos)">Eliminar</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="marcas" class="tabcontent">
+    <div class="producto producto-responsive">
+      <h3>Marcas</h3>
+      <p><button class="w3-button morado">Agregar</button></p>
+    </div>
+    <div class="producto producto-responsive" *ngFor="let aux of marca">
+      <div class="nombreprod nombreprod-responsive">
+        <h4>{{aux.idMarca}}</h4>
+        <p>{{aux.nombreDeMarca}}</p>
+      </div>
+      <div class="eliminar eliminar-responsive">
+        <a class="elim elim-responsive" (click)="eliminarmarca(aux.idMarca)">Eliminar</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="modelos" class="tabcontent">
+    <div class="producto producto-responsive">
+      <h3>Modelos</h3>
+      <p><button class="w3-button morado">Agregar</button></p>
+    </div>
+    <div class="producto producto-responsive" *ngFor="let aux of modelo">
+      <div class="nombreprod nombreprod-responsive">
+        <h4>{{aux.idModelo}}</h4>
+        <p>{{aux.nombreDeModelo}}</p>
+      </div>
+      <div class="eliminar eliminar-responsive">
+        <a class="elim elim-responsive" (click)="eliminarmodelo(aux.idModelo)">Eliminar</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="vehiculos" class="tabcontent">
+    <div class="producto producto-responsive">
+      <h3>Vehiculos</h3>
+      <p><button class="w3-button morado">Agregar</button></p>
+    </div>
+    <div class="producto producto-responsive" *ngFor="let aux of vehiculo">
+      <div class="nombreprod nombreprod-responsive">
+        <h4>{{aux.idVehiculo}}</h4>
+        <p>{{aux.nombreDeVehiculo}}</p>
+      </div>
+      <div class="eliminar eliminar-responsive">
+        <a class="elim elim-responsive" (click)="eliminarvehiculo(aux.idVehiculo)">Eliminar</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="logs" class="tabcontent">
+    <div class="producto producto-responsive">
+      <h3>Logs</h3>
+      <p><button class="w3-button morado">Agregar</button></p>
+    </div>
+    <div class="producto producto-responsive" *ngFor="let aux of log">
+      <div class="nombreprod nombreprod-responsive">
+        <h4>{{aux.idLog}}</h4>
+        <p>
+          el usuario con el id: {{aux.idLog}} modifico de la tabla: {{aux.tabla}} el campo: {{aux.campo}} en la fecha: {{aux.fechaDeModificacion | date: 'dd/MM/yyyy'}}
+        </p>
+      </div>
+      <div class="eliminar eliminar-responsive">
+        <!--<a class="elim elim-responsive" (click)="eliminarvehiculo(producto.idVehiculo)">Eliminar</a>-->
+      </div>
+    </div>
+  </div>
+    <div id="reportes" class="tabcontent">
+      <h3>Reportes</h3>
+      <p>London is the capital city of England.</p>
+    </div>
+</section>

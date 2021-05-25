@@ -49,8 +49,8 @@ namespace mototek.Controllers
                 using (DB_A6ED12_testmototekDBContext db = new DB_A6ED12_testmototekDBContext())
                 {
                     var idSearch = new SqlParameter("Id", id);
-                    Carrito data = db.Carritos.FromSqlRaw("Select * from Carritos where IdCarrito = @Id", idSearch)
-                        .FirstOrDefault();
+                    var data = db.Carritos.FromSqlRaw("Select * from Carritos where IdUsuario = @Id", idSearch)
+                        .ToList();
                     resp.status = "Ok";
                     resp.message = "Success";
                     resp.data = data;
@@ -86,11 +86,12 @@ namespace mototek.Controllers
                         new SqlParameter("@SUBTOTAL", value.Subtotal),
                         new SqlParameter("@TOTALENVIO", value.TotalEnvio),
                         new SqlParameter("@ACTIVO", value.Activo),
-                        new SqlParameter("@LISTADEPRODUCTOS", value.ListaDeProductos),
+                        new SqlParameter("@CANTIDAD", value.cantidad),
+                        new SqlParameter("@IMAGEURL", value.imageUrl),
                         new SqlParameter("@FECHADECREACION", DateTime.Now),
                         new SqlParameter("@FECHADEMODIFICACION", DateTime.Now),
                     };
-                    var data = db.Database.ExecuteSqlRaw("INSERT INTO [dbo].[CARRITOS] ([IdUsuario],[IdDireccion],[NombreDeCarrito],[Descripcion],[Total],[Subtotal],[TotalEnvio],[Activo],[ListaDeProductos],[FechaDeCreacion],[FechaDeModificacion]) VALUES (@IDUSUARIO, @IDDIRECCION, @NOMBREDECARRITO, @DESCRIPCION, @TOTAL, @SUBTOTAL, @TOTALENVIO, @ACTIVO, @LISTADEPRODUCTOS, @FECHADECREACION, @FECHADEMODIFICACION)", sqlParams);
+                    var data = db.Database.ExecuteSqlRaw("INSERT INTO [dbo].[CARRITOS] ([IdUsuario],[IdDireccion],[NombreDeCarrito],[Descripcion],[Total],[Subtotal],[TotalEnvio],[Activo],[cantidad],[imageUrl],[FechaDeCreacion],[FechaDeModificacion]) VALUES (@IDUSUARIO, @IDDIRECCION, @NOMBREDECARRITO, @DESCRIPCION, @TOTAL, @SUBTOTAL, @TOTALENVIO, @ACTIVO, @CANTIDAD, @IMAGEURL, @FECHADECREACION, @FECHADEMODIFICACION)", sqlParams);
                     SqlParameter[] sqlParamsLogs = new SqlParameter[]
                     {
                         new SqlParameter("@IDUSER", "12345"),
@@ -140,7 +141,7 @@ namespace mototek.Controllers
 
                     SqlParameter[] sqlParamsLogs = new SqlParameter[]
                     {
-                        new SqlParameter("@IDUSER", "12345"),
+                        new SqlParameter("@IDUSER", value.usuario),
                         new SqlParameter("@TABLE", "CARRITOS"),
                         new SqlParameter("@FIELD", value.campo),
                         new SqlParameter("@ANTERIOR", ""),
