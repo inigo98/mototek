@@ -1,3 +1,7 @@
+<head>
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximun-scale=1.0, minimum-scale=1.0" />
+</head>
+
 <section class="contenedorcarrito contenedorcarrito-responsive">
   <h2 class="titulo titulo-responsive">Carrito</h2>
 
@@ -18,7 +22,11 @@
         <p>{{producto.descripcion}}</p>
       </div>
       <div class="verproducto verproducto-responsive">
+<<<<<<< HEAD
         <input type="number" [placeholder]="producto.cantidad" (change)="cambio($event.srcElement.value, producto)"/>
+=======
+        <input type="number" placeholder="Cantidad"/>
+>>>>>>> 64e5ed31840abe488bcb02fc724d7bb6ec43b1c7
         <p>Disponibles: 10</p>
       </div>
       <div class="precio-eliminar precio-eliminar-responsive">
