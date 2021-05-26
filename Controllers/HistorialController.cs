@@ -19,7 +19,7 @@ namespace mototek.Controllers
             Respuesta resp = new Respuesta();
             resp.status = "Error";
             resp.data = null;
-            try
+            try 
             {
                 using (DB_A6ED12_testmototekDBContext db = new DB_A6ED12_testmototekDBContext())
                 {
@@ -86,9 +86,10 @@ namespace mototek.Controllers
                     };
                     var data = db.Database.ExecuteSqlRaw("INSERT INTO [dbo].[HISTORIAL] ([IdCarrito],[IdUsuario],[ListaDeProducto],[FechaDeCreacion],[FechaDeModificacion]) VALUES (@IDCARRITO,@IDUSUARIO,@LISTADEPRODUCTO, @FECHADECREACION, @FECHADEMODIFICACION)", sqlParams);
 
+                    /*
                     SqlParameter[] sqlParamsLogs = new SqlParameter[]
                     {
-                        new SqlParameter("@IDUSER", "12345"),
+                        new SqlParameter("@IDUSER", value.IdUsuario),
                         new SqlParameter("@TABLE", "HISTORIAL"),
                         new SqlParameter("@FIELD", "AGREGO"),
                         new SqlParameter("@ANTERIOR", ""),
@@ -96,6 +97,7 @@ namespace mototek.Controllers
                         new SqlParameter("@DATE", ""),
                     };
                     db.Database.ExecuteSqlRaw("[dbo].[sp_insertIntoLogs] @IDUSER, @TABLE, @FIELD, @ANTERIOR, @NUEVO, @DATE", sqlParamsLogs);
+                    */
 
                     resp.status = "Ok";
                     resp.message = "Success";
@@ -133,9 +135,10 @@ namespace mototek.Controllers
 
                     var data = db.Database.ExecuteSqlRaw("[dbo].[sp_updateFromTable] @ID, @VALUE, @FIELD, @USUARIO, @FIELDTOCHECK, @TABLE", sqlParams);
 
+                    /*
                     SqlParameter[] sqlParamsLogs = new SqlParameter[]
                     {
-                        new SqlParameter("@IDUSER", "12345"),
+                        new SqlParameter("@IDUSER", value.usuario),
                         new SqlParameter("@TABLE", "HISTORIAL"),
                         new SqlParameter("@FIELD", value.campo),
                         new SqlParameter("@ANTERIOR", ""),
@@ -143,6 +146,7 @@ namespace mototek.Controllers
                         new SqlParameter("@DATE", ""),
                     };
                     db.Database.ExecuteSqlRaw("[dbo].[sp_insertIntoLogs] @IDUSER, @TABLE, @FIELD, @ANTERIOR, @NUEVO, @DATE", sqlParamsLogs);
+                    */
 
                     resp.status = "Ok";
                     resp.message = "Success";
@@ -176,10 +180,10 @@ namespace mototek.Controllers
                     };
                     var list = db.Database.ExecuteSqlRaw("[dbo].[sp_deleteFromTable] @ID, @TABLE, @FIELD", sqlParams);
 
-
+                    /*
                     SqlParameter[] sqlParamsLogs = new SqlParameter[]
                     {
-                        new SqlParameter("@IDUSER", "12345"),
+                        new SqlParameter("@IDUSER", "0"),
                         new SqlParameter("@TABLE", "HISTORIAL"),
                         new SqlParameter("@FIELD", "BORRO"),
                         new SqlParameter("@ANTERIOR", id),
@@ -187,6 +191,7 @@ namespace mototek.Controllers
                         new SqlParameter("@DATE", ""),
                     };
                     db.Database.ExecuteSqlRaw("[dbo].[sp_insertIntoLogs] @IDUSER, @TABLE, @FIELD, @ANTERIOR, @NUEVO, @DATE", sqlParamsLogs);
+                    */
 
                     resp.status = "Ok";
                     resp.message = "Success";

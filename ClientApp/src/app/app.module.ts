@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
+import { ChartsModule } from 'ng2-charts';
+
 
 import { AppComponent } from './app.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
@@ -70,6 +72,7 @@ import { AdminComponent } from './admin/admin.component';
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
     HttpClientModule,
     FormsModule,
+    ChartsModule,
     RouterModule.forRoot([
     { path: '', component: InicioComponent, pathMatch: 'full' },
     { path: 'counter', component: CounterComponent },

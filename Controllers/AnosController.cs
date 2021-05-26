@@ -86,11 +86,11 @@ namespace mototek.Controllers
 
                     SqlParameter[] sqlParamsLogs = new SqlParameter[]
                     {
-                        new SqlParameter("@IDUSER", "12345"),
+                        new SqlParameter("@IDUSER", "0"),
                         new SqlParameter("@TABLE", "ANOS"),
                         new SqlParameter("@FIELD", "AGREGO"),
                         new SqlParameter("@ANTERIOR", ""),
-                        new SqlParameter("@NUEVO", ""),
+                        new SqlParameter("@NUEVO",  value.NombreDeAno),
                         new SqlParameter("@DATE", ""),
                     };
                     db.Database.ExecuteSqlRaw("[dbo].[sp_insertIntoLogs] @IDUSER, @TABLE, @FIELD, @ANTERIOR, @NUEVO, @DATE", sqlParamsLogs);
@@ -128,14 +128,12 @@ namespace mototek.Controllers
                         new SqlParameter("@FIELDTOCHECK", "IdAnos"),
                         new SqlParameter("@TABLE", "ANOS"),
                     };
-                    //string texto = "UPDATE[dbo].[ANOS] SET " + value.campo + " = " + value.valor + " WHERE IdAnos = " + id;
-                    //var data = db.Database.ExecuteSqlRaw(texto);
 
                     var data = db.Database.ExecuteSqlRaw("[dbo].[sp_updateFromTable] @ID, @VALUE, @FIELD, @USUARIO, @FIELDTOCHECK, @TABLE", sqlParams);
 
                     SqlParameter[] sqlParamsLogs = new SqlParameter[]
                     {
-                        new SqlParameter("@IDUSER", "12345"),
+                        new SqlParameter("@IDUSER", value.usuario),
                         new SqlParameter("@TABLE", "ANOS"),
                         new SqlParameter("@FIELD", value.campo),
                         new SqlParameter("@ANTERIOR", ""),
@@ -179,7 +177,7 @@ namespace mototek.Controllers
 
                     SqlParameter[] sqlParamsLogs = new SqlParameter[]
                     {
-                        new SqlParameter("@IDUSER", "12345"),
+                        new SqlParameter("@IDUSER", "0"),
                         new SqlParameter("@TABLE", "ANOS"),
                         new SqlParameter("@FIELD", "BORRO"),
                         new SqlParameter("@ANTERIOR", id),

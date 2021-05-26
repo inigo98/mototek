@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ApiUrlService } from '../api-url.service';
 import { Router } from '@angular/router';
+import { ChartOptions, ChartType, ChartDataSets } from 'chart.js';
+import * as pluginDataLabels from 'chartjs-plugin-annotation';
+import { Label } from 'ng2-charts';
 
 @Component({
   selector: 'app-admin',
@@ -19,9 +22,29 @@ export class AdminComponent implements OnInit {
     producto: any;
     usuario: any;
     cuenta: any;
-    rol: any;
+  rol: any;
+  public barChartOptions: ChartOptions = {
+    responsive: true,
+    // We use these empty structures as placeholders for dynamic theming.
+    scales: { xAxes: [{}], yAxes: [{}] },
+    plugins: {
+      datalabels: {
+        anchor: 'end',
+        align: 'end',
+      }
+    }
+  };
+  public barChartLabels: Label[] = ['visitas', 'stock', 'comprados', 'precio'];
+  public barChartType: ChartType = 'bar';
+  public barChartLegend = true;
+  public barChartPlugins = [pluginDataLabels];
+  //Datos que vamos a cargar en las graficas 
+  public barChartData: ChartDataSets[];
+  public chartColors;
+    customerBarChartData: boolean;
   constructor(public http: HttpClient, public apiUrl: ApiUrlService, private router: Router) {
     this.url = apiUrl.url;
+    this.customerBarChartData = false;
     this.http.get(this.url + 'rol').subscribe(data => {
       console.log(data);
       this.rol = data['data'];
@@ -37,6 +60,7 @@ export class AdminComponent implements OnInit {
     this.http.get(this.url + 'producto').subscribe(data => {
       console.log(data);
       this.producto = data['data'];
+      this.cargarDatos(this.producto);
     })
     this.http.get(this.url + 'envio').subscribe(data => {
       console.log(data);
@@ -62,6 +86,18 @@ export class AdminComponent implements OnInit {
       console.log(data);
       this.log = data['data'];
     })
+  }
+  cargarDatos(datos) {
+    this.barChartData = [];
+
+    for (const aux of datos) {
+      console.log(aux)
+      console.log(+aux['precio'])
+      console.log(aux['precio'])
+      this.barChartData.push({ data: [+aux['stock'], +aux['numeroDeVisitas'], +aux['numeroDeComprados'], +aux['precio']], label: aux['nombreDeProducto'] });
+    }
+    this.customerBarChartData = true;
+
   }
   eliminarrol(id) {
     console.log(id)

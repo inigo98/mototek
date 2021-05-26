@@ -14,7 +14,7 @@ namespace mototek.Models
         public string ListaIdAno { get; set; }
         public string NombreDeProducto { get; set; }
         public string Descripcion { get; set; }
-        public string Precio { get; set; }
+        public long? Precio { get; set; }
         public long? NumeroDeVisitas { get; set; }
         public string? IdImagen { get; set; }
         public bool? BloquearProducto { get; set; }
@@ -25,5 +25,6 @@ namespace mototek.Models
         public string? IdModeloText { get; set; }
         public string? IdAnoText { get; set; }
         public long? Stock { get; set; }
+        public long? NumeroDeComprados { get; set; }
     }
 }

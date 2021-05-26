@@ -274,8 +274,6 @@ namespace mototek.Models
 
                 entity.Property(e => e.NombreDeProducto).HasMaxLength(50);
 
-                entity.Property(e => e.Precio).HasMaxLength(255);
-
                 entity.Property(e => e.IdAnoText).HasColumnType("text");
 
                 entity.Property(e => e.IdMarcaText).HasColumnType("text");

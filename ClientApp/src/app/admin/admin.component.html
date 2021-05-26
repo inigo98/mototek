@@ -167,7 +167,6 @@
   <div id="logs" class="tabcontent">
     <div class="producto producto-responsive">
       <h3>Logs</h3>
-      <p><button class="w3-button morado">Agregar</button></p>
     </div>
     <div class="producto producto-responsive" *ngFor="let aux of log">
       <div class="nombreprod nombreprod-responsive">
@@ -181,8 +180,20 @@
       </div>
     </div>
   </div>
-    <div id="reportes" class="tabcontent">
+  <div id="reportes" class="tabcontent">
+    <div class="producto producto-responsive">
       <h3>Reportes</h3>
-      <p>London is the capital city of England.</p>
     </div>
+    <div *ngIf="customerBarChartData">
+      <canvas baseChart
+              [datasets]="barChartData"
+              [labels]="barChartLabels"
+              [options]="barChartOptions"
+              [plugins]="barChartPlugins"
+              [legend]="barChartLegend"
+              [chartType]="barChartType"
+              [colors]="chartColors">
+      </canvas>
+    </div>
+  </div>
 </section>

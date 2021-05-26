@@ -89,7 +89,7 @@ namespace mototek.Controllers
 
                     SqlParameter[] sqlParamsLogs = new SqlParameter[]
                     {
-                        new SqlParameter("@IDUSER", "12345"),
+                        new SqlParameter("@IDUSER", "0"),
                         new SqlParameter("@TABLE", "FAVORITOS"),
                         new SqlParameter("@FIELD", "AGREGO"),
                         new SqlParameter("@ANTERIOR", ""),
@@ -136,7 +136,7 @@ namespace mototek.Controllers
 
                     SqlParameter[] sqlParamsLogs = new SqlParameter[]
                     {
-                        new SqlParameter("@IDUSER", "12345"),
+                        new SqlParameter("@IDUSER", value.usuario),
                         new SqlParameter("@TABLE", "FAVORITOS"),
                         new SqlParameter("@FIELD", value.campo),
                         new SqlParameter("@ANTERIOR", ""),
@@ -180,7 +180,7 @@ namespace mototek.Controllers
 
                     SqlParameter[] sqlParamsLogs = new SqlParameter[]
                     {
-                        new SqlParameter("@IDUSER", "12345"),
+                        new SqlParameter("@IDUSER", "0"),
                         new SqlParameter("@TABLE", "FAVORITOS"),
                         new SqlParameter("@FIELD", "BORRO"),
                         new SqlParameter("@ANTERIOR", id),

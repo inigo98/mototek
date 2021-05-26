@@ -86,10 +86,11 @@ namespace mototek.Controllers
                         new SqlParameter("@FECHADEMODIFICACION", DateTime.Now),
                     };
                     var data = db.Database.ExecuteSqlRaw("INSERT INTO [dbo].[CUENTAS] ([Nombre],[Descripcion],[Usuario],[Contrasena],[Activo],[FechaDeCreacion],[FechaDeModificacion]) VALUES (@NOMBRE, @DESCRIPCION, @USUARIO, @CONTRASEÑA, @ACTIVO, @FECHADECREACION, @FECHADEMODIFICACION)", sqlParams);
-
+                    
+                    /*
                     SqlParameter[] sqlParamsLogs = new SqlParameter[]
                     {
-                        new SqlParameter("@IDUSER", "12345"),
+                        new SqlParameter("@IDUSER", "admin"),
                         new SqlParameter("@TABLE", "CUENTAS"),
                         new SqlParameter("@FIELD", "AGREGO"),
                         new SqlParameter("@ANTERIOR", ""),
@@ -97,6 +98,7 @@ namespace mototek.Controllers
                         new SqlParameter("@DATE", ""),
                     };
                     db.Database.ExecuteSqlRaw("[dbo].[sp_insertIntoLogs] @IDUSER, @TABLE, @FIELD, @ANTERIOR, @NUEVO, @DATE", sqlParamsLogs);
+                    */
 
                     resp.status = "Ok";
                     resp.message = "Success";
@@ -177,10 +179,10 @@ namespace mototek.Controllers
                     };
                     var list = db.Database.ExecuteSqlRaw("[dbo].[sp_deleteFromTable] @ID, @TABLE, @FIELD", sqlParams);
 
-
+                    /*
                     SqlParameter[] sqlParamsLogs = new SqlParameter[]
                     {
-                        new SqlParameter("@IDUSER", "12345"),
+                        new SqlParameter("@IDUSER", "admin"),
                         new SqlParameter("@TABLE", "CUENTAS"),
                         new SqlParameter("@FIELD", "BORRO"),
                         new SqlParameter("@ANTERIOR", id),
@@ -188,6 +190,7 @@ namespace mototek.Controllers
                         new SqlParameter("@DATE", ""),
                     };
                     db.Database.ExecuteSqlRaw("[dbo].[sp_insertIntoLogs] @IDUSER, @TABLE, @FIELD, @ANTERIOR, @NUEVO, @DATE", sqlParamsLogs);
+                    */
 
                     resp.status = "Ok";
                     resp.message = "Success";

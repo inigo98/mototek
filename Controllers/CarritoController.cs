@@ -94,7 +94,7 @@ namespace mototek.Controllers
                     var data = db.Database.ExecuteSqlRaw("INSERT INTO [dbo].[CARRITOS] ([IdUsuario],[IdDireccion],[NombreDeCarrito],[Descripcion],[Total],[Subtotal],[TotalEnvio],[Activo],[cantidad],[imageUrl],[FechaDeCreacion],[FechaDeModificacion]) VALUES (@IDUSUARIO, @IDDIRECCION, @NOMBREDECARRITO, @DESCRIPCION, @TOTAL, @SUBTOTAL, @TOTALENVIO, @ACTIVO, @CANTIDAD, @IMAGEURL, @FECHADECREACION, @FECHADEMODIFICACION)", sqlParams);
                     SqlParameter[] sqlParamsLogs = new SqlParameter[]
                     {
-                        new SqlParameter("@IDUSER", "12345"),
+                        new SqlParameter("@IDUSER", value.IdUsuario),
                         new SqlParameter("@TABLE", "CARRITOS"),
                         new SqlParameter("@FIELD", "AGREGO"),
                         new SqlParameter("@ANTERIOR", ""),
@@ -185,7 +185,7 @@ namespace mototek.Controllers
 
                     SqlParameter[] sqlParamsLogs = new SqlParameter[]
                     {
-                        new SqlParameter("@IDUSER", "12345"),
+                        new SqlParameter("@IDUSER", "0"),
                         new SqlParameter("@TABLE", "CARRITOS"),
                         new SqlParameter("@FIELD", "BORRO"),
                         new SqlParameter("@ANTERIOR", id),

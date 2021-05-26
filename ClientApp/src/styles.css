@@ -27,6 +27,8 @@ code {
   background: linear-gradient(0deg, rgba(122,25,121,1) 0%, rgba(64,191,79,1) 100%)!important;
 }
 
-body{
-    background: transparent;
+body {
+  background: transparent;
+  margin: 0;
+  min-width: inherit!important;
 }
