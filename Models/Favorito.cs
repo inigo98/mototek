@@ -12,5 +12,8 @@ namespace mototek.Models
         public long? ListaDeFavoritos { get; set; }
         public DateTime? FechaDeCreacion { get; set; }
         public DateTime? FechaDeModificacion { get; set; }
+        public string? NombreProducto { get; set; }
+        public string? imageUrl { get; set; }
+        public string? descripcion { get; set; }
     }
 }

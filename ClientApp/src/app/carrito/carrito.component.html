@@ -5,7 +5,7 @@
 <section class="contenedorcarrito contenedorcarrito-responsive">
   <h2 class="titulo titulo-responsive">Carrito</h2>
 
-  <div class="filaproducto filaproducto-responsive" *ngFor="let producto of productos">
+  <div class="filaproducto filaproducto-responsive" *ngFor="let producto of productos" [hidden]="!producto.activo">
     <div class="check check-responsive">
       <label class="container container-responsive">
         <input type="checkbox" checked="checked">
@@ -23,7 +23,7 @@
       </div>
       <div class="verproducto verproducto-responsive">
         <input type="number" [placeholder]="producto.cantidad" (change)="cambio($event.srcElement.value, producto)"/>
-        <p>Disponibles: 10</p>
+        <p>Disponibles: {{producto.stock}}</p>
       </div>
       <div class="precio-eliminar precio-eliminar-responsive">
         <h4>{{producto.subtotal}}</h4>

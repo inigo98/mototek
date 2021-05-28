@@ -15,5 +15,11 @@ namespace mototek.Models
         public DateTime? FechaDeModificacion { get; set; }
         public string? ImageUrl { get; set; }
         public string? NombreProducto { get; set; }
+        public string? status { get; set; }
+        public string? direccion { get; set; }
+        public string? email { get; set; }
+        public string? clabe { get; set; }
+        public bool? activo { get; set; }
+        public string? comprobacion { get; set; }
     }
 }

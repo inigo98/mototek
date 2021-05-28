@@ -88,10 +88,11 @@ namespace mototek.Controllers
                         new SqlParameter("@ACTIVO", value.Activo),
                         new SqlParameter("@CANTIDAD", value.cantidad),
                         new SqlParameter("@IMAGEURL", value.imageUrl),
+                        new SqlParameter("@STOCK", value.stock),
                         new SqlParameter("@FECHADECREACION", DateTime.Now),
                         new SqlParameter("@FECHADEMODIFICACION", DateTime.Now),
                     };
-                    var data = db.Database.ExecuteSqlRaw("INSERT INTO [dbo].[CARRITOS] ([IdUsuario],[IdDireccion],[NombreDeCarrito],[Descripcion],[Total],[Subtotal],[TotalEnvio],[Activo],[cantidad],[imageUrl],[FechaDeCreacion],[FechaDeModificacion]) VALUES (@IDUSUARIO, @IDDIRECCION, @NOMBREDECARRITO, @DESCRIPCION, @TOTAL, @SUBTOTAL, @TOTALENVIO, @ACTIVO, @CANTIDAD, @IMAGEURL, @FECHADECREACION, @FECHADEMODIFICACION)", sqlParams);
+                    var data = db.Database.ExecuteSqlRaw("INSERT INTO [dbo].[CARRITOS] ([IdUsuario],[IdDireccion],[NombreDeCarrito],[Descripcion],[Total],[Subtotal],[TotalEnvio],[Activo],[cantidad],[imageUrl],[stock],[FechaDeCreacion],[FechaDeModificacion]) VALUES (@IDUSUARIO, @IDDIRECCION, @NOMBREDECARRITO, @DESCRIPCION, @TOTAL, @SUBTOTAL, @TOTALENVIO, @ACTIVO, @CANTIDAD, @IMAGEURL, @STOCK, @FECHADECREACION, @FECHADEMODIFICACION)", sqlParams);
                     SqlParameter[] sqlParamsLogs = new SqlParameter[]
                     {
                         new SqlParameter("@IDUSER", value.IdUsuario),

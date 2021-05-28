@@ -9,6 +9,7 @@
     <button class="tablinks" (click)="openCity($event, 'marcas')">Marcas</button>
     <button class="tablinks" (click)="openCity($event, 'modelos')">Modelos</button>
     <button class="tablinks" (click)="openCity($event, 'vehiculos')">Vehiculos</button>
+    <button class="tablinks" (click)="openCity($event, 'pagos')">Pagos</button>
     <button class="tablinks" (click)="openCity($event, 'logs')">Logs</button>
     <button class="tablinks" (click)="openCity($event, 'reportes')">Reportes</button>
   </div>
@@ -16,7 +17,6 @@
   <div id="roles" class="tabcontent">
     <div class="producto producto-responsive">
       <h3>Roles</h3>
-      <p><button class="w3-button morado">Agregar</button></p>
     </div>
     <div class="producto producto-responsive" *ngFor="let aux of rol">
       <div class="nombreprod nombreprod-responsive">
@@ -32,7 +32,7 @@
   <div id="usuarios" class="tabcontent">
     <div class="producto producto-responsive">
       <h3>Usuarios</h3>
-      <p><button class="w3-button morado">Agregar</button></p>
+      <p><button class="w3-button morado" data-toggle="modal" data-target="#agregarUsuario">Agregar</button></p>
     </div>
     <div class="producto producto-responsive" *ngFor="let aux of usuario">
       <div class="nombreprod nombreprod-responsive">
@@ -54,7 +54,6 @@
   <div id="cuentas" class="tabcontent">
     <div class="producto producto-responsive">
       <h3>Cuentas</h3>
-      <p><button class="w3-button morado">Agregar</button></p>
     </div>
     <div class="producto producto-responsive" *ngFor="let aux of cuenta">
       <div class="nombreprod nombreprod-responsive">
@@ -71,12 +70,19 @@
   <div id="productos" class="tabcontent">
     <div class="producto producto-responsive">
       <h3>Producto</h3>
-      <p><button class="w3-button morado">Agregar</button></p>
+      <p><button class="w3-button morado" data-toggle="modal" data-target="#agregarProd">Agregar</button></p>
     </div>
     <div class="producto producto-responsive" *ngFor="let aux of producto">
       <div class="nombreprod nombreprod-responsive">
         <h4>{{aux.idProducto}}</h4>
         <p>{{aux.nombreDeProducto}}</p>
+      </div>
+      <div class="eliminar eliminar-responsive">
+        <a class="elim elim-responsive" (click)="bloquearprod(aux.idProducto)">Bloquear</a>
+        <a class="elim elim-responsive" (click)="desbloquearprod(aux.idProducto)">Desbloquear</a>
+      </div>
+      <div class="eliminar eliminar-responsive">
+        <p><button class="w3-button morado" data-toggle="modal" data-target="#modificarProd" (click)="idProd(aux)">Modificar</button></p>
       </div>
       <div class="eliminar eliminar-responsive">
         <a class="elim elim-responsive" (click)="eliminarproducto(aux.idProducto)">Eliminar</a>
@@ -93,6 +99,7 @@
       <div class="nombreprod nombreprod-responsive">
         <h4>{{aux.idEnvio}}</h4>
         <p>{{aux.estado}}</p>
+        <input type="number" [placeholder]="aux.precio" (change)="cambiarenvio($event.srcElement.value, aux.idEnvio)" />
       </div>
       <div class="eliminar eliminar-responsive">
         <a class="elim elim-responsive" (click)="eliminarenvio(aux.idEnvio)">Eliminar</a>
@@ -164,6 +171,30 @@
     </div>
   </div>
 
+  <div id="pagos" class="tabcontent">
+    <div class="producto producto-responsive">
+      <h3>Pagos</h3>
+    </div>
+    <div class="producto producto-responsive" *ngFor="let aux of transferencia">
+      <div class="nombreprod nombreprod-responsive">
+        <h4>{{aux.idHistorial}}</h4>
+        <img *ngIf="aux.comprobacion === null" src="../../assets/productos/disco de freno.jpg" alt="" class="imagen-producto" />
+        <img *ngIf="aux.comprobacion !== null" [src]="aux.comprobacion" alt="" class="imagen-producto" />
+        <p>{{aux.clabe}}</p>
+        <p>{{aux.fechaDeCreacion | date:'short'}}</p>
+        <p>{{aux.clabe}}</p>
+        <p>{{aux.status}}</p>
+      </div>
+      <div class="eliminar eliminar-responsive">
+        <select (change)="changeValHistory($event.srcElement.value, aux.idHistorial)">
+          <option *ngFor="let opt of opcionesHistory" [value]="opt.valor">
+            {{opt.nombre}}
+          </option>
+        </select>
+      </div>
+    </div>
+  </div>
+
   <div id="logs" class="tabcontent">
     <div class="producto producto-responsive">
       <h3>Logs</h3>
@@ -180,6 +211,7 @@
       </div>
     </div>
   </div>
+
   <div id="reportes" class="tabcontent">
     <div class="producto producto-responsive">
       <h3>Reportes</h3>
@@ -196,4 +228,88 @@
       </canvas>
     </div>
   </div>
+
+  <div class="modal" id="modificarProd" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document" style="margin-top: 124px">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <select (change)="chooseUpdateField($event.srcElement.value)">
+            <option *ngFor="let opt of opciones" [value]="opt.valor">
+              {{opt.nombre}}
+            </option>
+          </select>
+          <input type="text" (change)="cambiarValorProd($event.srcElement.value)"/>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" (click)="actualizarProd()">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="agregarProd" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document" style="margin-top: 124px">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <select (change)="changeAddProdVehi($event.srcElement.value)">
+            <option *ngFor="let aux of vehiculo" [value]="aux.nombreDeVehiculo">{{aux.nombreDeVehiculo}}</option>
+          </select>
+          <select (change)="changeAddProdMod($event.srcElement.value)">
+            <option *ngFor="let aux of modelo" [value]="aux.nombreDeModelo">{{aux.nombreDeModelo}}</option>
+          </select>
+          <select (change)="changeAddMarca($event.srcElement.value)">
+            <option *ngFor="let aux of marca" [value]="aux.nombreDeMarca">{{aux.nombreDeMarca}}</option>
+          </select>
+          <select (change)="changeAddProdAnos($event.srcElement.value)">
+            <option *ngFor="let aux of anos" [value]="aux.nombreDeAno">{{aux.nombreDeAno}}</option>
+          </select>
+          <input type="text" (change)="addProdValue($event.srcElement.value, 'NombreDeProducto')" placeholder="nombre de producto" />
+          <input type="text" (change)="addProdValue($event.srcElement.value, 'Descripcion')" placeholder="descripcion de producto" />
+          <input type="text" (change)="addProdValueInt($event.srcElement.value, 'Precio')" placeholder="precio de producto" />
+          <input type="text" (change)="addProdValueInt($event.srcElement.value, 'Stock')" placeholder="stock de producto" />
+          <input type="file" #file placeholder="Choose file" (change)="uploadFile(file.files)" style="display:none;">
+          <button type="button" class="btn btn-success" (click)="file.click()">Upload File</button>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" (click)="argregarProducto()">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="agregarUsuario" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document" style="margin-top: 124px">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <input type="text" (change)="addUserValue($event.srcElement.value, 'Correo')" placeholder="Correo" />
+          <input type="text" (change)="addUserValue($event.srcElement.value, 'Contrasena')" placeholder="contraseña" />
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" (click)="AddUser()">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </section>

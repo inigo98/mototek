@@ -12,5 +12,6 @@ namespace mototek.Models
         public bool? Activo { get; set; }
         public DateTime? FechaDeCreacion { get; set; }
         public DateTime? FechaDeModificacion { get; set; }
+        public bool? Pagado { get; set; }
     }
 }

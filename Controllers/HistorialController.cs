@@ -49,8 +49,8 @@ namespace mototek.Controllers
                 using (DB_A6ED12_testmototekDBContext db = new DB_A6ED12_testmototekDBContext())
                 {
                     var idSearch = new SqlParameter("Id", id);
-                    Historial data = db.Historials.FromSqlRaw("Select * from historial where IdHistorial = @Id", idSearch)
-                        .FirstOrDefault();
+                    var data = db.Historials.FromSqlRaw("Select * from historial where IdUsuario = @Id", idSearch)
+                        .ToList();
                     resp.status = "Ok";
                     resp.message = "Success";
                     resp.data = data;

@@ -51,8 +51,8 @@ namespace mototek.Controllers
                 using (DB_A6ED12_testmototekDBContext db = new DB_A6ED12_testmototekDBContext())
                 {
                     var idSearch = new SqlParameter("Id", id);
-                    Favorito data = db.Favoritos.FromSqlRaw("Select * from Favoritos where IdFavoritos = @Id", idSearch)
-                        .FirstOrDefault();
+                    var data = db.Favoritos.FromSqlRaw("Select * from Favoritos where IdUsuario = @Id", idSearch)
+                        .ToList();
                     resp.status = "Ok";
                     resp.message = "Success";
                     resp.data = data;
@@ -82,10 +82,13 @@ namespace mototek.Controllers
                         new SqlParameter("@FAVORITO", value.IdFavoritos),
                         new SqlParameter("@IDUSUARIO", value.IdUsuario),
                         new SqlParameter("@LISTADEFAVORITOS", value.ListaDeFavoritos),
+                        new SqlParameter("@NOMBRE", value.NombreProducto),
+                        new SqlParameter("@IMAGEN", value.imageUrl),
+                        new SqlParameter("@DESCRIPCION", value.descripcion),
                         new SqlParameter("@FECHADECREACION", DateTime.Now),
                         new SqlParameter("@FECHADEMODIFICACION", DateTime.Now),
                     };
-                    var data = db.Database.ExecuteSqlRaw("INSERT INTO [dbo].[FAVORITOS] ([IdUsuario],[ListaDeFavoritos],[FechaDeCreacion],[FechaDeModificacion]) VALUES (@IDUSUARIO, @LISTADEFAVORITOS, @FECHADECREACION, @FECHADEMODIFICACION)", sqlParams);
+                    var data = db.Database.ExecuteSqlRaw("INSERT INTO [dbo].[FAVORITOS] ([IdUsuario],[ListaDeFavoritos],[FechaDeCreacion],[FechaDeModificacion],[NombreProducto],[imageUrl],[descripcion]) VALUES (@IDUSUARIO, @LISTADEFAVORITOS, @FECHADECREACION, @FECHADEMODIFICACION, @NOMBRE, @IMAGEN, @DESCRIPCION)", sqlParams);
 
                     SqlParameter[] sqlParamsLogs = new SqlParameter[]
                     {

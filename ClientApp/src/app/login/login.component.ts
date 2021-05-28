@@ -47,9 +47,15 @@ export class LoginComponent implements OnInit {
         )
     }).subscribe(data => {
       console.log(data);
-      if (data['status'] === "Ok") {
-        localStorage.setItem('IdUser', data['data']['idUsuario']);
-        this.router.navigate(['/configuracion']);
+      if (data['data'] !== null) {
+        if (!data['data']['bloquear']) {
+          localStorage.setItem('IdUser', data['data']['idUsuario']);
+          this.router.navigate(['/configuracion']);
+        } else {
+          alert('su usuario ha sido bloqueado')
+        }
+      } else {
+        alert('datos incorrectos')
       }
     })
   }

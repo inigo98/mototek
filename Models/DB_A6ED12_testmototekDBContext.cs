@@ -100,6 +100,8 @@ namespace mototek.Models
                 entity.Property(e => e.TotalEnvio).HasMaxLength(255);
 
                 entity.Property(e => e.imageUrl).HasMaxLength(255);
+
+                entity.Property(e => e.stock).HasMaxLength(255);
             });
 
             modelBuilder.Entity<Cuenta>(entity =>
@@ -190,6 +192,16 @@ namespace mototek.Models
                 entity.Property(e => e.ImageUrl).HasColumnType("text");
 
                 entity.Property(e => e.NombreProducto).HasColumnType("text");
+
+                entity.Property(e => e.status).HasColumnType("text");
+
+                entity.Property(e => e.direccion).HasColumnType("text");
+
+                entity.Property(e => e.email).HasColumnType("text");
+
+                entity.Property(e => e.clabe).HasColumnType("text");
+
+                entity.Property(e => e.comprobacion).HasColumnType("text");
             });
 
             modelBuilder.Entity<Imagene>(entity =>

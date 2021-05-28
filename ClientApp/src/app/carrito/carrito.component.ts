@@ -40,7 +40,9 @@ export class CarritoComponent implements OnInit {
       console.log(data);
       this.productos = data['data'];
       for (let producto of this.productos) {
-        this.totalCarrito = this.totalCarrito + ((+producto['subtotal']) * producto['cantidad']) + (+producto['totalEnvio'])
+        if (producto['activo']) {
+          this.totalCarrito = this.totalCarrito + ((+producto['subtotal']) * producto['cantidad']) + (+producto['totalEnvio'])
+        }
       }
     })
   }

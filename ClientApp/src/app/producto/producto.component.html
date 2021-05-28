@@ -22,7 +22,7 @@
       <select class="esta esta-responsive" (change)="filterProductos($event.srcElement.value)">
         <option *ngFor="let envio of envios" [value]="envio.precio">{{envio.estado}}</option>
       </select>
-      <a class="addfavoritos addfavoritos-responsive" (click)="favoritos(producto.idProducto)">Agregar a favoritos</a>
+      <a class="addfavoritos addfavoritos-responsive" (click)="favoritos(producto)">Agregar a favoritos</a>
     </div>
     <div class="envio envio-responsive">
       <p>Calcular envío</p>

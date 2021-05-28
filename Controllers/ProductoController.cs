@@ -88,10 +88,16 @@ namespace mototek.Controllers
                         new SqlParameter("@NUMERODEVISITAS", value. NumeroDeVisitas),
                         new SqlParameter("@IDIMAGEN", value.IdImagen),
                         new SqlParameter("@BLOQUEARPRODUCTO", value.BloquearProducto),
+                        new SqlParameter("@VEHICULOTEXT", value.IdVehiculoText),
+                        new SqlParameter("@MARCATEXT", value.IdMarcaText),
+                        new SqlParameter("@MODELOTEXT", value.IdModeloText),
+                        new SqlParameter("@ANOTEXT", value.IdAnoText),
+                        new SqlParameter("@STOCK", value.Stock),
+                        new SqlParameter("@NUMERODECOMPRADOS", value.NumeroDeComprados),
                         new SqlParameter("@FECHADECREACION", DateTime.Now),
                         new SqlParameter("@FECHADEMODIFICACION", DateTime.Now),
                     };
-                    var data = db.Database.ExecuteSqlRaw("INSERT INTO [dbo].[PRODUCTOS] ([ListaIdVehiculo],[ListaIdMarca],[ListaIdModelo],[ListaIdAno],[NombreDeProducto],[Descripcion],[Precio],[NumeroDeVisitas],[IdImagen],[BloquearProducto],[FechaDeCreacion],[FechaDeModificacion]) VALUES (@ListaIdVehiculo, @ListaIdMarca,@ListaIdModelo, @ListaIdAno, @NombreDeProducto, @Descripcion, @Precio, @NumeroDeVisitas, @IdImagen, @BloquearProducto, @FechaDeCreacion, @FechaDeModificacion)", sqlParams);
+                    var data = db.Database.ExecuteSqlRaw("INSERT INTO [dbo].[PRODUCTOS] ([ListaIdVehiculo],[ListaIdMarca],[ListaIdModelo],[ListaIdAno],[NombreDeProducto],[Descripcion],[Precio],[NumeroDeVisitas],[IdImagen],[BloquearProducto],[IdAnoText],[IdVehiculoText],[IdMarcaText],[IdModeloText],[Stock],[numeroDeComprados] ,[FechaDeCreacion],[FechaDeModificacion]) VALUES (@ListaIdVehiculo, @ListaIdMarca,@ListaIdModelo, @ListaIdAno, @NombreDeProducto, @Descripcion, @Precio, @NumeroDeVisitas, @IdImagen, @BloquearProducto, @ANOTEXT, @VEHICULOTEXT, @MARCATEXT, @MODELOTEXT, @STOCK, @NUMERODECOMPRADOS, @FechaDeCreacion, @FechaDeModificacion)", sqlParams);
 
                     SqlParameter[] sqlParamsLogs = new SqlParameter[]
                     {

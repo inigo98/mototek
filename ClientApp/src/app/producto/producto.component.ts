@@ -45,13 +45,16 @@ export class ProductoComponent implements OnInit {
   filterProductos(value) {
     this.EnvioValue = value
   }
-  favoritos(IdProducto) {
+  favoritos(Producto) {
     if (localStorage.getItem('IdUser')) {
       if (localStorage.getItem('IdUser') !== null && localStorage.getItem('IdUser') !== undefined && localStorage.getItem('IdUser') !== '' ) {
         const data = {
           IdFavoritos: 0,
           IdUsuario: +localStorage.getItem('IdUser'),
-          ListaDeFavoritos:  IdProducto
+          ListaDeFavoritos: Producto.idProducto,
+          NombreProducto: Producto.nombreDeProducto,
+          imageUrl: Producto.idImagen,
+          descripcion: Producto.descripcion,
         }
         console.log(data);
         this.http.post(this.url + 'favorito', data).subscribe(response => {
@@ -82,11 +85,12 @@ export class ProductoComponent implements OnInit {
             NombreDeCarrito: Producto.nombreDeProducto,
             Descripcion: Producto.descripcion,
             Total: '' + (+Producto.precio) + (+this.EnvioValue),
-            Subtotal: Producto.precio,
+            Subtotal: '' + Producto.precio,
             TotalEnvio: '' + this.EnvioValue,
             Activo: true,
             Cantidad: this.cantidad,
             imageUrl: Producto.idImagen,
+            stock: Producto.stock
           }
           console.log(data);
           this.http.post(this.url + 'carrito', data).subscribe(response => {

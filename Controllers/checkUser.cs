@@ -16,6 +16,32 @@ namespace mototek.Controllers
     public class checkUser : ControllerBase
     {
 
+        [HttpGet("{id}")]
+        public IActionResult Get(int id)
+        {
+            Respuesta resp = new Respuesta();
+            resp.status = "Error";
+            resp.data = null;
+            try
+            {
+                using (DB_A6ED12_testmototekDBContext db = new DB_A6ED12_testmototekDBContext())
+                {
+                    var idSearch = new SqlParameter("Id", id);
+                    var data = db.Historials.FromSqlRaw("Select * from historial where IdHistorial = @Id", idSearch)
+                        .FirstOrDefault();
+                    resp.status = "Ok";
+                    resp.message = "Success";
+                    resp.data = data;
+                    return Ok(resp);
+                }
+            }
+            catch (Exception message)
+            {
+                resp.message = message.Message;
+                return BadRequest(resp);
+            }
+        }
+
         // POST api/GETUSUARIO
         [HttpPost]
         public IActionResult Post([FromBody] auxiliar value)

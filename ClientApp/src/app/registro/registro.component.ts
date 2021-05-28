@@ -78,7 +78,7 @@ export class RegistroComponent implements OnInit {
       console.log(data);
       if (data['status'] === "Ok") {
         localStorage.setItem('IdUser', data['data']['idUsuario']);
-        this.router.navigate(['/configuracion']);
+        this.router.navigate(['/login']);
       }
     })
   }
