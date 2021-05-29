@@ -15,8 +15,8 @@ namespace mototek.Models
         public string Correo { get; set; }
         public string Contrasena { get; set; }
         public string Telefono { get; set; }
-        public long? IdDireccion { get; set; }
-        public long? IdDireccionFavorita { get; set; }
+        public string? IdDireccion { get; set; }
+        public string? IdDireccionFavorita { get; set; }
         public bool? Bloquear { get; set; }
         public bool? RecibirNotificaciones { get; set; }
         public DateTime? FechaDeCreacion { get; set; }

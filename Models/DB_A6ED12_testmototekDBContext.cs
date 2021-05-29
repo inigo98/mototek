@@ -343,6 +343,10 @@ namespace mototek.Models
 
                 entity.Property(e => e.Telefono).HasMaxLength(50);
 
+                entity.Property(e => e.IdDireccion).HasMaxLength(50);
+
+                entity.Property(e => e.IdDireccionFavorita).HasMaxLength(50);
+
                 entity.Property(e => e.Usuario1)
                     .HasMaxLength(255)
                     .HasColumnName("Usuario");
