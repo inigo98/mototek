@@ -1,5 +1,4 @@
-@media screen and (min-width: 480px) and (max-width: 799px) {
-
+@media screen and (min-width: 300px) and (max-width: 479px){
   .custom-form {
     width: 90%;
     margin: 0px;
@@ -10,7 +9,11 @@
     background-color: #ecf0f3;
     color: black;
     margin-top: 3rem;
-    
+  }
+
+  .titulo {
+    padding: 10px 30px 10px 30px;
+    Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
   }
 
     .custom-form input {
@@ -24,6 +27,7 @@
       border: 0 none;
       background: #ebf5fc;
       font-size: 1.5vw;
+      Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
     }
 
     .custom-form button {
@@ -72,6 +76,126 @@
 
     .formulario-contacto h3 {
       font-size: 2.5vw;
+      Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
+    }
+
+  .mapa {
+    width: 100%;
+    
+  }
+
+  .map {
+    width: 80%;
+    height: 300px;
+    margin: 1em;
+  }
+
+  .mapa a {
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: 300;
+    color: white;
+    display: block;
+    transition: all 0.3s ease;
+    padding-left: 3em;
+  }
+
+  .mapa p {
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: 300;
+    color: white;
+    display: block;
+    padding-left: 3em;
+    Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
+  }
+
+  .mapa a:hover {
+    color: mediumseagreen;
+    padding-left: 10px;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 799px) {
+
+  .custom-form {
+    width: 90%;
+    margin: 0px;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 1rem 2rem;
+    margin: auto;
+    border-radius: 2rem;
+    background-color: #ecf0f3;
+    color: black;
+    margin-top: 3rem;
+  }
+
+  .titulo {
+    padding: 10px 30px 10px 30px;
+    Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
+  }
+
+    .custom-form input {
+      display: block;
+      margin: .5rem 0;
+      width: 100%;
+      border-radius: 0.5rem;
+      padding: 1rem;
+      border: none;
+      box-shadow: inset -5px -5px 15px rgba(255, 255, 255, 0.8), inset 5px 5px 10px rgba(0, 0, 0, 0.1);
+      border: 0 none;
+      background: #ebf5fc;
+      font-size: 1.5vw;
+      Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
+    }
+
+    .custom-form button {
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      border: none;
+      font-size: 0.875rem;
+      color: #ffffff;
+      font-weight: bold;
+      background-color: #bcd8c1;
+      width: 100%;
+      display: block;
+      padding: 0.875rem 1rem;
+      border-radius: 1.5rem;
+      box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px #ffffff;
+      cursor: pointer;
+    }
+
+  .contenedor-contacto {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .formulario-contacto {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    padding-right: 4em;
+  }
+
+    .formulario-contacto h3 {
+      font-size: 2.5vw;
+      Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
     }
 
   .mapa {
@@ -101,13 +225,13 @@
     color: white;
     display: block;
     padding-left: 3em;
+    Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
   }
 
   .mapa a:hover {
     color: mediumseagreen;
     padding-left: 10px;
   }
-
 }
 
 @media screen and (min-width: 800px) and (max-width: 999px) {
@@ -125,6 +249,11 @@
     margin-bottom: 100px;
   }
 
+  .titulo {
+    padding: 10px 30px 10px 30px;
+    Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
+  }
+
     .custom-form input {
       display: block;
       margin: .5rem 0;
@@ -136,6 +265,7 @@
       border: 0 none;
       background: #ebf5fc;
       font-size: 1.5vw;
+      Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
     }
 
     .custom-form button {
@@ -199,6 +329,7 @@
     color: black;
     display: block;
     padding-left: 3em;
+    Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
   }
 
   .mapa a:hover {
@@ -218,13 +349,13 @@
     background: #ecf0f3;
   }
 
-  h3 {
-    margin: 0;
-    padding: 0;
+  .titulo {
+    padding: 10px 30px 10px 30px;
+    Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
   }
 
   .custom-form {
-    width: 90%;
+    width: 700px;
     margin: 0px;
     background: rgba(255, 255, 255, 0.15);
     padding: 1rem 2rem;
@@ -246,6 +377,7 @@
       box-shadow: inset -5px -5px 15px rgba(255, 255, 255, 0.8), inset 5px 5px 10px rgba(0, 0, 0, 0.1);
       border: 0 none;
       background: #ebf5fc;
+      Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
     }
 
     .custom-form button {
@@ -306,6 +438,7 @@
     color: black;
     display: block;
     padding-left: 3em;
+    Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
   }
 
   .mapa a:hover {
@@ -325,13 +458,13 @@
     background: #ecf0f3;
   }
 
-  h3 {
-    margin: 0;
-    padding: 0;
+  .titulo {
+    padding: 10px 30px 10px 30px;
+    Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
   }
 
   .custom-form {
-    width: 90%;
+    width: 700px;
     margin: 0px;
     background: rgba(255, 255, 255, 0.15);
     padding: 1rem 2rem;
@@ -353,6 +486,7 @@
       box-shadow: inset -5px -5px 15px rgba(255, 255, 255, 0.8), inset 5px 5px 10px rgba(0, 0, 0, 0.1);
       border: 0 none;
       background: #ebf5fc;
+      Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
     }
 
     .custom-form button {
@@ -413,6 +547,7 @@
     color: black;
     display: block;
     padding-left: 3em;
+    Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
   }
 
   .mapa a:hover {

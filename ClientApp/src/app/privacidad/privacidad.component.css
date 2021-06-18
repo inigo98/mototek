@@ -1,29 +1,138 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+@media screen and (min-width: 300px) and (max-width: 479px) {
+  .contenedorprivacidad {
+    padding: 60px 0;
+    width: 100%;
+    max-width: 1000px;
+    overflow: hidden;
+  }
 
-.contenedorprivacidad {
-  padding: 60px 0;
-  width: 100%;
-  max-width: 1000px;
-  overflow: hidden;
-}
+    .contenedorprivacidad p {
+      padding: 0px 15px 30px 15px;
+      font-weight: 300;
+      text-align: justify;
+      font-size: 3.5vw;
+      Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
+    }
 
- .contenedorprivacidad p {
-  padding: 0px 0px 30px 15px;
-  font-weight: 300;
-  text-align: justify;
- }
+  .titulo {
+    color: indigo;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 60px;
+    Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
+  }
 
-.titulo {
-  color: indigo;
-  font-size: 40px;
-  text-align: center;
-  margin-bottom: 60px;
-}
-
-.contenedorprivacidad{
+  .contenedorprivacidad {
     padding-bottom: 50px;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 799px) {
+  .contenedorprivacidad {
+    padding: 60px 0;
+    width: 100%;
+    max-width: 1000px;
+    overflow: hidden;
+  }
+
+    .contenedorprivacidad p {
+      padding: 0px 20px 20px 20px;
+      font-weight: 300;
+      text-align: justify;
+      font-size: 2.5vw;
+      Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
+    }
+
+  .titulo {
+    color: indigo;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 60px;
+    Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
+  }
+
+  .contenedorprivacidad {
+    padding-bottom: 50px;
+  }
+}
+@media screen and (min-width: 800px) and (max-width: 999px) {
+  .contenedorprivacidad {
+    padding: 60px 0;
+    width: 100%;
+    max-width: 1000px;
+    overflow: hidden;
+  }
+
+    .contenedorprivacidad p {
+      padding: 0px 20px 20px 20px;
+      font-weight: 300;
+      text-align: justify;
+      font-size: 1.8vw;
+      Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
+    }
+
+  .titulo {
+    color: indigo;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 60px;
+    Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
+  }
+
+  .contenedorprivacidad {
+    padding-bottom: 50px;
+  }
+}
+@media screen and (min-width: 1000px) and (max-width: 1199px) {
+  .contenedorprivacidad {
+    padding: 60px 0;
+    width: 100%;
+    overflow: hidden;
+  }
+
+    .contenedorprivacidad p {
+      padding: 0px 30px 30px 30px;
+      font-weight: 300;
+      text-align: justify;
+      font-size: 1.5vw;
+      Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
+    }
+
+  .titulo {
+    color: indigo;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 60px;
+    Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
+  }
+
+  .contenedorprivacidad {
+    padding-bottom: 50px;
+  }
+}
+@media screen and (min-width: 1200px){
+  .contenedorprivacidad {
+    padding: 60px 0;
+    width: 100%;
+    overflow: hidden;
+  }
+
+    .contenedorprivacidad p {
+      padding: 0px 30px 30px 30px;
+      font-weight: 300;
+      text-align: justify;
+      font-size: 1.5vw;
+      Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
+    }
+
+  .titulo {
+    color: indigo;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 60px;
+    Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
+  }
+
+  .contenedorprivacidad {
+    padding-bottom: 50px;
+  }
 }

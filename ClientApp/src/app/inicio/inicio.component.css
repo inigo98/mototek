@@ -1,7 +1,68 @@
-@media screen and (min-width: 480px) and (max-width: 799px){
+@media screen and (min-width: 300px) and (max-width: 479px){
+  .contenedor-marcas {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .marc {
+    width: 8%;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .marcas {
+    width: 100%;
+    flex-wrap: wrap;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .marca {
+    width: 85%;
+    margin-bottom: 10px;
+  }
+
+    .marca > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
 
   .contenedor-media {
-    width: 95%;
+    width: 100%;
     margin: auto;
     overflow: hidden;
   }
@@ -56,147 +117,93 @@
     }
   }
 
-
+  .titulo {
+    color: indigo;
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 50px;
+  }
 
   .contenedornosotros {
-    padding: 60px 0;
+    padding: 20px 15px;
     width: 100%;
-    max-width: 1000px;
     overflow: hidden;
+    margin-bottom: 5rem;
   }
 
     .contenedornosotros p {
       padding: 0px 0px 30px 15px;
       font-weight: 300;
       text-align: justify;
-      font-size: 16px;
+      font-size: 12px;
     }
-
-  .titulo {
-    color: indigo;
-    font-size: 40px;
-    text-align: center;
-    margin-bottom: 60px;
-  }
-
-  .contenedor-mision {
-    display: flex;
-    justify-content: space-evenly;
-  }
-
-  .imagen-mision {
-    width: 48%;
-    height: 300px;
-  }
-
-  .texto-mision {
-    width: 48%;
-    font-size: 16px;
-  }
-
-  .contenedor-vision {
-    display: flex;
-    justify-content: space-evenly;
-  }
-
-  .imagen-vision {
-    width: 40%;
-    height: 300px;
-  }
-
-  .texto-vision {
-    width: 48%;
-    font-size: 16px;
-  }
-
-  .imagen-mision .texto mision {
-    width: 48%;
-  }
-
-  .imagen-vision .texto vision {
-    width: 48%;
-  }
-
-  .texto-mision p {
-    padding: 0px 0px 30px 15px;
-    font-weight: 300;
-    text-align: justify;
-  }
-
-  .texto-vision p {
-    padding: 30px 15px 0px 0px;
-    font-weight: 300;
-    text-align: justify;
-  }
-
-  .contenedor-marcas {
-    width: 100%;
-    margin-bottom: 5rem;
-  }
-
-  .marc {
-    width: 50%;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-align-content: center;
-    -ms-flex-line-pack: center;
-    align-content: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
-  }
-
-  .marcas {
-    width: 100%;
-    flex-wrap: wrap;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-align-content: center;
-    -ms-flex-line-pack: center;
-    align-content: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
-  }
-
-  .marca {
-    width: 60%;
-    margin-bottom: 10px;
-  }
-
-    .marca > img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
 }
 
-@media screen and (min-width: 800px) and (max-width: 999px) {
+@media screen and (min-width: 480px) and (max-width: 899px){
+  .contenedor-marcas {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .marc {
+    width: 8%;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .marcas {
+    width: 100%;
+    flex-wrap: wrap;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .marca {
+    width: 85%;
+    margin-bottom: 10px;
+  }
+
+    .marca > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
 
   .contenedor-media {
-    width: 95%;
+    width: 100%;
     margin: auto;
     overflow: hidden;
   }
@@ -251,13 +258,18 @@
     }
   }
 
-
+  .titulo {
+    color: indigo;
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 50px;
+  }
 
   .contenedornosotros {
-    padding: 60px 0;
+    padding: 20px 15px;
     width: 100%;
-    max-width: 1000px;
     overflow: hidden;
+    margin-bottom: 5rem;
   }
 
     .contenedornosotros p {
@@ -266,71 +278,16 @@
       text-align: justify;
       font-size: 16px;
     }
+}
 
-  .titulo {
-    color: indigo;
-    font-size: 40px;
-    text-align: center;
-    margin-bottom: 60px;
-  }
-
-  .contenedor-mision {
-    display: flex;
-    justify-content: space-evenly;
-  }
-
-  .imagen-mision {
-    width: 48%;
-    height: 300px;
-  }
-
-  .texto-mision {
-    width: 48%;
-    font-size: 16px;
-  }
-
-  .contenedor-vision {
-    display: flex;
-    justify-content: space-evenly;
-  }
-
-  .imagen-vision {
-    width: 40%;
-    height: 300px;
-  }
-
-  .texto-vision {
-    width: 48%;
-    font-size: 16px;
-  }
-
-  .imagen-mision .texto mision {
-    width: 48%;
-  }
-
-  .imagen-vision .texto vision {
-    width: 48%;
-  }
-
-  .texto-mision p {
-    padding: 0px 0px 30px 15px;
-    font-weight: 300;
-    text-align: justify;
-  }
-
-  .texto-vision p {
-    padding: 30px 15px 0px 0px;
-    font-weight: 300;
-    text-align: justify;
-  }
-
+@media screen and (min-width: 900px) and (max-width: 999px){
   .contenedor-marcas {
     width: 100%;
-    margin-bottom: 5rem;
+    margin-bottom: 1rem;
   }
 
   .marc {
-    width: 50%;
+    width: 8%;
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
@@ -375,7 +332,7 @@
   }
 
   .marca {
-    width: 60%;
+    width: 85%;
     margin-bottom: 10px;
   }
 
@@ -386,14 +343,154 @@
       display: block;
     }
 
+  .contenedor-media {
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    height: 500px;
+  }
+
+    .contenedor-media ul {
+      display: flex;
+      padding: 0;
+      width: 400%;
+      animation: cambio 20s infinite alternate linear;
+    }
+
+    .contenedor-media li {
+      width: 100%;
+      list-style: none;
+    }
+
+    .contenedor-media img {
+      width: 100%;
+    }
+
+  @keyframes cambio {
+    0% {
+      margin-left: 0;
+    }
+
+    20% {
+      margin-left: 0;
+    }
+
+    25% {
+      margin-left: -100%;
+    }
+
+    45% {
+      margin-left: -100%;
+    }
+
+    50% {
+      margin-left: -200%;
+    }
+
+    70% {
+      margin-left: -200%;
+    }
+
+    75% {
+      margin-left: -300%;
+    }
+
+    100% {
+      margin-left: -300%;
+    }
+  }
+
+  .titulo {
+    color: indigo;
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .contenedornosotros {
+    padding: 20px 15px;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 5rem;
+  }
+
+    .contenedornosotros p {
+      padding: 0px 0px 30px 15px;
+      font-weight: 300;
+      text-align: justify;
+      font-size: 16px;
+    }
 }
 
 @media screen and (min-width: 1000px) and (max-width: 1199px) {
 
+  .contenedor-marcas {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .marc {
+    width: 8%;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .marcas {
+    width: 100%;
+    flex-wrap: wrap;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .marca {
+    width: 85%;
+    margin-bottom: 10px;
+  }
+
+    .marca > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
   .contenedor-media {
-    width: 95%;
+    width: 100%;
     margin: auto;
     overflow: hidden;
+    height: 550px;
   }
 
     .contenedor-media ul {
@@ -446,13 +543,18 @@
     }
   }
 
-
+  .titulo {
+    color: indigo;
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 50px;
+  }
 
   .contenedornosotros {
-    padding: 60px 0;
+    padding: 20px 15px;
     width: 100%;
-    max-width: 1000px;
     overflow: hidden;
+    margin-bottom: 5rem;
   }
 
     .contenedornosotros p {
@@ -461,266 +563,16 @@
       text-align: justify;
       font-size: 16px;
     }
-
-  .titulo {
-    color: indigo;
-    font-size: 40px;
-    text-align: center;
-    margin-bottom: 60px;
-  }
-
-  .contenedor-mision {
-    display: flex;
-    justify-content: space-evenly;
-  }
-
-  .imagen-mision {
-    width: 48%;
-    height: 300px;
-  }
-
-  .texto-mision {
-    width: 48%;
-    font-size: 17px;
-  }
-
-  .contenedor-vision {
-    display: flex;
-    justify-content: space-evenly;
-  }
-
-  .imagen-vision {
-    width: 40%;
-    height: 300px;
-  }
-
-  .texto-vision {
-    width: 48%;
-    font-size: 17px;
-  }
-
-  .imagen-mision .texto mision {
-    width: 48%;
-  }
-
-  .imagen-vision .texto vision {
-    width: 48%;
-  }
-
-  .texto-mision p {
-    padding: 0px 0px 30px 15px;
-    font-weight: 300;
-    text-align: justify;
-  }
-
-  .texto-vision p {
-    padding: 30px 15px 0px 0px;
-    font-weight: 300;
-    text-align: justify;
-  }
-
-  .contenedor-marcas {
-    width: 100%;
-    margin-bottom: 5rem;
-  }
-
-  .marc {
-    width: 30%;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-align-content: center;
-    -ms-flex-line-pack: center;
-    align-content: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
-  }
-
-  .marcas {
-    width: 100%;
-    flex-wrap: wrap;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-align-content: center;
-    -ms-flex-line-pack: center;
-    align-content: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
-  }
-
-  .marca {
-    width: 60%;
-    margin-bottom: 10px;
-  }
-
-    .marca > img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
 }
 
 @media screen and (min-width: 1200px) {
-
-  .contenedor-media {
-    width: 95%;
-    margin: auto;
-    overflow: hidden;
-  }
-
-    .contenedor-media ul {
-      display: flex;
-      padding: 0;
-      width: 400%;
-      animation: cambio 20s infinite alternate linear;
-    }
-
-    .contenedor-media li {
-      width: 100%;
-      list-style: none;
-    }
-
-    .contenedor-media img {
-      width: 100%;
-    }
-
-  @keyframes cambio {
-    0% {
-      margin-left: 0;
-    }
-
-    20% {
-      margin-left: 0;
-    }
-
-    25% {
-      margin-left: -100%;
-    }
-
-    45% {
-      margin-left: -100%;
-    }
-
-    50% {
-      margin-left: -200%;
-    }
-
-    70% {
-      margin-left: -200%;
-    }
-
-    75% {
-      margin-left: -300%;
-    }
-
-    100% {
-      margin-left: -300%;
-    }
-  }
-
-
-
-  .contenedornosotros {
-    padding: 60px 0;
-    width: 100%;
-    max-width: 1000px;
-    overflow: hidden;
-  }
-
-    .contenedornosotros p {
-      padding: 0px 0px 30px 15px;
-      font-weight: 300;
-      text-align: justify;
-      font-size: 16px;
-    }
-
-  .titulo {
-    color: indigo;
-    font-size: 40px;
-    text-align: center;
-    margin-bottom: 60px;
-  }
-
-  .contenedor-mision {
-    display: flex;
-    justify-content: space-evenly;
-  }
-
-  .imagen-mision {
-    width: 48%;
-    height: 300px;
-  }
-
-  .texto-mision {
-    width: 48%;
-    font-size: 17px;
-  }
-
-  .contenedor-vision {
-    display: flex;
-    justify-content: space-evenly;
-  }
-
-  .imagen-vision {
-    width: 40%;
-    height: 300px;
-  }
-
-  .texto-vision {
-    width: 48%;
-    font-size: 17px;
-  }
-
-  .imagen-mision .texto mision {
-    width: 48%;
-  }
-
-  .imagen-vision .texto vision {
-    width: 48%;
-  }
-
-  .texto-mision p {
-    padding: 0px 0px 30px 15px;
-    font-weight: 300;
-    text-align: justify;
-  }
-
-  .texto-vision p {
-    padding: 30px 15px 0px 0px;
-    font-weight: 300;
-    text-align: justify;
-  }
-
   .contenedor-marcas {
     width: 100%;
-    margin-bottom: 5rem;
+    margin-bottom: 1rem;
   }
 
   .marc {
-      width: 30%;
+    width: 8%;
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
@@ -765,7 +617,7 @@
   }
 
   .marca {
-    width: 60%;
+    width: 85%;
     margin-bottom: 10px;
   }
 
@@ -776,4 +628,84 @@
       display: block;
     }
 
+  .contenedor-media {
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    height: 550px;
+  }
+
+    .contenedor-media ul {
+      display: flex;
+      padding: 0;
+      width: 400%;
+      animation: cambio 20s infinite alternate linear;
+    }
+
+    .contenedor-media li {
+      width: 100%;
+      list-style: none;
+    }
+
+    .contenedor-media img {
+      width: 100%;
+      object-fit: cover;
+    }
+
+  @keyframes cambio {
+    0% {
+      margin-left: 0;
+    }
+
+    20% {
+      margin-left: 0;
+    }
+
+    25% {
+      margin-left: -100%;
+    }
+
+    45% {
+      margin-left: -100%;
+    }
+
+    50% {
+      margin-left: -200%;
+    }
+
+    70% {
+      margin-left: -200%;
+    }
+
+    75% {
+      margin-left: -300%;
+    }
+
+    100% {
+      margin-left: -300%;
+    }
+  }
+
+  .titulo {
+    Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
+    color: indigo;
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .contenedornosotros {
+    padding: 20px 15px;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 5rem;
+  }
+
+    .contenedornosotros p {
+      Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
+      padding: 0px 0px 30px 15px;
+      font-weight: 300;
+      text-align: justify;
+      font-size: 16px;
+    }
 }

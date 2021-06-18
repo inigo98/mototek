@@ -1,13 +1,14 @@
-@media screen and (min-width: 300px) and (max-width: 479px){
-  .contenedorterminos {
+@media screen and (min-width: 300px) and (max-width: 479px) {
+  .contenedorpoliticas {
     padding: 60px 0;
     width: 100%;
     max-width: 1000px;
+    padding-bottom: 50px;
     overflow: hidden;
   }
 
-    .contenedorterminos p {
-      padding: 0px 0px 30px 15px;
+    .contenedorpoliticas p {
+      padding: 0px 15px 30px 15px;
       font-weight: 300;
       text-align: justify;
       font-size: 3.5vw;
@@ -16,26 +17,24 @@
 
   .titulo {
     color: indigo;
-    font-size: 40px;
+    font-size: 30px;
     text-align: center;
     margin-bottom: 60px;
     Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
   }
-
-  .contenedorterminos {
-    padding-bottom: 50px;
-  }
 }
-@media screen and (min-width: 480px) and (max-width: 799px){
-  .contenedorterminos {
+
+@media screen and (min-width: 480px) and (max-width: 799px) {
+  .contenedorpoliticas {
     padding: 60px 0;
     width: 100%;
     max-width: 1000px;
     overflow: hidden;
+    padding-bottom: 50px;
   }
 
-    .contenedorterminos p {
-      padding: 0px 0px 30px 15px;
+    .contenedorpoliticas p {
+      padding: 0px 20px 30px 20px;
       font-weight: 300;
       text-align: justify;
       font-size: 2.2vw;
@@ -49,21 +48,19 @@
     margin-bottom: 60px;
     Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
   }
-
-  .contenedorterminos {
-    padding-bottom: 50px;
-  }
 }
+
 @media screen and (min-width: 800px) and (max-width: 999px) {
-  .contenedorterminos {
+  .contenedorpoliticas {
     padding: 60px 0;
     width: 100%;
     max-width: 1000px;
     overflow: hidden;
+    padding-bottom: 50px;
   }
 
-    .contenedorterminos p {
-      padding: 0px 0px 30px 15px;
+    .contenedorpoliticas p {
+      padding: 0px 20px 30px 20px;
       font-weight: 300;
       text-align: justify;
       font-size: 1.8vw;
@@ -77,21 +74,18 @@
     margin-bottom: 60px;
     Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
   }
-
-  .contenedorterminos {
-    padding-bottom: 50px;
-  }
 }
+
 @media screen and (min-width: 1000px) and (max-width: 1199px) {
-  .contenedorterminos {
+  .contenedorpoliticas {
     padding: 60px 0;
     width: 100%;
-    max-width: 1000px;
     overflow: hidden;
+    padding-bottom: 50px;
   }
 
-    .contenedorterminos p {
-      padding: 0px 0px 30px 15px;
+    .contenedorpoliticas p {
+      padding: 0px 30px 30px 30px;
       font-weight: 300;
       text-align: justify;
       font-size: 1.5vw;
@@ -105,21 +99,18 @@
     margin-bottom: 60px;
     Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
   }
-
-  .contenedorterminos {
-    padding-bottom: 50px;
-  }
 }
-@media screen and (min-width: 1200px){
-  .contenedorterminos {
+
+@media screen and (min-width: 1200px) {
+  .contenedorpoliticas {
     padding: 60px 0;
     width: 100%;
-    max-width: 1000px;
     overflow: hidden;
+    padding-bottom: 50px;
   }
 
-    .contenedorterminos p {
-      padding: 0px 0px 30px 15px;
+    .contenedorpoliticas p {
+      padding: 0px 30px 30px 30px;
       font-weight: 300;
       text-align: justify;
       font-size: 1.2vw;
@@ -132,9 +123,5 @@
     text-align: center;
     margin-bottom: 60px;
     Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
-  }
-
-  .contenedorterminos {
-    padding-bottom: 50px;
   }
 }

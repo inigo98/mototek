@@ -7,10 +7,11 @@ h1 {
   margin: 0;
   padding: 0;
   font-size: 3vw;
+  Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
 }
 
 .custom-form {
-  min-width: 300px;
+  min-width: 250px;
   max-width: 40%;
   margin: 0px auto;
   background: rgba(255, 255, 255, 0.15);
@@ -21,17 +22,19 @@ h1 {
   color: black;
   margin-top: 10rem;
   margin-bottom: 200px;
+  Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
 }
   .custom-form input {
     display: block;
     margin: 1rem 0;
-    width: 100%;
+    width: 95%;
     border-radius: 0.5rem;
     padding: .5rem;
     border: none;
     border: 0 none;
     background: #ebf5fc;
     font-size: 12px;
+    Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
   }
 
   .custom-form button {
@@ -42,9 +45,67 @@ h1 {
     color: black;
     font-weight: bold;
     background-color: #4cff00;
-    width: 100%;
+    width: 95%;
     display: block;
     padding: 0.775rem .6rem;
     border-radius: 1.5rem;
     cursor: pointer;
+    Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
+  }
+
+  @media screen and (min-width: 800px){
+    body {
+      background: #ecf0f3;
+    }
+
+    h1 {
+      margin: 0;
+      padding: 0;
+      font-size: 2vw;
+      Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
+    }
+
+    .custom-form {
+      min-width: 250px;
+      max-width: 40%;
+      margin: 0px auto;
+      background: rgba(255, 255, 255, 0.15);
+      padding: 1rem 1.5rem;
+      margin: auto;
+      border-radius: 2rem;
+      background-color: #8f2b93;
+      color: black;
+      margin-top: 10rem;
+      margin-bottom: 200px;
+      Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
+    }
+
+      .custom-form input {
+        display: block;
+        margin: 1rem 0;
+        width: 95%;
+        border-radius: 0.5rem;
+        padding: 1rem;
+        border: none;
+        border: 0 none;
+        background: #ebf5fc;
+        font-size: 12px;
+        Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
+      }
+
+      .custom-form button {
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        border: none;
+        font-size: 0.775rem;
+        color: black;
+        font-weight: bold;
+        background-color: #4cff00;
+        width: 95%;
+        display: block;
+        padding: 1rem .6rem;
+        border-radius: 1.5rem;
+        cursor: pointer;
+        Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
+      }
   }

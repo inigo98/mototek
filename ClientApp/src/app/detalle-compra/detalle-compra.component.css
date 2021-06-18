@@ -1,8 +1,6 @@
-@media screen and (min-width: 480px) and (max-width: 799px){
-
+@media screen and (min-width: 300px) and (max-width: 479px){
   .seccion {
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding: 10px;
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
@@ -30,6 +28,7 @@
   .h3 {
     padding-bottom: 20px;
     padding-top: 20px;
+    Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
   }
 
   .datosenvio {
@@ -102,7 +101,7 @@
   }
 
     .botones a {
-      font-size: 16px;
+      font-size: 11px;
       text-transform: capitalize;
       color: #b200ff;
       text-decoration: none;
@@ -110,6 +109,7 @@
       color: black;
       display: block;
       transition: all 0.3s ease;
+      Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
     }
 
       .botones a:hover {
@@ -138,6 +138,7 @@
     align-items: baseline;
     padding-top: 20px;
     padding-bottom: 20px;
+    Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
   }
 
   .productos {
@@ -258,6 +259,7 @@
     -ms-flex-item-align: stretch;
     align-self: stretch;
     margin-top: 1rem;
+    Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
   }
 
   .inforesumen {
@@ -325,7 +327,7 @@
   }
 
   .botonpago {
-    align-self:center;
+    align-self: center;
   }
 
   .botonpagar {
@@ -337,7 +339,7 @@
     display: inline-block;
     cursor: pointer;
     color: #306108;
-    font-family: Arial;
+    Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
     font-size: 15px;
     font-weight: bold;
     padding: 6px 24px;
@@ -355,14 +357,12 @@
       position: relative;
       top: 1px;
     }
-
 }
 
-@media screen and (min-width: 800px) and (max-width: 999px) {
+@media screen and (min-width: 480px) and (max-width: 799px) {
 
   .seccion {
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding: 20px;
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
@@ -384,12 +384,13 @@
   }
 
   .left {
-    width: 55%;
+    width: 100%;
   }
 
   .h3 {
     padding-bottom: 20px;
     padding-top: 20px;
+    Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
   }
 
   .datosenvio {
@@ -470,6 +471,7 @@
       color: black;
       display: block;
       transition: all 0.3s ease;
+      Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
     }
 
       .botones a:hover {
@@ -498,6 +500,369 @@
     align-items: baseline;
     padding-top: 20px;
     padding-bottom: 20px;
+    Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
+  }
+
+  .productos {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-align-content: flex-start;
+    -ms-flex-line-pack: start;
+    align-content: flex-start;
+    -webkit-align-items: baseline;
+    -ms-flex-align: baseline;
+    align-items: baseline;
+    border: 2px solid black;
+    border-radius: 20px;
+    width: 100%;
+    padding: 15px;
+  }
+
+  .producto {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-align-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-bottom: medium double black;
+    width: 100%;
+    padding: 20px;
+  }
+
+    .producto:last-child {
+      border-bottom: none;
+    }
+
+  .prod {
+    width: 15%;
+    height: auto;
+  }
+
+  .nombre {
+    width: 50%;
+  }
+
+  .precio {
+    width: 25%;
+  }
+
+  .costoenvio {
+    padding: 15px;
+    width: 100%;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-align-content: flex-start;
+    -ms-flex-line-pack: start;
+    align-content: flex-start;
+    -webkit-align-items: baseline;
+    -ms-flex-align: baseline;
+    align-items: baseline;
+    border: 2px solid black;
+    border-radius: 20px;
+  }
+
+  .right {
+    width: 100%;
+    border: 2px solid black;
+    border-radius: 20px;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-align-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    padding-top: 20px;
+    padding-bottom: 15px;
+    -ms-flex-item-align: stretch;
+    align-self: stretch;
+    margin-top: 1rem;
+    Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
+  }
+
+  .inforesumen {
+    width: 70%;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-align-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+  }
+
+  .resumencompra {
+    border-bottom: solid 2px black;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    width: 100%;
+  }
+
+  .montos {
+    border-bottom: solid 2px black;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    width: 100%;
+  }
+
+    .montos table {
+      width: 100%;
+    }
+
+  .total {
+    width: 100%;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-align-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+  }
+
+  .botonpago {
+    align-self: center;
+  }
+
+  .botonpagar {
+    box-shadow: inset 0px 1px 0px 0px #caefab;
+    background: linear-gradient(to bottom, #77d42a 5%, #5cb811 100%);
+    background-color: #77d42a;
+    border-radius: 6px;
+    border: 1px solid #268a16;
+    display: inline-block;
+    cursor: pointer;
+    color: #306108;
+    Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 6px 24px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #aade7c;
+    align-content: center;
+  }
+
+    .botonpagar:hover {
+      background: linear-gradient(to bottom, #68a54b 5%, #74ad5a 100%);
+      background-color: #68a54b;
+    }
+
+    .botonpagar:active {
+      position: relative;
+      top: 1px;
+    }
+}
+
+@media screen and (min-width: 800px) and (max-width: 999px) {
+
+  .seccion {
+    padding: 20px;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-align-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+  }
+
+  .left {
+    width: 55%;
+  }
+
+  .h3 {
+    padding-bottom: 20px;
+    padding-top: 20px;
+    Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
+  }
+
+  .datosenvio {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-align-content: flex-start;
+    -ms-flex-line-pack: start;
+    align-content: flex-start;
+    -webkit-align-items: baseline;
+    -ms-flex-align: baseline;
+    align-items: baseline;
+    padding: 15px;
+    border: 2px solid black;
+    border-radius: 20px;
+  }
+
+  .dato {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-content: flex-start;
+    -ms-flex-line-pack: start;
+    align-content: flex-start;
+    -webkit-align-items: baseline;
+    -ms-flex-align: baseline;
+    align-items: baseline;
+    width: 70%;
+  }
+
+  .botones {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-align-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    padding-right: 20px;
+    width: 20%;
+  }
+
+    .botones a {
+      font-size: 16px;
+      text-transform: capitalize;
+      color: #b200ff;
+      text-decoration: none;
+      font-weight: 300;
+      color: black;
+      display: block;
+      transition: all 0.3s ease;
+      Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
+    }
+
+      .botones a:hover {
+        color: #b338e8;
+        padding-left: 10px;
+      }
+
+  .productosp {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-align-content: flex-start;
+    -ms-flex-line-pack: start;
+    align-content: flex-start;
+    -webkit-align-items: baseline;
+    -ms-flex-align: baseline;
+    align-items: baseline;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
   }
 
   .productos {
@@ -645,6 +1010,7 @@
     padding-bottom: 10px;
     padding-top: 10px;
     width: 100%;
+    Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
   }
 
   .montos {
@@ -652,6 +1018,7 @@
     padding-bottom: 10px;
     padding-top: 10px;
     width: 100%;
+    Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
   }
 
     .montos table {
@@ -695,7 +1062,7 @@
     display: inline-block;
     cursor: pointer;
     color: #306108;
-    font-family: Arial;
+    Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
     font-size: 15px;
     font-weight: bold;
     padding: 6px 24px;
@@ -719,8 +1086,7 @@
 @media screen and (min-width: 1000px) and (max-width: 1199px) {
 
   .seccion {
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding: 30px;
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
@@ -748,6 +1114,7 @@
   .h3 {
     padding-bottom: 20px;
     padding-top: 20px;
+    Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
   }
 
   .datosenvio {
@@ -828,6 +1195,7 @@
       color: black;
       display: block;
       transition: all 0.3s ease;
+      Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
     }
 
       .botones a:hover {
@@ -856,6 +1224,7 @@
     align-items: baseline;
     padding-top: 20px;
     padding-bottom: 20px;
+    Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
   }
 
   .productos {
@@ -1003,6 +1372,7 @@
     padding-bottom: 10px;
     padding-top: 10px;
     width: 100%;
+    Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
   }
 
   .montos {
@@ -1010,6 +1380,7 @@
     padding-bottom: 10px;
     padding-top: 10px;
     width: 100%;
+    Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
   }
 
     .montos table {
@@ -1053,7 +1424,7 @@
     display: inline-block;
     cursor: pointer;
     color: #306108;
-    font-family: Arial;
+    Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
     font-size: 15px;
     font-weight: bold;
     padding: 6px 24px;
@@ -1077,8 +1448,7 @@
 @media screen and (min-width: 1200px){
 
   .seccion {
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding: 30px;
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
@@ -1186,6 +1556,7 @@
       color: black;
       display: block;
       transition: all 0.3s ease;
+      Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
     }
 
       .botones a:hover {
@@ -1239,6 +1610,7 @@
     border-radius: 20px;
     width: 100%;
     padding: 15px;
+    Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
   }
 
   .producto {
@@ -1361,6 +1733,7 @@
     padding-bottom: 10px;
     padding-top: 10px;
     width: 100%;
+    Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
   }
 
   .montos {
@@ -1368,6 +1741,7 @@
     padding-bottom: 10px;
     padding-top: 10px;
     width: 100%;
+    Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
   }
 
     .montos table {
@@ -1411,7 +1785,7 @@
     display: inline-block;
     cursor: pointer;
     color: #306108;
-    font-family: Arial;
+    Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
     font-size: 15px;
     font-weight: bold;
     padding: 6px 24px;

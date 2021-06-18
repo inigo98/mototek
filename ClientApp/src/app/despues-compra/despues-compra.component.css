@@ -1,8 +1,7 @@
-@media screen and (min-width: 480px) and (max-width: 799px) {
-
-    .h3{
-        margin-bottom: 3rem;
-    }
+@media screen and (min-width: 300px) and (max-width: 479px){
+  h3 {
+    padding-left: 10px;
+  }
 
   .seccion {
     display: -ms-flexbox;
@@ -52,14 +51,15 @@
     align-items: flex-start;
     margin-bottom: 3rem;
     padding-left: 2rem;
+    Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
   }
 
-  .datos{
-      font-size: 2.5vw;
+  .datos {
+    font-size: 2.5vw;
   }
 
   .der {
-    width: 40%;
+    width: 50%;
     border: 2px solid black;
     border-radius: 20px;
     display: -ms-flexbox;
@@ -83,6 +83,7 @@
     padding-top: 20px;
     padding-bottom: 15px;
     margin-bottom: 5rem;
+    Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
   }
 
   .inforesumen {
@@ -116,6 +117,7 @@
 
     .resumencompra h5 {
       font-size: 2.5vw;
+      Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
     }
 
   .montos {
@@ -181,6 +183,224 @@
     align-content: center;
     justify-content: center;
     width: 90%;
+    Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
+  }
+
+  .confpedido {
+    box-shadow: inset 0px 1px 0px 0px #caefab;
+    background: linear-gradient(to bottom, #77d42a 5%, #5cb811 100%);
+    background-color: #77d42a;
+    border-radius: 6px;
+    border: 1px solid #268a16;
+    display: inline-block;
+    cursor: pointer;
+    color: #306108;
+    font-family: Arial;
+    font-size: 3vw;
+    font-weight: bold;
+    padding: 8px 15px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #aade7c;
+  }
+
+    .confpedido:hover {
+      background: linear-gradient(to bottom, #5cb811 5%, #77d42a 100%);
+      background-color: #5cb811;
+    }
+
+    .confpedido:active {
+      position: relative;
+      top: 1px;
+    }
+}
+
+@media screen and (min-width: 480px) and (max-width: 799px) {
+
+  .h3 {
+    margin-bottom: 3rem;
+  }
+
+  .seccion {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-align-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-top: 3rem;
+  }
+
+  .izq {
+    width: 70%;
+    border: 2px solid black;
+    padding-top: 20px;
+    padding-bottom: 15px;
+    border-radius: 20px;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-align-content: center;
+    -ms-flex-line-pack: center;
+    align-content: flex-start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    margin-bottom: 3rem;
+    padding-left: 2rem;
+    Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
+  }
+
+  .datos {
+    font-size: 2.5vw;
+  }
+
+  .der {
+    width: 40%;
+    border: 2px solid black;
+    border-radius: 20px;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-align-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    padding-top: 20px;
+    padding-bottom: 15px;
+    margin-bottom: 5rem;
+    Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
+  }
+
+  .inforesumen {
+    width: 90%;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-align-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+  }
+
+  .resumencompra {
+    border-bottom: solid 2px black;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    width: 100%;
+  }
+
+    .resumencompra h5 {
+      font-size: 2.5vw;
+      Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
+    }
+
+  .montos {
+    border-bottom: solid 2px black;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    width: 100%;
+    font-size: 2.5vw;
+  }
+
+    .montos table {
+      width: 100%;
+    }
+
+  .total {
+    width: 100%;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .tot {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-align-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-align-items: baseline;
+    -ms-flex-align: baseline;
+    align-items: baseline;
+    width: 100%;
+    font-size: 2.5vw;
+  }
+
+  .boton {
+    align-content: center;
+    justify-content: center;
+    width: 90%;
+    Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
   }
 
   .confpedido {
@@ -199,18 +419,23 @@
     text-decoration: none;
     text-shadow: 0px 1px 0px #aade7c;
   }
+
     .confpedido:hover {
       background: linear-gradient(to bottom, #5cb811 5%, #77d42a 100%);
       background-color: #5cb811;
     }
+
     .confpedido:active {
       position: relative;
       top: 1px;
     }
-
 }
 
 @media screen and (min-width: 800px) and (max-width: 999px) {
+
+    h3{
+        padding-left: 20px;
+    }
 
   .seccion {
     display: -ms-flexbox;
@@ -260,6 +485,8 @@
     -ms-flex-align: start;
     align-items: flex-start;
     padding-left: 2rem;
+    Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
+    font-size: 13px;
   }
 
   .der {
@@ -286,6 +513,8 @@
     align-items: flex-start;
     padding-top: 20px;
     padding-bottom: 15px;
+    Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
+    font-size: 13px;
   }
 
   .inforesumen {
@@ -318,6 +547,7 @@
 
     .resumencompra h5 {
       font-size: 1.8vw;
+      Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
     }
 
   .montos {
@@ -383,6 +613,7 @@
     align-content: center;
     justify-content: center;
     width: 90%;
+    Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
   }
 
   .confpedido {
@@ -415,6 +646,10 @@
 
 @media screen and (min-width: 1000px) and (max-width: 1199px){
 
+  h3 {
+    padding-left: 30px;
+  }
+
   .seccion {
     display: -ms-flexbox;
     display: -webkit-flex;
@@ -463,6 +698,8 @@
     -ms-flex-align: start;
     align-items: flex-start;
     padding-left: 2rem;
+    Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
+    font-size: 15px;
   }
 
   .der {
@@ -489,6 +726,8 @@
     align-items: flex-start;
     padding-top: 20px;
     padding-bottom: 15px;
+    Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
+    font-size: 15px;
   }
 
   .inforesumen {
@@ -520,6 +759,7 @@
   }
     .resumencompra h5 {
       font-size: 1.8vw;
+      Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
     }
 
   .montos {
@@ -595,7 +835,7 @@
     display: inline-block;
     cursor: pointer;
     color: #306108;
-    font-family: Arial;
+    Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
     font-size: 15px;
     font-weight: bold;
     padding: 8px 35px;
@@ -616,6 +856,10 @@
 }
 
 @media screen and (min-width: 1200px) {
+
+    h3{
+        padding-left: 30px;
+    }
 
   .seccion {
     display: -ms-flexbox;
@@ -665,6 +909,8 @@
     -ms-flex-align: start;
     align-items: flex-start;
     padding-left: 2rem;
+    Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
+    font-size: 15px;
   }
 
   .der {
@@ -691,6 +937,8 @@
     align-items: flex-start;
     padding-top: 20px;
     padding-bottom: 15px;
+    Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
+    font-size: 15px;
   }
 
   .inforesumen {
@@ -792,7 +1040,7 @@
     display: inline-block;
     cursor: pointer;
     color: #306108;
-    font-family: Arial;
+    Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
     font-size: 15px;
     font-weight: bold;
     padding: 8px 35px;

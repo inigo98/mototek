@@ -1,5 +1,4 @@
-@media screen and (min-width: 480px) and (max-width: 799px){
-
+@media screen and (min-width: 300px) and (max-width: 479px){
   .contenedorproducto {
     width: 100%;
     display: -ms-flexbox;
@@ -23,9 +22,9 @@
   }
 
   .imagen {
-    width: 50%;
+    width: 90%;
     padding-top: 2rem;
-    padding-bottom: 5rem;
+    padding-bottom: 1rem;
   }
 
   .imagen-producto {
@@ -36,8 +35,9 @@
   }
 
   .info {
-    width: 50%;
+    width: 100%;
     padding-top: 10px;
+    Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
   }
 
 
@@ -61,8 +61,10 @@
     -ms-flex-align: start;
     align-items: flex-start;
   }
-    .precio h3{
-        font-size: 4vw;
+
+    .precio h3 {
+      font-size: 4vw;
+      Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
     }
 
   .cantidad {
@@ -141,8 +143,10 @@
     align-items: flex-start;
     padding-left: 40px;
   }
-    .stock p{
-        font-size: 10px;
+
+    .stock p {
+      font-size: 10px;
+      Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
     }
 
 
@@ -261,6 +265,7 @@
       padding: 0px 0px 30px 15px;
       font-weight: 300;
       text-align: justify;
+      Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
     }
 
   .titulo {
@@ -269,6 +274,7 @@
     font-size: 30px;
     text-align: left;
     margin-bottom: 20px;
+    Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
   }
 
 
@@ -293,7 +299,310 @@
     .contenedor-prodsimilares img {
       width: 50%;
     }
+}
 
+@media screen and (min-width: 480px) and (max-width: 799px) {
+
+  .contenedorproducto {
+    width: 100%;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .imagen {
+    width: 50%;
+    padding-top: 2rem;
+    padding-bottom: 5rem;
+  }
+
+  .imagen-producto {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .info {
+    width: 50%;
+    padding-top: 10px;
+    Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
+  }
+
+
+  .precio {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-align-content: flex-start;
+    -ms-flex-line-pack: start;
+    align-content: flex-start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+  }
+
+    .precio h3 {
+      font-size: 4vw;
+      Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
+    }
+
+  .cantidad {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-align-content: flex-start;
+    -ms-flex-line-pack: start;
+    align-content: flex-start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    padding-top: 10px;
+  }
+
+    .cantidad input {
+      width: 45%;
+    }
+
+  .addcarrito {
+    box-shadow: inset 0px 1px 0px 0px #caefab;
+    background: linear-gradient(to bottom, #77d42a 5%, #5cb811 100%);
+    background-color: #77d42a;
+    border-radius: 6px;
+    border: 1px solid #268a16;
+    display: inline-block;
+    cursor: pointer;
+    color: #306108;
+    font-family: Arial;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 6px 24px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #aade7c;
+    width: 45%;
+  }
+
+    .addcarrito:hover {
+      background: linear-gradient(to bottom, #5cb811 5%, #77d42a 100%);
+      background-color: #5cb811;
+    }
+
+    .addcarrito:active {
+      position: relative;
+      top: 1px;
+    }
+
+
+  .stock {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-align-content: flex-start;
+    -ms-flex-line-pack: start;
+    align-content: flex-start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    padding-left: 40px;
+  }
+
+    .stock p {
+      font-size: 10px;
+      Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
+    }
+
+
+  .favoritos {
+    width: 100%;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-align-content: flex-start;
+    -ms-flex-line-pack: start;
+    align-content: flex-start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    padding-top: 15px;
+  }
+
+  .esta {
+    width: 45%;
+  }
+
+  .addfavoritos {
+    box-shadow: inset 0px 1px 0px 0px #e184f3;
+    background: linear-gradient(to bottom, #c123de 5%, #a20dbd 100%);
+    background-color: #c123de;
+    border-radius: 6px;
+    border: 1px solid #a511c0;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 6px 24px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #9b14b3;
+    width: 45%;
+    justify-content: center;
+  }
+
+    .addfavoritos:hover {
+      background: linear-gradient(to bottom, #a20dbd 5%, #c123de 100%);
+      background-color: #a20dbd;
+    }
+
+    .addfavoritos:active {
+      position: relative;
+      top: 1px;
+    }
+
+
+  .envio {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-align-content: flex-start;
+    -ms-flex-line-pack: start;
+    align-content: flex-start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    padding-top: 15px;
+  }
+
+
+  .estado {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-align-content: flex-start;
+    -ms-flex-line-pack: start;
+    align-content: center;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    width: 75%;
+    padding-top: 30px;
+  }
+
+
+  .contenedordescripcion {
+    padding: 60px 0;
+    width: 100%;
+    max-width: 1000px;
+    overflow: hidden;
+  }
+
+    .contenedordescripcion p {
+      padding: 0px 0px 30px 15px;
+      font-weight: 300;
+      text-align: justify;
+      Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
+    }
+
+  .titulo {
+    width: 100%;
+    color: indigo;
+    font-size: 30px;
+    text-align: left;
+    margin-bottom: 20px;
+    Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
+  }
+
+
+  .contenedor-prodsimilares {
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    margin-bottom: 60px;
+  }
+
+    .contenedor-prodsimilares ul {
+      display: flex;
+      padding: 0;
+      width: 200%;
+    }
+
+    .contenedor-prodsimilares li {
+      width: 20%;
+      list-style: none;
+    }
+
+    .contenedor-prodsimilares img {
+      width: 50%;
+    }
 }
 
 @media screen and (min-width: 800px) and (max-width: 999px) {
@@ -336,6 +645,8 @@
   .info {
     width: 50%;
     padding-top: 10px;
+    Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
+
   }
 
 
@@ -550,6 +861,7 @@
       padding: 0px 0px 30px 15px;
       font-weight: 300;
       text-align: justify;
+      Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
     }
 
   .titulo {
@@ -558,6 +870,7 @@
     font-size: 30px;
     text-align: left;
     margin-bottom: 20px;
+    Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
   }
 
 
@@ -607,6 +920,7 @@
   .info {
     width: 50%;
     padding-top: 70px;
+    Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
   }
 
 
@@ -819,6 +1133,7 @@
       padding: 0px 0px 30px 15px;
       font-weight: 300;
       text-align: justify;
+      Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
     }
 
   .titulo {
@@ -826,6 +1141,7 @@
     font-size: 30px;
     text-align: left;
     margin-bottom: 60px;
+    Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
   }
 
 
@@ -875,6 +1191,7 @@
   .info {
     width: 50%;
     padding-top: 70px;
+    Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
   }
 
 
@@ -1087,6 +1404,7 @@
       padding: 0px 0px 30px 15px;
       font-weight: 300;
       text-align: justify;
+      Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
     }
 
   .titulo {
@@ -1094,6 +1412,7 @@
     font-size: 30px;
     text-align: left;
     margin-bottom: 60px;
+    Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
   }
 
 

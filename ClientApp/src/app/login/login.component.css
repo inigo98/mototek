@@ -1,4 +1,59 @@
-@media screen and (min-width: 480px) and (max-width: 799px){
+@media screen and (min-width: 300px) and (max-width: 479px){
+  body {
+    background: #ecf0f3;
+  }
+
+  h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 4vw;
+    Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
+  }
+
+  .custom-form {
+    min-width: 200px;
+    max-width: 40%;
+    margin: 0px auto;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 2rem 3rem;
+    margin: auto;
+    border-radius: 2rem;
+    background-color: #8f2b93;
+    color: black;
+    margin-top: 10rem;
+    margin-bottom: 200px;
+  }
+
+    .custom-form input {
+      display: block;
+      margin: 1.5rem 0;
+      width: 100%;
+      border-radius: 0.5rem;
+      padding: .3rem;
+      border: none;
+      border: 0 none;
+      background: #ebf5fc;
+      Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
+    }
+
+    .custom-form button {
+      text-transform: uppercase;
+      letter-spacing: 0.10em;
+      border: none;
+      font-size: 0.675rem;
+      color: black;
+      font-weight: bold;
+      background-color: #4cff00;
+      width: 100%;
+      display: block;
+      padding: 0.675rem 1rem;
+      border-radius: 1.5rem;
+      cursor: pointer;
+      Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
+    }
+}
+
+@media screen and (min-width: 480px) and (max-width: 799px) {
 
   body {
     background: #ecf0f3;
@@ -8,6 +63,7 @@
     margin: 0;
     padding: 0;
     font-size: 4vw;
+    Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
   }
 
   .custom-form {
@@ -48,8 +104,8 @@
       padding: 0.675rem 1rem;
       border-radius: 1.5rem;
       cursor: pointer;
+      Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
     }
-
 }
 
 @media screen and (min-width: 800px) and (max-width: 999px) {
@@ -62,6 +118,7 @@
     margin: 0;
     padding: 0;
     font-size: 2.5vw;
+    Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
   }
 
   .custom-form {
@@ -102,6 +159,7 @@
       padding: 0.875rem 1rem;
       border-radius: 1.5rem;
       cursor: pointer;
+      Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
     }
 
 }
@@ -116,6 +174,7 @@
     margin: 0;
     padding: 0;
     font-size: 2vw;
+    Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
   }
 
   .custom-form {
@@ -147,7 +206,7 @@
       text-transform: uppercase;
       letter-spacing: 0.15em;
       border: none;
-      font-size: 0.775rem;
+      font-size: 1rem;
       color: black;
       font-weight: bold;
       background-color: #4cff00;
@@ -156,6 +215,7 @@
       padding: 0.875rem 1rem;
       border-radius: 1.5rem;
       cursor: pointer;
+      Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
     }
 
 }
@@ -170,6 +230,7 @@
     margin: 0;
     padding: 0;
     font-size: 1.7vw;
+    Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
   }
 
   .custom-form {
@@ -201,7 +262,7 @@
       text-transform: uppercase;
       letter-spacing: 0.15em;
       border: none;
-      font-size: 0.775rem;
+      font-size: 1rem;
       color: black;
       font-weight: bold;
       background-color: #4cff00;
@@ -210,6 +271,7 @@
       padding: 0.875rem 1rem;
       border-radius: 1.5rem;
       cursor: pointer;
+      Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
     }
 
 }

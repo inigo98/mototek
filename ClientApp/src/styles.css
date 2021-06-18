@@ -30,5 +30,5 @@ code {
 body {
   background: transparent;
   margin: 0;
-  min-width: inherit!important;
+  min-width: inherit !important;
 }

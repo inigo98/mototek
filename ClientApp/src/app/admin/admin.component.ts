@@ -3,7 +3,7 @@ import { HttpClient, HttpEventType } from '@angular/common/http';
 import { ApiUrlService } from '../api-url.service';
 import { Router } from '@angular/router';
 import { ChartOptions, ChartType, ChartDataSets } from 'chart.js';
-import * as pluginDataLabels from 'chartjs-plugin-annotation';
+
 import { Label } from 'ng2-charts';
 
 @Component({
@@ -107,7 +107,7 @@ export class AdminComponent implements OnInit {
   public barChartLabels: Label[] = ['visitas', 'stock', 'comprados', 'precio'];
   public barChartType: ChartType = 'bar';
   public barChartLegend = true;
-  public barChartPlugins = [pluginDataLabels];
+  
   //Datos que vamos a cargar en las graficas 
   public barChartData: ChartDataSets[];
   public chartColors;

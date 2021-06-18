@@ -35,6 +35,9 @@ import { AdminAgregarCategoriasComponent } from './admin-agregar-categorias/admi
 import { AdminUsuariosComponent } from './admin-usuarios/admin-usuarios.component';
 import { FooterComponent } from './footer/footer.component';
 import { AdminComponent } from './admin/admin.component';
+import { PreguntasComponent } from './preguntas/preguntas.component';
+import { PoliticasComponent } from './politicas/politicas.component';
+import { FacturacionComponent } from './facturacion/facturacion.component';
 
 @NgModule({
   declarations: [
@@ -66,7 +69,10 @@ import { AdminComponent } from './admin/admin.component';
     AdminAgregarCategoriasComponent,
     AdminUsuariosComponent,
     FooterComponent,
-    AdminComponent
+    AdminComponent,
+    PreguntasComponent,
+    PoliticasComponent,
+    FacturacionComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -93,7 +99,10 @@ import { AdminComponent } from './admin/admin.component';
     { path: 'pago', component: PagoComponent },
     { path: 'admin', component: AdminComponent },
     { path: 'configuracion', component: ConfiguracionesComponent },
-    { path: 'despues-compra', component: DespuesCompraComponent },
+      { path: 'despues-compra', component: DespuesCompraComponent },
+      { path: 'preguntas', component: PreguntasComponent },
+      { path: 'politicas', component: PoliticasComponent },
+      { path: 'facturacion', component: FacturacionComponent },
 ], { relativeLinkResolution: 'legacy' })
   ],
   providers: [],
