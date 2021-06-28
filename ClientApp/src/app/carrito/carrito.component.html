@@ -16,7 +16,8 @@
         <p>{{producto.descripcion}}</p>
       </div>
       <div class="verproducto verproducto-responsive">
-        <input type="number" [placeholder]="producto.cantidad" (change)="cambio($event.srcElement.value, producto)"/>
+        <input type="number"
+               placeholder="Cantidad" (change)="cambio($event.srcElement.value, producto)"/>
         <p>Disponibles: {{producto.stock}}</p>
       </div>
       <div class="precio-eliminar precio-eliminar-responsive">

@@ -107,9 +107,8 @@
     align-items: center;
   }
 
-  .imgprod {
-    width: 90%;
-    height: auto;
+  .imagen-producto {
+    width: 50px;
   }
 
 
@@ -428,9 +427,8 @@
     align-items: center;
   }
 
-  .imgprod {
-    width: 90%;
-    height: auto;
+  .imagen-producto {
+    width: 100px;
   }
 
 
@@ -748,9 +746,8 @@
     align-items: center;
   }
 
-  .imgprod {
-    width: 100%;
-    height: auto;
+  .imagen-producto {
+    width: 100px;
   }
 
 
@@ -1061,9 +1058,8 @@
     align-items: center;
   }
 
-  .imgprod {
-    width: 100%;
-    height: auto;
+  .imagen-producto {
+    width: 150px;
   }
 
 
@@ -1327,9 +1323,8 @@
     align-items: center;
   }
 
-  .imgprod {
-    width: 60%;
-    height: 80%;
+  .imagen-producto {
+    width: 150px;
   }
 
 

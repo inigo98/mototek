@@ -1,6 +1,6 @@
 
+<h2 class="titulo titulo-responsive">{{producto.nombreDeProducto}}</h2>
 <section class="contenedorproducto contenedorproducto-responsive">
-  <h2 class="titulo titulo-responsive">{{producto.nombreDeProducto}}</h2>
   <div class="imagen imagen-responsive">
     <img *ngIf="producto.idImagen === null" src="../../assets/productos/disco de freno.jpg" alt="" class="imagen-producto" />
     <img *ngIf="producto.idImagen !== null" [src]="producto.idImagen" alt="" class="imagen-producto" />

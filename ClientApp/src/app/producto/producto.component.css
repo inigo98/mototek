@@ -19,6 +19,7 @@
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
+    padding: 10px;
   }
 
   .imagen {
@@ -259,6 +260,7 @@
     width: 100%;
     max-width: 1000px;
     overflow: hidden;
+    padding: 10px;
   }
 
     .contenedordescripcion p {
@@ -283,6 +285,7 @@
     margin: auto;
     overflow: hidden;
     margin-bottom: 60px;
+    padding: 10px;
   }
 
     .contenedor-prodsimilares ul {
@@ -323,6 +326,7 @@
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
+    padding: 20px;
   }
 
   .imagen {
@@ -563,6 +567,7 @@
     width: 100%;
     max-width: 1000px;
     overflow: hidden;
+    padding: 20px;
   }
 
     .contenedordescripcion p {
@@ -587,6 +592,7 @@
     margin: auto;
     overflow: hidden;
     margin-bottom: 60px;
+    padding: 20px;
   }
 
     .contenedor-prodsimilares ul {
@@ -627,6 +633,7 @@
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
+    padding: 20px;
   }
 
   .imagen {
@@ -855,6 +862,7 @@
     width: 100%;
     max-width: 1000px;
     overflow: hidden;
+    padding: 20px;
   }
 
     .contenedordescripcion p {
@@ -879,6 +887,7 @@
     margin: auto;
     overflow: hidden;
     margin-bottom: 60px;
+    padding: 20px;
   }
 
     .contenedor-prodsimilares ul {
@@ -903,6 +912,7 @@
   .contenedorproducto {
     width: 100%;
     display: flex;
+    padding: 30px;
   }
 
   .imagen {
@@ -1127,6 +1137,7 @@
     width: 100%;
     max-width: 1000px;
     overflow: hidden;
+    padding: 30px;
   }
 
     .contenedordescripcion p {
@@ -1150,6 +1161,7 @@
     margin: auto;
     overflow: hidden;
     margin-bottom: 60px;
+    padding: 30px;
   }
 
     .contenedor-prodsimilares ul {
@@ -1174,6 +1186,7 @@
   .contenedorproducto {
     width: 100%;
     display: flex;
+    padding: 30px;
   }
 
   .imagen {
@@ -1398,6 +1411,7 @@
     width: 100%;
     max-width: 1000px;
     overflow: hidden;
+    padding: 30px;
   }
 
     .contenedordescripcion p {
@@ -1421,6 +1435,7 @@
     margin: auto;
     overflow: hidden;
     margin-bottom: 60px;
+    padding: 30px;
   }
 
     .contenedor-prodsimilares ul {

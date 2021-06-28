@@ -50,7 +50,7 @@ export class LoginComponent implements OnInit {
       if (data['data'] !== null) {
         if (!data['data']['bloquear']) {
           localStorage.setItem('IdUser', data['data']['idUsuario']);
-          this.router.navigate(['/configuracion']);
+          
         } else {
           alert('su usuario ha sido bloqueado')
         }
@@ -58,6 +58,9 @@ export class LoginComponent implements OnInit {
         alert('datos incorrectos')
       }
     })
+
+    window.location.reload();
+    this.router.navigate(['/configuracion']);
   }
   valueUpdate(value, field) {
     this.loginValues[field] = value;

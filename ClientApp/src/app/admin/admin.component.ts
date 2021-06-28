@@ -22,10 +22,11 @@ export class AdminComponent implements OnInit {
     producto: any;
     usuario: any;
     cuenta: any;
-  rol: any;
+    rol: any;
 
   public progress: number;
   public message: string;
+
   @Output() public onUploadFinished = new EventEmitter();
   opciones = [
     {
@@ -45,6 +46,9 @@ export class AdminComponent implements OnInit {
       valor: 'precio'
     }
   ]
+
+  
+
   agregarProd = {
     IdProducto: 0,
     ListaIdVehiculo: '',
@@ -88,11 +92,43 @@ export class AdminComponent implements OnInit {
     Correo: '',
     Contrasena: '',
     Telefono: '333811-5213',
-    IdDireccion: 0,
-    IdDireccionFavorita: 0,
+    IdDireccion: '' + 0,
+    IdDireccionFavorita: '' + 0,
     Bloquear: false,
     RecibirNotificaciones: false
   }
+
+  addEnvios = {
+    IdEnvio: 0,
+    Precio: '',
+    IdEstado: 0,
+    TiempoDeEntrega: '',
+    Estado: '',
+  }
+
+  addAnos = {
+    IdAno: 0,
+    NombreDeAno: '',
+  }
+
+  addMarca = {
+    IdMarca: 0,
+    NombreDeMarca: '',
+    Descripcion: '',
+  }
+
+  addModelo = {
+    IdModelo: 0,
+    NombreDeModelo: '',
+    Descripcion: '',
+  }
+
+  addVehiculo = {
+    IdVehiculo: 0,
+    NombreDeVehiculo: '',
+    Descripcion: '',
+  }
+
   public barChartOptions: ChartOptions = {
     responsive: true,
     // We use these empty structures as placeholders for dynamic theming.
@@ -191,6 +227,37 @@ export class AdminComponent implements OnInit {
     this.agregarProd[field] = +value
     console.log(this.agregarProd)
   }
+
+  addEnviosValue(value, field) {
+    console.log(value)
+    this.addEnvios[field] = value
+    console.log(this.addEnvios)
+  }
+
+  addAnosValue(value, field) {
+    console.log(value)
+    this.addAnos[field] = value
+    console.log(this.addAnos)
+  }
+
+  addMarcaValue(value, field) {
+    console.log(value)
+    this.addMarca[field] = value
+    console.log(this.addMarca)
+  }
+
+  addModeloValue(value, field) {
+    console.log(value)
+    this.addModelo[field] = value
+    console.log(this.addModelo)
+  }
+
+  addVehiculoValue(value, field) {
+    console.log(value)
+    this.addVehiculo[field] = value
+    console.log(this.addVehiculo)
+  }
+
   public uploadFile = (files) => {
     if (files.length === 0) {
       return;
@@ -219,7 +286,7 @@ export class AdminComponent implements OnInit {
     })
   }
 
-
+  
   addUserValue(value, field) {
     console.log(value)
     this.agregarUser[field] = value
@@ -228,6 +295,41 @@ export class AdminComponent implements OnInit {
   AddUser() {
     console.log(this.agregarUser)
     this.http.post(this.url + 'usuario', this.agregarUser).subscribe(data => {
+      console.log(data);
+    })
+  }
+
+  agregarEnvios() {
+    console.log(this.addEnvios)
+    this.http.post(this.url + 'envio', this.addEnvios).subscribe(data => {
+      console.log(data);
+    })
+  }
+
+  agregarAnos() {
+    console.log(this.addAnos)
+    this.http.post(this.url + 'anos', this.addAnos).subscribe(data => {
+      console.log(data);
+    })
+  }
+
+  agregarMarca() {
+    console.log(this.addMarca)
+    this.http.post(this.url + 'marca', this.addMarca).subscribe(data => {
+      console.log(data);
+    })
+  }
+
+  agregarModelo() {
+    console.log(this.addModelo)
+    this.http.post(this.url + 'modelo', this.addModelo).subscribe(data => {
+      console.log(data);
+    })
+  }
+
+  agregarVehiculo() {
+    console.log(this.addVehiculo)
+    this.http.post(this.url + 'vehiculo', this.addVehiculo).subscribe(data => {
       console.log(data);
     })
   }

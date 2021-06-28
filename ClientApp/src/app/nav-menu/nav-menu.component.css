@@ -1,3 +1,4 @@
+
 .container {
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -172,3 +173,18 @@ html {
   }
 }
 
+.box-search{
+    position: fixed;
+    top: 165px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1200px;
+    background: black;
+    z-index: 8;
+    overflow: hidden;
+    display: block
+}
+
+.nav-link{
+    backface-visibility: 
+}

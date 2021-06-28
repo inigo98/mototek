@@ -1,4 +1,14 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
 <section class="seccion">
+  <div class="tab">
+    <button class="tablinks" (click)="openCity($event, 'EMAIL')" id="defaultOpen">Email</button>
+    <button class="tablinks" (click)="openCity($event, 'USUARIO')" id="defaultOpen">Usuario</button>
+    <button class="tablinks" (click)="openCity($event, 'CLAVE')" id="defaultOpen">Contraseña</button>
+    <button class="tablinks" (click)="openCity($event, 'DOMICILIO')" id="defaultOpen">Dirección</button>
+  </div>
 
   <div class="titulo titulo-responsive">
     <h3>Perfil</h3>
@@ -10,7 +20,7 @@
         <p>EMAIL</p>
       </div>
       <div class="der der-responsive">
-        <a class="flecha flecha-responsive" href="/"><img class="fl" src="../../assets/Iconos/flecha-correcta.png"></a>
+        <a class="flecha flecha-responsive" data-toggle="modal" data-target="#EMAIL"><img class="fl" src="../../assets/Iconos/flecha-correcta.png"></a>
       </div>
     </div>
     <div class="contenedor contenedor-responsive">
@@ -19,7 +29,7 @@
         <p>USUARIO</p>
       </div>
       <div class="der der-responsive">
-        <a class="flecha flecha-responsive" href="/"><img class="fl" src="../../assets/Iconos/flecha-correcta.png"></a>
+        <a class="flecha flecha-responsive" data-toggle="modal" data-target="#USUARIO"><img class="fl" src="../../assets/Iconos/flecha-correcta.png"></a>
       </div>
     </div>
     <div class="contenedor contenedor-responsive">
@@ -28,7 +38,7 @@
         <p>CLAVE</p>
       </div>
       <div class="der der-responsive">
-        <a class="flecha flecha-responsive" href="/"><img class="fl" src="../../assets/Iconos/flecha-correcta.png"></a>
+        <a class="flecha flecha-responsive" data-toggle="modal" data-target="#CLAVE"><img class="fl" src="../../assets/Iconos/flecha-correcta.png"></a>
       </div>
     </div>
     <div class="contenedor contenedor-responsive">
@@ -37,9 +47,113 @@
         <p>DOMICILIO</p>
       </div>
       <div class="der der-responsive">
-        <a class="flecha flecha-responsive" href="/"><img class="fl" src="../../assets/Iconos/flecha-correcta.png"></a>
+        <a class="flecha flecha-responsive" data-toggle="modal" data-target="#DOMICILIO"><img class="fl" src="../../assets/Iconos/flecha-correcta.png"></a>
       </div>
     </div>
   </div>
 
+ 
+
 </section>
+
+<!-- code by w3codegenerator.com -->
+
+<div class="modal" id="EMAIL">
+  <div class="modal-dialog ">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Ingresa nuevo correo</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+
+        <input type="email"
+               (change)="cambiarValorEmail($event.srcElement.value)"
+               name="emailch"
+               placeholder="Ingresa nuevo correo"
+               required="required"
+                />
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" (click)="cambiarEmail()">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="USUARIO">
+  <div class="modal-dialog ">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Ingresa nuevo nombre de usuario</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+
+        <input type="text"
+               (change)="cambiarValorUser($event.srcElement.value)"
+               name="username"
+               placeholder="Ingresa nombre de usuario"
+               required="required"
+               />
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" (click)="cambiarUser()">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="CLAVE">
+  <div class="modal-dialog ">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Ingresa nueva contraseña</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+
+        <p>Ingresa nueva contraseña</p>
+        <input type="password"
+               (change)="cambiarValorPass($event.srcElement.value)"
+               name="password"
+               required="required" />
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" (click)="cambiarPass()">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="DOMICILIO">
+  <div class="modal-dialog ">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Ingresa nuevo domicilio</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+
+        <input type="text"
+               (change)="cambiarValorDom($event.srcElement.value)"
+               name="domicilio"
+               placeholder="Ingresa domicilio"
+               required="required" />
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" (click)="cambiarDom()">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+

@@ -79,23 +79,46 @@ export class ProductoComponent implements OnInit {
       if (localStorage.getItem('IdUser') !== null && localStorage.getItem('IdUser') !== undefined && localStorage.getItem('IdUser') !== '') {
         this.http.get(this.url + 'usuario/' + +localStorage.getItem('IdUser')).subscribe(response => {
           console.log(response);
-          const data = {
-            IdUsuario: +localStorage.getItem('IdUser'),
-            IdDireccion: response['data']['idDireccionFavorita'],
-            NombreDeCarrito: Producto.nombreDeProducto,
-            Descripcion: Producto.descripcion,
-            Total: '' + (+Producto.precio) + (+this.EnvioValue),
-            Subtotal: '' + Producto.precio,
-            TotalEnvio: '' + this.EnvioValue,
-            Activo: true,
-            Cantidad: this.cantidad,
-            imageUrl: Producto.idImagen,
-            stock: Producto.stock
+
+          if (response['data']['idDireccionFavorita'] = null) {
+            this.IdDireccion = 1;
+            const data = {
+              IdUsuario: +localStorage.getItem('IdUser'),
+              IdDireccion: response['data']['idDireccionFavorita'],
+              NombreDeCarrito: Producto.nombreDeProducto,
+              Descripcion: Producto.descripcion,
+              Total: '' + (+Producto.precio) + (+this.EnvioValue),
+              Subtotal: '' + Producto.precio,
+              TotalEnvio: '' + this.EnvioValue,
+              Activo: true,
+              Cantidad: this.cantidad,
+              imageUrl: Producto.idImagen,
+              stock: '' + Producto.stock
+            }
+            console.log(data);
+            this.http.post(this.url + 'carrito', data).subscribe(response => {
+              console.log(response);
+            })
+          } else {
+            this.IdDireccion = response['data']['idDireccionFavorita'];
+            const data = {
+              IdUsuario: +localStorage.getItem('IdUser'),
+              IdDireccion: 0,
+              NombreDeCarrito: Producto.nombreDeProducto,
+              Descripcion: Producto.descripcion,
+              Total: '' + (+Producto.precio) + (+this.EnvioValue),
+              Subtotal: '' + Producto.precio,
+              TotalEnvio: '' + this.EnvioValue,
+              Activo: true,
+              Cantidad: this.cantidad,
+              imageUrl: Producto.idImagen,
+              stock: '' + Producto.stock
+            }
+            console.log(data);
+            this.http.post(this.url + 'carrito', data).subscribe(response => {
+              console.log(response);
+            })
           }
-          console.log(data);
-          this.http.post(this.url + 'carrito', data).subscribe(response => {
-            console.log(response);
-          })
         })
       }
       else {

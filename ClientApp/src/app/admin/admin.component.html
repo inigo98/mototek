@@ -93,7 +93,7 @@
   <div id="envios" class="tabcontent">
     <div class="producto producto-responsive">
       <h3>Envios</h3>
-      <p><button class="w3-button morado">Agregar</button></p>
+      <p><button class="w3-button morado" data-toggle="modal" data-target="#agregarenvios">Agregar</button></p>
     </div>
     <div class="producto producto-responsive" *ngFor="let aux of envio">
       <div class="nombreprod nombreprod-responsive">
@@ -110,7 +110,7 @@
   <div id="anos" class="tabcontent">
     <div class="producto producto-responsive">
       <h3>Años</h3>
-      <p><button class="w3-button morado">Agregar</button></p>
+      <p><button class="w3-button morado" data-toggle="modal" data-target="#agregaranos">Agregar</button></p>
     </div>
     <div class="producto producto-responsive" *ngFor="let aux of anos">
       <div class="nombreprod nombreprod-responsive">
@@ -126,7 +126,7 @@
   <div id="marcas" class="tabcontent">
     <div class="producto producto-responsive">
       <h3>Marcas</h3>
-      <p><button class="w3-button morado">Agregar</button></p>
+      <p><button class="w3-button morado" data-toggle="modal" data-target="#agregarmarca">Agregar</button></p>
     </div>
     <div class="producto producto-responsive" *ngFor="let aux of marca">
       <div class="nombreprod nombreprod-responsive">
@@ -142,7 +142,7 @@
   <div id="modelos" class="tabcontent">
     <div class="producto producto-responsive">
       <h3>Modelos</h3>
-      <p><button class="w3-button morado">Agregar</button></p>
+      <p><button class="w3-button morado" data-toggle="modal" data-target="#agregarmodelo">Agregar</button></p>
     </div>
     <div class="producto producto-responsive" *ngFor="let aux of modelo">
       <div class="nombreprod nombreprod-responsive">
@@ -158,7 +158,7 @@
   <div id="vehiculos" class="tabcontent">
     <div class="producto producto-responsive">
       <h3>Vehiculos</h3>
-      <p><button class="w3-button morado">Agregar</button></p>
+      <p><button class="w3-button morado" data-toggle="modal" data-target="#agregarveh">Agregar</button></p>
     </div>
     <div class="producto producto-responsive" *ngFor="let aux of vehiculo">
       <div class="nombreprod nombreprod-responsive">
@@ -221,7 +221,6 @@
               [datasets]="barChartData"
               [labels]="barChartLabels"
               [options]="barChartOptions"
-              
               [legend]="barChartLegend"
               [chartType]="barChartType"
               [colors]="chartColors">
@@ -244,7 +243,7 @@
               {{opt.nombre}}
             </option>
           </select>
-          <input type="text" (change)="cambiarValorProd($event.srcElement.value)"/>
+          <input type="text" (change)="cambiarValorProd($event.srcElement.value)" />
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -307,6 +306,110 @@
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
           <button type="button" class="btn btn-primary" (click)="AddUser()">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="agregarenvios" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document" style="margin-top: 124px">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <input type="text" (change)="addEnviosValue($event.srcElement.value, 'Estado')" placeholder="Estado" />
+          <input type="text" (change)="addEnviosValue($event.srcElement.value, 'Precio')" placeholder="Precio" />
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" (click)="agregarEnvios()">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="agregaranos" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document" style="margin-top: 124px">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <input type="text" (change)="addAnosValue($event.srcElement.value, 'NombreDeAno')" placeholder="Ingresa Año" />
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" (click)="agregarAnos()">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="agregarmarca" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document" style="margin-top: 124px">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <input type="text" (change)="addMarcaValue($event.srcElement.value, 'NombreDeMarca')" placeholder="Ingresa Marca" />
+          <input type="text" (change)="addMarcaValue($event.srcElement.value, 'Descripcion')" placeholder="Descripción" />
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" (click)="agregarMarca()">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="agregarmodelo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document" style="margin-top: 124px">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <input type="text" (change)="addModeloValue($event.srcElement.value, 'NombreDeModelo')" placeholder="Ingresa Modelo" />
+          <input type="text" (change)="addModeloValue($event.srcElement.value, 'Descripcion')" placeholder="Descripción" />
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" (click)="agregarModelo()">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="agregarveh" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document" style="margin-top: 124px">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <input type="text" (change)="addVehiculoValue($event.srcElement.value, 'NombreDeVehiculo')" placeholder="Ingresa Vehiculo" />
+          <input type="text" (change)="addVehiculoValue($event.srcElement.value, 'Descripcion')" placeholder="Descripción" />
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" (click)="agregarVehiculo()">Save changes</button>
         </div>
       </div>
     </div>

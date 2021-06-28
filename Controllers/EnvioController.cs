@@ -78,13 +78,14 @@ namespace mototek.Controllers
                     SqlParameter[] sqlParams = new SqlParameter[]
                     {
                         new SqlParameter("@IDENVIO", value.IdEnvio),
+                        new SqlParameter("@ESTADO", value.Estado),
                         new SqlParameter("@PRECIO", value.Precio),
                         new SqlParameter("@IDESTADO", value.IdEstado),
                         new SqlParameter("@TIEMPODEENTREGA", value.TiempoDeEntrega),
                         new SqlParameter("@FECHADECREACION", DateTime.Now),
                         new SqlParameter("@FECHADEMODIFICACION", DateTime.Now),
                     };
-                    var data = db.Database.ExecuteSqlRaw("INSERT INTO [dbo].[ENVIOS] ([Precio],[IdEstado],[TiempoDeEntrega],[FechaDeCreacion],[FechaDeModificacion]) VALUES (@PRECIO, @IDESTADO, @TIEMPODEENTREGA, @FECHADECREACION, @FECHADEMODIFICACION)", sqlParams);
+                    var data = db.Database.ExecuteSqlRaw("INSERT INTO [dbo].[ENVIOS] ([Estado],[Precio],[IdEstado],[TiempoDeEntrega],[FechaDeCreacion],[FechaDeModificacion]) VALUES (@ESTADO, @PRECIO, @IDESTADO, @TIEMPODEENTREGA, @FECHADECREACION, @FECHADEMODIFICACION)", sqlParams);
 
                     SqlParameter[] sqlParamsLogs = new SqlParameter[]
                     {
