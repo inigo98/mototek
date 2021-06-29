@@ -1238,7 +1238,7 @@
   .titulo {
     padding-top: 30px;
     padding-left: 30px;
-    padding-bottom: 70px;
+    padding-bottom: 0px;
     font-size: 30px;
     Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
   }

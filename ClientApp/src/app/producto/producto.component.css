@@ -921,7 +921,7 @@
   }
 
   .imagen-producto {
-    width: 100%;
+    width: 350px;
     height: auto;
     object-fit: cover;
     display: block;
@@ -1195,7 +1195,7 @@
   }
 
   .imagen-producto {
-    width: 100%;
+    width: 450px;
     height: 100%;
     object-fit: cover;
     display: block;
