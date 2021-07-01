@@ -17,11 +17,11 @@
       </div>
       <div class="verproducto verproducto-responsive">
         <input type="number"
-               placeholder="Cantidad" (change)="cambio($event.srcElement.value, producto)"/>
+               [placeholder]="producto.cantidad" (change)="cambio($event.srcElement.value, producto)"/>
         <p>Disponibles: {{producto.stock}}</p>
       </div>
       <div class="precio-eliminar precio-eliminar-responsive">
-        <h4>{{producto.subtotal}}</h4>
+        <h4>{{producto.total}}</h4>
         <a class="elim elim-responsive" (click)="eliminar(producto.idCarrito)">Eliminar</a>
       </div>
     </div>

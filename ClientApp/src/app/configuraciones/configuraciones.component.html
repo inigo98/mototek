@@ -3,13 +3,6 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 
 <section class="seccion">
-  <div class="tab">
-    <button class="tablinks" (click)="openCity($event, 'EMAIL')" id="defaultOpen">Email</button>
-    <button class="tablinks" (click)="openCity($event, 'USUARIO')" id="defaultOpen">Usuario</button>
-    <button class="tablinks" (click)="openCity($event, 'CLAVE')" id="defaultOpen">Contraseña</button>
-    <button class="tablinks" (click)="openCity($event, 'DOMICILIO')" id="defaultOpen">Dirección</button>
-  </div>
-
   <div class="titulo titulo-responsive">
     <h3>Perfil</h3>
   </div>
@@ -21,15 +14,6 @@
       </div>
       <div class="der der-responsive">
         <a class="flecha flecha-responsive" data-toggle="modal" data-target="#EMAIL"><img class="fl" src="../../assets/Iconos/flecha-correcta.png"></a>
-      </div>
-    </div>
-    <div class="contenedor contenedor-responsive">
-      <div class="izq izq-responsive">
-        <img class="img img-responsive" src="../../assets/Iconos/user.png" />
-        <p>USUARIO</p>
-      </div>
-      <div class="der der-responsive">
-        <a class="flecha flecha-responsive" data-toggle="modal" data-target="#USUARIO"><img class="fl" src="../../assets/Iconos/flecha-correcta.png"></a>
       </div>
     </div>
     <div class="contenedor contenedor-responsive">
@@ -51,9 +35,6 @@
       </div>
     </div>
   </div>
-
- 
-
 </section>
 
 <!-- code by w3codegenerator.com -->
@@ -78,31 +59,6 @@
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         <button type="button" class="btn btn-primary" (click)="cambiarEmail()">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="modal" id="USUARIO">
-  <div class="modal-dialog ">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title">Ingresa nuevo nombre de usuario</h4>
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-      </div>
-      <div class="modal-body">
-
-        <input type="text"
-               (change)="cambiarValorUser($event.srcElement.value)"
-               name="username"
-               placeholder="Ingresa nombre de usuario"
-               required="required"
-               />
-
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary" (click)="cambiarUser()">Save changes</button>
       </div>
     </div>
   </div>

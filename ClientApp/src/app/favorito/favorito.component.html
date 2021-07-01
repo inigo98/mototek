@@ -11,7 +11,7 @@
       <p>{{producto.descripcion}}</p>
     </div>
     <div class="verproducto verproducto-responsive">
-      <a class="verprod verprod-responsive"  [routerLink]="['/producto', producto.listaDeProducto]">Ver producto</a>
+      <a class="verprod verprod-responsive"  [routerLink]="['/producto', producto.listaDeFavoritos]">Ver producto</a>
     </div>
     <div class="eliminar eliminar-responsive">
       <a class="elim elim-responsive" (click)="eliminar(producto.idFavoritos)">Eliminar</a>

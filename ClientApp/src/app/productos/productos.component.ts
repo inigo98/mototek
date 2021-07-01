@@ -59,5 +59,11 @@ export class ProductosComponent implements OnInit {
   }
   ngOnInit() {
   }
-
+  limpiarfiltros() {
+    this.http.get(this.url + 'producto').subscribe(data => {
+      console.log('prod')
+      console.log(data);
+      this.productos = data['data'];
+    })
+  }
 }

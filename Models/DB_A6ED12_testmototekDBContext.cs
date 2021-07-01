@@ -102,6 +102,8 @@ namespace mototek.Models
                 entity.Property(e => e.imageUrl).HasMaxLength(255);
 
                 entity.Property(e => e.stock).HasMaxLength(255);
+
+                entity.Property(e => e.IdDireccion).HasMaxLength(255);
             });
 
             modelBuilder.Entity<Cuenta>(entity =>

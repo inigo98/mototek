@@ -43,7 +43,7 @@ export class ProductoComponent implements OnInit {
   ngOnInit() {
   }
   filterProductos(value) {
-    this.EnvioValue = value
+    this.EnvioValue = +value
   }
   favoritos(Producto) {
     if (localStorage.getItem('IdUser')) {
@@ -79,15 +79,15 @@ export class ProductoComponent implements OnInit {
       if (localStorage.getItem('IdUser') !== null && localStorage.getItem('IdUser') !== undefined && localStorage.getItem('IdUser') !== '') {
         this.http.get(this.url + 'usuario/' + +localStorage.getItem('IdUser')).subscribe(response => {
           console.log(response);
-
-          if (response['data']['idDireccionFavorita'] = null) {
+          if (response['data']['idDireccion'] = null) {
             this.IdDireccion = 1;
+            var totalProd = (Producto.precio * this.cantidad) + this.EnvioValue;
             const data = {
               IdUsuario: +localStorage.getItem('IdUser'),
-              IdDireccion: response['data']['idDireccionFavorita'],
+              IdDireccion: response['data']['idDireccion'],
               NombreDeCarrito: Producto.nombreDeProducto,
               Descripcion: Producto.descripcion,
-              Total: '' + (+Producto.precio) + (+this.EnvioValue),
+              Total: '' + totalProd,
               Subtotal: '' + Producto.precio,
               TotalEnvio: '' + this.EnvioValue,
               Activo: true,
@@ -100,13 +100,14 @@ export class ProductoComponent implements OnInit {
               console.log(response);
             })
           } else {
-            this.IdDireccion = response['data']['idDireccionFavorita'];
+            this.IdDireccion = response['data']['idDireccion'];
+            var totalProd = (Producto.precio * this.cantidad) + this.EnvioValue;
             const data = {
               IdUsuario: +localStorage.getItem('IdUser'),
-              IdDireccion: 0,
+              IdDireccion: '',
               NombreDeCarrito: Producto.nombreDeProducto,
               Descripcion: Producto.descripcion,
-              Total: '' + (+Producto.precio) + (+this.EnvioValue),
+              Total: '' + totalProd,
               Subtotal: '' + Producto.precio,
               TotalEnvio: '' + this.EnvioValue,
               Activo: true,

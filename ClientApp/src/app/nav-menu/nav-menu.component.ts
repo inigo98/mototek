@@ -59,7 +59,7 @@ export class NavMenuComponent {
 
   logout() {
     localStorage.removeItem('IdUser');
-    window.location.reload();
+    this.router.navigate(['/login']);
   }
 
   collapse() {

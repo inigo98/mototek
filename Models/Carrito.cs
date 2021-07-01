@@ -9,7 +9,7 @@ namespace mototek.Models
     {
         public long IdCarrito { get; set; }
         public long? IdUsuario { get; set; }
-        public long? IdDireccion { get; set; }
+        public string IdDireccion { get; set; }
         public string NombreDeCarrito { get; set; }
         public string Descripcion { get; set; }
         public string Total { get; set; }

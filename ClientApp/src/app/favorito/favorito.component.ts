@@ -18,9 +18,31 @@ export class FavoritoComponent implements OnInit {
     this.url = apiUrl.url;
     if (localStorage.getItem('IdUser')) {
       if (localStorage.getItem('IdUser') !== null && localStorage.getItem('IdUser') !== undefined && localStorage.getItem('IdUser') !== '') {
-        this.http.get(this.url + 'favorito/' + localStorage.getItem('IdUser')).subscribe(data => {
+        this.http.get(this.url + 'usuario/' + localStorage.getItem('IdUser')).subscribe(data => {
           console.log(data);
-          this.productos = data['data'];
+          if (data['data'] == null) {
+            var r = confirm("su usuario no existe");
+            if (r == true) {
+              this.router.navigate(['/login']);
+            } else {
+              this.router.navigate(['/login']);
+            }
+          } else {
+            if (data['data']['bloquear'] == true) {
+              var r = confirm("su usuario esta bloqueado");
+              if (r == true) {
+                this.router.navigate(['/login']);
+              } else {
+                this.router.navigate(['/login']);
+              }
+            } else {
+              //entra a la pagina
+              this.http.get(this.url + 'favorito/' + localStorage.getItem('IdUser')).subscribe(data => {
+                console.log(data);
+                this.productos = data['data'];
+              })
+            }
+          }
         })
       }
     }
@@ -30,6 +52,10 @@ export class FavoritoComponent implements OnInit {
   eliminar(id) {
     this.http.delete(this.url + 'favorito/' + id).subscribe(data => {
       console.log(data);
+      this.http.get(this.url + 'favorito/' + localStorage.getItem('IdUser')).subscribe(data => {
+        console.log(data);
+        this.productos = data['data'];
+      })
     })
   }
 }

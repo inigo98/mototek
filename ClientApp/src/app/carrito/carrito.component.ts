@@ -17,11 +17,30 @@ export class CarritoComponent implements OnInit {
     this.url = apiUrl.url;
     if (localStorage.getItem('IdUser')) {
       if (localStorage.getItem('IdUser') !== null && localStorage.getItem('IdUser') !== undefined && localStorage.getItem('IdUser') !== '') {
-        this.http.get(this.url + 'carrito/' + localStorage.getItem('IdUser')).subscribe(data => {
+        this.http.get(this.url + 'usuario/' + localStorage.getItem('IdUser')).subscribe(data => {
           console.log(data);
-          this.productos = data['data'];
-          for (let producto of this.productos) {
-            this.totalCarrito = this.totalCarrito + ((+producto['subtotal']) * producto['cantidad']) + (+producto['totalEnvio'])
+          if (data['data'] == null) {
+            var r = confirm("su usuario no existe");
+            if (r == true) {
+              this.router.navigate(['/login']);
+            } else {
+              this.router.navigate(['/login']);
+            }
+          } else {
+            if (data['data']['bloquear'] == true) {
+              var r = confirm("su usuario esta bloqueado");
+              if (r == true) {
+                this.router.navigate(['/login']);
+              } else {
+                this.router.navigate(['/login']);
+              }
+            } else {
+              //entra a la pagina
+              this.http.get(this.url + 'carrito/' + localStorage.getItem('IdUser')).subscribe(data => {
+                console.log(data);
+                this.productos = data['data'];
+              })
+            }
           }
         })
       }
