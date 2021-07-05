@@ -1,54 +1,34 @@
-<h3>Compra 13042021001 - 13/04/2021</h3>
+<h3>Compra {{productos.idHistorial}} - {{productos.fechaDeCreacion | date: 'dd/MM/yyyy'}}</h3>
 <section class="seccion seccion-responsive">
 
   <div class="izq izq-responsive">
     <table class="datos datos-responsive">
       <tr>
-        <th>Número de rastreo:</th>
-        <td>010000000035</td>
-      </tr>
-      <tr>
         <th>Estado de pedido:</th>
-        <td>En camino</td>
+        <td>{{productos.status}}</td>
       </tr>
       <tr>
         <th>Método de pago:</th>
-        <td>Paypal</td>
-      </tr>
-      <tr>
-        <th>Empresa de transporte:</th>
-        <td>DHL</td>
+        <td>{{productos.clabe}}</td>
       </tr>
     </table>
   </div>
 
   <div class="der der-responsive">
     <div class="inforesumen inforesumen-responsive">
-      <div class="resumencompra resumencompra-responsive">
-        <h5>Resumen de compra</h5>
-      </div>
-      <div class="montos montos-responsive">
-        <table>
-          <tr>
-            <td>Productos</td>
-            <td>${{subtotal}}</td>
-          </tr>
-          <tr>
-            <td>Envío</td>
-            <td>${{envioTotal}}</td>
-          </tr>
-        </table>
-      </div>
       <div class="total total-responsive">
-        <div class="tot tot-responsive">
-          <p>Total</p>
-          <p>${{totalCarrito}}</p>
-        </div>
         <div class="boton boton-responsive">
-          <a class="confpedido confpedido-responsive">Pedido Recibido</a>
+          <a class="confpedido confpedido-responsive" (click)="recibido()">Pedido Recibido</a>
         </div>
       </div>
     </div>
+  </div>
+
+  <div class="producto producto-responsive" [hidden]="prod.nombreDeCarrito !== idHistorial" *ngFor="let prod of carrito">
+    <img *ngIf="prod.imageUrl === null" src="../../assets/productos/disco de freno.jpg" class="prod prod-responsive" />
+    <img *ngIf="prod.imageUrl !== null" [src]="prod.imageUrl" class="prod prod-responsive" />
+    <p class="precio precio-responsive">${{prod.subtotal}}</p>
+    <p class="precio precio-responsive">{{prod.cantidad}}</p>
   </div>
 
 </section>

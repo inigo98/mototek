@@ -5,12 +5,15 @@
 
   <div class="left left-responsive">
     <div class="paypal paypal-responsive">
-      <label><input class="ch ch-responsive" type="radio" name="Check"></label>
-      <img class="itipo" src="../../assets/Iconos/paypal.png">
+      <div class="der der-responsive">
+        <div [hidden]="paidFor" #paypal></div>
+      </div>
+      <h4 class="tipo">Paypal</h4>
     </div>
     <div class="transferencia">
-      <label><input class="ch ch-responsive" type="radio" name="Check"></label>
-      <img class="itipo" src="../../assets/Iconos/money-transfer.png">
+      <div class="der der-responsive">
+        <a class="flecha flecha-responsive" data-toggle="modal" data-target="#Transferencia">SUBIR COMPROBANTE</a>
+      </div>
       <h4 class="tipo">Transferencia</h4>
     </div>
   </div>
@@ -43,5 +46,24 @@
 </section>
 
 <div class="botoncontinuar botoncontinuar-responsive">
-  <a class="botoncont botoncont-responsive" [routerLink]="['/despues-compra']">Continuar</a>
+  <a class="botoncont botoncont-responsive" (click)="historialId()">Continuar</a>
+</div>
+
+<div class="modal" id="Transferencia">
+  <div class="modal-dialog ">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Depositar {{totalCarrito}} a la cuenta {{transferencia}}</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <input type="file" #file placeholder="Choose file" (change)="uploadFile(file.files)" style="display:none;">
+        <button type="button" class="btn btn-success" (click)="file.click()">Upload File</button>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" (click)="guardarHistorial()">Save changes</button>
+      </div>
+    </div>
+  </div>
 </div>

@@ -81,10 +81,17 @@ namespace mototek.Controllers
                         new SqlParameter("@IDCARRITO", value.IdCarrito),
                         new SqlParameter("@IDUSUARIO", value.IdUsuario),
                         new SqlParameter("@LISTADEPRODUCTO", value.ListaDeProducto),
+                        new SqlParameter("@IMAGEURL", value.ImageUrl),
+                        new SqlParameter("@STATUS", value.status),
+                        new SqlParameter("@DIRECCION", value.direccion),
+                        new SqlParameter("@EMAIL", value.email),
+                        new SqlParameter("@CLABE", value.clabe),
+                        new SqlParameter("@ACTIVO", value.activo),
+                        new SqlParameter("@COMPROBACION", value.comprobacion),
                         new SqlParameter("@FECHADECREACION", DateTime.Now),
                         new SqlParameter("@FECHADEMODIFICACION", DateTime.Now),
                     };
-                    var data = db.Database.ExecuteSqlRaw("INSERT INTO [dbo].[HISTORIAL] ([IdCarrito],[IdUsuario],[ListaDeProducto],[FechaDeCreacion],[FechaDeModificacion]) VALUES (@IDCARRITO,@IDUSUARIO,@LISTADEPRODUCTO, @FECHADECREACION, @FECHADEMODIFICACION)", sqlParams);
+                    var data = db.Database.ExecuteSqlRaw("INSERT INTO [dbo].[HISTORIAL] ([IdCarrito],[IdUsuario],[ListaDeProducto],[ImageUrl],[status],[direccion],[email],[clabe],[activo],[comprobacion],[FechaDeCreacion],[FechaDeModificacion]) VALUES (@IDCARRITO,@IDUSUARIO,@LISTADEPRODUCTO, @IMAGEURL, @STATUS, @DIRECCION, @EMAIL, @CLABE, @ACTIVO, @COMPROBACION, @FECHADECREACION, @FECHADEMODIFICACION)", sqlParams);
 
                     /*
                     SqlParameter[] sqlParamsLogs = new SqlParameter[]

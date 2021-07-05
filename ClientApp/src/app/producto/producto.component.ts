@@ -74,6 +74,10 @@ export class ProductoComponent implements OnInit {
     this.cantidad = +value;
   }
   carrito(Producto) {
+    if (this.EnvioValue == 0) {
+      alert('no a seleccionado envio');
+      return;
+    }
     console.log(Producto);
     if (localStorage.getItem('IdUser')) {
       if (localStorage.getItem('IdUser') !== null && localStorage.getItem('IdUser') !== undefined && localStorage.getItem('IdUser') !== '') {

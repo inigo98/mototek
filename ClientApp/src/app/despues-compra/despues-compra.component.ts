@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ApiUrlService } from '../api-url.service';
 
 @Component({
@@ -15,9 +15,13 @@ export class DespuesCompraComponent implements OnInit {
   productos: any;
   url: any;
   usuario: any;
+    idHistorial: string;
+    carrito: any;
 
-  constructor(public http: HttpClient, public apiUrl: ApiUrlService, private router: Router) {
+  constructor(public http: HttpClient, private route: ActivatedRoute, public apiUrl: ApiUrlService, private router: Router) {
     this.url = apiUrl.url;
+    let id = this.route.snapshot.paramMap.get('id');
+    this.idHistorial = id;
     if (localStorage.getItem('IdUser')) {
       if (localStorage.getItem('IdUser') !== null && localStorage.getItem('IdUser') !== undefined && localStorage.getItem('IdUser') !== '') {
         this.http.get(this.url + 'usuario/' + localStorage.getItem('IdUser')).subscribe(data => {
@@ -39,7 +43,7 @@ export class DespuesCompraComponent implements OnInit {
               }
             } else {
               //entra a la pagina
-              this.http.get(this.url + 'carrito/' + localStorage.getItem('IdUser')).subscribe(data => {
+              this.http.get(this.url + 'checkUser/' + id).subscribe(data => {
                 console.log(data);
                 this.productos = data['data'];
               })
@@ -47,31 +51,28 @@ export class DespuesCompraComponent implements OnInit {
                 console.log(data);
                 this.usuario = data['data'];
               })
+              this.http.get(this.url + 'carrito/' + localStorage.getItem('IdUser')).subscribe(data => {
+                console.log(data);
+                this.carrito = data['data'];
+              })
             }
           }
         })
       }
     }
-    this.calcular();
   }
 
-  calcular() {
-    this.totalCarrito = 0;
-    this.subtotal = 0;
-    this.envioTotal = 0;
-    this.http.get(this.url + 'carrito/' + localStorage.getItem('IdUser')).subscribe(data => {
-      console.log(data);
-      this.productos = data['data'];
-      for (let producto of this.productos) {
-        if (producto['activo']) {
-          this.envioTotal = this.envioTotal + (+producto['totalEnvio'])
-          this.subtotal = this.subtotal + ((+producto['subtotal']) * producto['cantidad'])
-          this.totalCarrito = this.totalCarrito + ((+producto['subtotal']) * producto['cantidad']) + (+producto['totalEnvio'])
-        }
-      }
-    })
-  }
   ngOnInit() {
   }
+  recibido() {
 
+    let data1 = {
+      "campo": "[status]",
+      "valor": "'recibido'",
+      "usuario": localStorage.getItem('IdUser')
+    }
+    this.http.put(this.url + 'historial/' + this.idHistorial, data1).subscribe(data => {
+      console.log(data);
+    })
+  }
 }

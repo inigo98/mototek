@@ -152,6 +152,7 @@ export class AdminComponent implements OnInit {
     valorProdActualizar: any;
     fieldUpdate: any;
     AuxProd: any;
+    carrito: any;
   constructor(public http: HttpClient, public apiUrl: ApiUrlService, private router: Router) {
     this.url = apiUrl.url;
     if (localStorage.getItem('IdUser')) {
@@ -227,6 +228,10 @@ export class AdminComponent implements OnInit {
     this.http.get(this.url + 'historial').subscribe(data => {
       console.log(data);
       this.transferencia = data['data'];
+    })
+    this.http.get(this.url + 'carrito').subscribe(data => {
+      console.log(data);
+      this.carrito = data['data'];
     })
     this.http.get(this.url + 'vehiculo').subscribe(data => {
       console.log(data);

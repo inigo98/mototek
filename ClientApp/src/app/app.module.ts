@@ -39,6 +39,7 @@ import { PreguntasComponent } from './preguntas/preguntas.component';
 import { PoliticasComponent } from './politicas/politicas.component';
 import { FacturacionComponent } from './facturacion/facturacion.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -99,7 +100,7 @@ import { FacturacionComponent } from './facturacion/facturacion.component';
     { path: 'pago', component: PagoComponent },
     { path: 'admin', component: AdminComponent },
     { path: 'configuracion', component: ConfiguracionesComponent },
-      { path: 'despues-compra', component: DespuesCompraComponent },
+      { path: 'despues-compra/:id', component: DespuesCompraComponent },
       { path: 'preguntas', component: PreguntasComponent },
       { path: 'politicas', component: PoliticasComponent },
       { path: 'facturacion', component: FacturacionComponent },

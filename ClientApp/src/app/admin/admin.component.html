@@ -178,9 +178,7 @@
     <div class="producto producto-responsive" *ngFor="let aux of transferencia">
       <div class="nombreprod nombreprod-responsive">
         <h4>{{aux.idHistorial}}</h4>
-        <img *ngIf="aux.comprobacion === null" src="../../assets/productos/disco de freno.jpg" alt="" class="imagen-producto" />
-        <img *ngIf="aux.comprobacion !== null" [src]="aux.comprobacion" alt="" class="imagen-producto" />
-        <p>{{aux.clabe}}</p>
+        <a *ngIf="aux.clabe == 'transferencia'" target="_blank" href="{{aux.comprobacion}}">Ver Imagen de pago</a>
         <p>{{aux.fechaDeCreacion | date:'short'}}</p>
         <p>{{aux.clabe}}</p>
         <p>{{aux.status}}</p>
@@ -191,6 +189,12 @@
             {{opt.nombre}}
           </option>
         </select>
+      </div>
+      <div class="producto producto-responsive" [hidden]="+prod.nombreDeCarrito !== aux.idHistorial" *ngFor="let prod of carrito">
+        <img *ngIf="prod.imageUrl === null" src="../../assets/productos/disco de freno.jpg" class="prod prod-responsive" />
+        <img *ngIf="prod.imageUrl !== null" [src]="prod.imageUrl" class="prod prod-responsive" />
+        <p class="precio precio-responsive">${{prod.subtotal}}</p>
+        <p class="precio precio-responsive">{{prod.cantidad}}</p>
       </div>
     </div>
   </div>

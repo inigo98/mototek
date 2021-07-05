@@ -2,13 +2,6 @@
   <h2 class="titulo titulo-responsive">Historial</h2>
 
   <div class="producto producto-responsive" *ngFor="let producto of productos" [hidden]="!producto.activo">
-    <div class="img img-responsive">
-      <img *ngIf="producto.imageUrl == null" class="imgprod imgprod-responsive" src="../../assets/productos/disco de freno.jpg">
-      <img *ngIf="producto.imageUrl != null" class="imgprod imgprod-responsive" [src]="producto.imageUrl">
-    </div>
-    <div class="nombreprod nombreprod-responsive">
-      <h4>{{producto.nombreProducto}}</h4>
-    </div>
     <div class="fecha flecha-responsive">
       <p>{{producto.status}}</p>
     </div>
@@ -16,7 +9,7 @@
       <p>{{producto.fechaDeCreacion | date: 'dd/MM/yyyy'}}</p>
     </div>
     <div class="verproducto verproducto-responsive">
-      <a class="verprod verprod-responsive" [routerLink]="['/producto', +producto.listaDeProducto]">Ver producto</a>
+      <a class="verprod verprod-responsive"(click)="historialId(producto.idHistorial)">Ver detalles</a>
     </div>
   </div>
 </section>

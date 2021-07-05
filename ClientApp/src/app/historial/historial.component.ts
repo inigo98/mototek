@@ -50,4 +50,7 @@ export class HistorialComponent implements OnInit {
   ngOnInit() {
   }
 
+  historialId(id) {
+      this.router.navigate(['/despues-compra', id]);
+  }
 }
