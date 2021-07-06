@@ -5,8 +5,8 @@
       <h3>Dirección de envío</h3>
       <div class="datosenvio datosenvio-responsive">
         <div class="dato dato-responsive">
-          <p>{{usuario.idDireccion}}</p>
-          <p>{{usuario.nombre}} {{usuario.apellido}}</p>
+          <p>Diracción de envío:   {{usuario.idDireccion}}</p>
+          <p>Nombre de Usuario:    {{usuario.nombre}} {{usuario.apellido}}</p>
         </div>
         <div class="botones botones-responsive">
           <a [routerLink]="['/configuracion']">Editar</a>
@@ -20,8 +20,8 @@
         <div class="producto producto-responsive" *ngFor="let prod of productos" [hidden]="!prod.activo">
           <img *ngIf="prod.imageUrl === null" src="../../assets/productos/disco de freno.jpg" class="prod prod-responsive"/>
           <img *ngIf="prod.imageUrl !== null" [src]="prod.imageUrl" class="prod prod-responsive"/>
-          <p class="precio precio-responsive">${{prod.subtotal}}</p>
-          <p class="precio precio-responsive">{{prod.cantidad}}</p>
+          <p class="precio precio-responsive">Precio unitario: ${{prod.subtotal}}</p>
+          <p class="precio precio-responsive">Cantidad: {{prod.cantidad}}</p>
         </div>
       </div>
     </div>

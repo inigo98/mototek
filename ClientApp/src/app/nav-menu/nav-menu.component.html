@@ -48,14 +48,14 @@
               <a class="nav-link text-white" [routerLink]="['/carrito']">Carrito</a>
             </li>
             <li class="nav-item" >
-              <button class="nav-link text-white" type="submit" (click)="logout()">Cerrar sesión</button>
+              <a class="nav-link text-white" type="submit" (click)="logout()">Cerrar sesión</a>
             </li>
           </ul>
         </div>
         <ul class="navbar-nav flex-grow">
           <li>
             <div class="navbar-search">
-              <input type="search" placeholder="Buscar productos" aria-label="Search" (keyup)="buscarPalabra(buscarTexto.value)" #buscarTexto />
+              <input id="Buscador" type="search" placeholder="Buscar productos" aria-label="Search" (keyup)="buscarPalabra(buscarTexto.value)" #buscarTexto />
             </div>
             <a class="icono" data-toggle="modal" data-target="#BUSCA"><i class="fas fa-search"></i></a>
           </li>
@@ -81,14 +81,17 @@
         <button type="button" class="close" data-dismiss="modal">&times;</button>
       </div>
       <div class="modal-body">
-        <div class="datos">
-          <p>Disco de freno</p>
-          <img class="prev" src="../../assets/productos/disco de freno.jpg" />
+        <div class="datos" *ngFor="let producto of buscadorproductos">
+          <div class="texto">
+            <p>{{producto.nombreDeProducto}}</p>
+          </div>
+          <div class="image">
+            <img class="prev" src="{{producto.idImagen}}" [routerLink]="['/producto', producto.idProducto]" />
+          </div>
         </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
       </div>
     </div>
   </div>

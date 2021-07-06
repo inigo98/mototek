@@ -5,16 +5,20 @@
 
   <div class="left left-responsive">
     <div class="paypal paypal-responsive">
+      <div class="pay">
+        <h4 class="tipo">Paypal</h4>
+      </div>
       <div class="der der-responsive">
         <div [hidden]="paidFor" #paypal></div>
       </div>
-      <h4 class="tipo">Paypal</h4>
     </div>
     <div class="transferencia">
-      <div class="der der-responsive">
-        <a class="flecha flecha-responsive" data-toggle="modal" data-target="#Transferencia">SUBIR COMPROBANTE</a>
+      <div class="pay">
+        <h4 class="tipo">Transferencia</h4>
       </div>
-      <h4 class="tipo">Transferencia</h4>
+      <div class="der der-responsive">
+        <a class="myButton" data-toggle="modal" data-target="#Transferencia">SUBIR COMPROBANTE</a>
+      </div>
     </div>
   </div>
 

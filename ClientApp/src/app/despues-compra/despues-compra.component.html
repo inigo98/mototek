@@ -4,12 +4,12 @@
   <div class="izq izq-responsive">
     <table class="datos datos-responsive">
       <tr>
-        <th>Estado de pedido:</th>
-        <td>{{productos.status}}</td>
+        <th>Estado de pedido:  </th>
+        <td>  {{productos.status}}</td>
       </tr>
       <tr>
-        <th>Método de pago:</th>
-        <td>{{productos.clabe}}</td>
+        <th>Método de pago:  </th>
+        <td>  {{productos.clabe}}</td>
       </tr>
     </table>
   </div>
@@ -25,10 +25,16 @@
   </div>
 
   <div class="producto producto-responsive" [hidden]="prod.nombreDeCarrito !== idHistorial" *ngFor="let prod of carrito">
-    <img *ngIf="prod.imageUrl === null" src="../../assets/productos/disco de freno.jpg" class="prod prod-responsive" />
-    <img *ngIf="prod.imageUrl !== null" [src]="prod.imageUrl" class="prod prod-responsive" />
-    <p class="precio precio-responsive">${{prod.subtotal}}</p>
-    <p class="precio precio-responsive">{{prod.cantidad}}</p>
+    <div class="ap">
+      <img *ngIf="prod.imageUrl === null" src="../../assets/productos/disco de freno.jpg" class="prod prod-responsive" />
+      <img *ngIf="prod.imageUrl !== null" [src]="prod.imageUrl" class="prod prod-responsive" />
+    </div>
+    <div class="ap">
+      <p class="precio precio-responsive">Precio:   ${{prod.subtotal}}</p>
+    </div>
+    <div class="ap">
+      <p class="precio precio-responsive">Cantidad:   {{prod.cantidad}}</p>
+    </div>
   </div>
 
 </section>

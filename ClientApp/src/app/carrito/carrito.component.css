@@ -50,6 +50,7 @@
     align-items: flex-start;
     padding-top: 15px;
     width: 100%;
+    font-size: 10px;
   }
 
   
@@ -75,7 +76,7 @@
     }
 
   .producto {
-    width: 85%;
+    width: 95%;
     border: 2px solid black;
     margin: 2px;
     display: -ms-flexbox;
@@ -113,7 +114,7 @@
 
 
   .nombreprod {
-    width: 30%;
+    width: 40%;
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
@@ -140,12 +141,13 @@
     }
 
     .nombreprod h4 {
-      font-size: 2.5vw;
+      font-size: 8px;
+      margin-left: 15px;
       Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
     }
 
   .verproducto {
-    width: 35%;
+    width: 25%;
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
@@ -167,12 +169,12 @@
   }
 
     .verproducto p {
-      font-size: 1.5vw;
+      font-size: 10px;
       Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
     }
 
     .verproducto input {
-      width: 80%;
+      width: 50%;
       height: 25px;
       align-self: center;
     }
@@ -428,7 +430,8 @@
   }
 
   .imagen-producto {
-    width: 100px;
+    width: 70px;
+    height: 70px;
   }
 
 
@@ -460,7 +463,8 @@
     }
 
     .nombreprod h4 {
-      font-size: 2.5vw;
+      font-size: 10px;
+      margin-left: 20px;
       Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
     }
 
@@ -774,12 +778,15 @@
   }
 
     .nombreprod p {
-      font-size: 1.5vw;
+      font-size: 10px;
       Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
+      margin-left: 20px;
     }
 
     .nombreprod h4 {
-      font-size: 2.5vw;
+      font-size: 15px;
+      margin-left: 20px;
+      Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
     }
 
   .verproducto {
@@ -860,7 +867,7 @@
     align-items: center;
   }
   .precio-eliminar h4{
-      font-size: 2.5vw;
+      font-size: 15px;
   }
 
   .elim {
@@ -1085,8 +1092,16 @@
     align-items: flex-start;
   }
     .nombreprod p {
-      font-size: 1.3vw;
+      font-size: 13px;
       Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
+      margin-left: 10px;
+    }
+
+    .nombreprod h4 {
+      font-size: 18px;
+      margin-left: 20px;
+      Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
+      margin-left: 10px;
     }
 
   .verproducto {

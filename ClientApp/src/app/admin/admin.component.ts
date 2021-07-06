@@ -245,52 +245,62 @@ export class AdminComponent implements OnInit {
   changeAddProdVehi(value) {
     console.log(value);
     this.agregarProd['IdVehiculoText'] = value
+
   }
   changeAddProdMod(value) {
     console.log(value);
     this.agregarProd['IdModeloText'] = value
+   
   }
   changeAddMarca(value) {
     console.log(value);
     this.agregarProd['IdMarcaText'] = value
+
   }
   changeAddProdAnos(value) {
     console.log(value);
     this.agregarProd['IdAnoText'] = value
+
   }
   addProdValue(value, field) {
     console.log(value)
     this.agregarProd[field] = value
     console.log(this.agregarProd)
+
   }
   addProdValueInt(value, field) {
     console.log(value)
     this.agregarProd[field] = +value
     console.log(this.agregarProd)
+
   }
 
   addEnviosValue(value, field) {
     console.log(value)
     this.addEnvios[field] = value
     console.log(this.addEnvios)
+    alert('Se guardaron los cambios')
   }
 
   addAnosValue(value, field) {
     console.log(value)
     this.addAnos[field] = value
     console.log(this.addAnos)
+    alert('Se guardaron los cambios')
   }
 
   addMarcaValue(value, field) {
     console.log(value)
     this.addMarca[field] = value
     console.log(this.addMarca)
+    alert('Se guardaron los cambios')
   }
 
   addModeloValue(value, field) {
     console.log(value)
     this.addModelo[field] = value
     console.log(this.addModelo)
+    alert('Se guardaron los cambios')
   }
 
   addVehiculoValue(value, field) {
@@ -318,6 +328,7 @@ export class AdminComponent implements OnInit {
 
         }
       });
+    
   }
 
   argregarProducto() {
@@ -325,6 +336,7 @@ export class AdminComponent implements OnInit {
     this.http.post(this.url + 'producto', this.agregarProd).subscribe(data => {
       console.log(data);
     })
+    alert('Se guardaron los cambios')
   }
 
   
@@ -332,12 +344,14 @@ export class AdminComponent implements OnInit {
     console.log(value)
     this.agregarUser[field] = value
     console.log(this.agregarUser)
+    alert('Se guardaron los cambios')
   }
   AddUser() {
     console.log(this.agregarUser)
     this.http.post(this.url + 'usuario', this.agregarUser).subscribe(data => {
       console.log(data);
     })
+    alert('Se guardaron los cambios')
   }
 
   agregarEnvios() {
@@ -345,6 +359,7 @@ export class AdminComponent implements OnInit {
     this.http.post(this.url + 'envio', this.addEnvios).subscribe(data => {
       console.log(data);
     })
+    alert('Se guardaron los cambios')
   }
 
   agregarAnos() {
@@ -352,6 +367,7 @@ export class AdminComponent implements OnInit {
     this.http.post(this.url + 'anos', this.addAnos).subscribe(data => {
       console.log(data);
     })
+    alert('Se guardaron los cambios')
   }
 
   agregarMarca() {
@@ -359,6 +375,7 @@ export class AdminComponent implements OnInit {
     this.http.post(this.url + 'marca', this.addMarca).subscribe(data => {
       console.log(data);
     })
+    alert('Se guardaron los cambios')
   }
 
   agregarModelo() {
@@ -366,6 +383,7 @@ export class AdminComponent implements OnInit {
     this.http.post(this.url + 'modelo', this.addModelo).subscribe(data => {
       console.log(data);
     })
+    alert('Se guardaron los cambios')
   }
 
   agregarVehiculo() {
@@ -373,6 +391,7 @@ export class AdminComponent implements OnInit {
     this.http.post(this.url + 'vehiculo', this.addVehiculo).subscribe(data => {
       console.log(data);
     })
+    alert('Se guardaron los cambios')
   }
 
   cargarDatos(datos) {
@@ -392,6 +411,7 @@ export class AdminComponent implements OnInit {
     this.http.delete(this.url + 'rol/' + id).subscribe(data => {
       console.log(data);
     })
+    alert('Se guardaron los cambios')
   }
   bloquearusuario(id) {
     const data = {
@@ -420,6 +440,7 @@ export class AdminComponent implements OnInit {
     this.http.delete(this.url + 'usuario/' + id).subscribe(data => {
       console.log(data);
     })
+    alert('Se guardaron los cambios')
   }
   cambiarCuenta(value, id) {
     if ( (typeof value) === "string") {
@@ -440,6 +461,7 @@ export class AdminComponent implements OnInit {
     this.http.delete(this.url + 'cuenta/' + id).subscribe(data => {
       console.log(data);
     })
+    alert('Se guardaron los cambios')
   }
   bloquearprod(id) {
     const data = {
@@ -465,6 +487,7 @@ export class AdminComponent implements OnInit {
   }
   cambiarValorProd(value) {
     this.valorProdActualizar = value;
+    alert('Se guardaron los cambios')
   }
   chooseUpdateField(value) {
     this.fieldUpdate = value;
@@ -482,12 +505,14 @@ export class AdminComponent implements OnInit {
     this.http.put(this.url + 'producto/' + this.AuxProd['idProducto'], data).subscribe(data => {
       console.log(data);
     })
+    alert('Se guardaron los cambios')
   }
   eliminarproducto(id) {
     console.log(id)
     this.http.delete(this.url + 'producto/' + id).subscribe(data => {
       console.log(data);
     })
+    alert('Producto eliminado con exito')
   }
 
   cambiarenvio(value, id) {
@@ -500,36 +525,42 @@ export class AdminComponent implements OnInit {
     this.http.put(this.url + 'envio/' + id, data).subscribe(data => {
       console.log(data);
     })
+    alert('Se guardaron los cambios')
   }
   eliminarenvio(id) {
     console.log(id)
     this.http.delete(this.url + 'envio/' + id).subscribe(data => {
       console.log(data);
     })
+    alert('Se guardaron los cambios')
   }
   eliminaranos(id) {
     console.log(id)
     this.http.delete(this.url + 'anos/' + id).subscribe(data => {
       console.log(data);
     })
+    alert('Se guardaron los cambios')
   }
   eliminarmarca(id) {
     console.log(id)
     this.http.delete(this.url + 'marca/' + id).subscribe(data => {
       console.log(data);
     })
+    alert('Se guardaron los cambios')
   }
   eliminarmodelo(id) {
     console.log(id)
     this.http.delete(this.url + 'modelo/' + id).subscribe(data => {
       console.log(data);
     })
+    alert('Se guardaron los cambios')
   }
   eliminarvehiculo(id) {
     console.log(id)
     this.http.delete(this.url + 'vehiculo/' + id).subscribe(data => {
       console.log(data);
     })
+    alert('Se guardaron los cambios')
   }
 
   changeValHistory(value, id) {
@@ -550,6 +581,7 @@ export class AdminComponent implements OnInit {
   }
   ngOnInit(): void {
     document.getElementById("defaultOpen").click();
+    
   }
 
   openCity(evt, cityName) {

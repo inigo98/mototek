@@ -3,6 +3,7 @@
   <div class="buscador buscador-responsive">
     <label for="tiposvehiculos">Tipo de vehículo</label>
     <select id="tiposvehiculos" name="tiposvehiculos" (change)="filterProductos($event.srcElement.value, 'idVehiculoText')">
+      <option selected="true" disabled="disabled"></option>
       <option *ngFor="let vehiculo of vehiculos" [value]="vehiculo.nombreDeVehiculo">{{vehiculo.nombreDeVehiculo}}</option>
     </select>
   </div>
@@ -10,6 +11,7 @@
   <div class="buscador buscador-responsive">
     <label for="marca">Marca</label>
     <select id="marca" name="marca" (change)="filterProductos($event.srcElement.value, 'idMarcaText')">
+      <option selected="true" disabled="disabled"></option>
       <option *ngFor="let marca of marcas" [value]="marca.nombreDeMarca">{{marca.nombreDeMarca}}</option>
     </select>
   </div>
@@ -17,6 +19,7 @@
   <div class="buscador buscador-responsive">
     <label for="modelo">Modelo</label>
     <select id="modelo" name="modelo" (change)="filterProductos($event.srcElement.value, 'idModeloText')">
+      <option selected="true" disabled="disabled"></option>
       <option *ngFor="let modelo of modelos" [value]="modelo.nombreDeModelo">{{modelo.nombreDeModelo}}</option>
     </select>
   </div>
@@ -24,6 +27,7 @@
   <div class="buscador buscador-responsive">
     <label for="año">Año</label>
     <select id="año" name="año" (change)="filterProductos($event.srcElement.value, 'idAnoText')">
+      <option selected="true" disabled="disabled"></option>
       <option *ngFor="let ano of anos" [value]="ano.nombreDeAno">{{ano.nombreDeAno}}</option>
     </select>
   </div>

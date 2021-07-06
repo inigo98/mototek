@@ -46,7 +46,7 @@ export class ContactoComponent implements OnInit {
           },
           "Subject": "Mensaje de " + this.values['nombre'] + "Telefono: " + this.values['phone'],
           "TextBody": this.values['mensaje'],
-          "HtmlBody": ""
+          "HtmlBody": this.values['mensaje']
         }
       ]
     });

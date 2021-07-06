@@ -8,7 +8,7 @@
   <div class="info info-responsive">
     <div class="precio precio-responsive">
       <p>Precio</p>
-      <h3>{{producto.precio}}</h3>
+      <h3>${{producto.precio}}.00</h3>
     </div>
     <div class="cantidad cantidad-responsive">
       <input type="number"
@@ -20,13 +20,14 @@
     </div>
     <div class="favoritos favoritos-responsive">
       <select class="esta esta-responsive" (change)="filterProductos($event.srcElement.value)">
+        <option selected="true" disabled="disabled"></option>
         <option *ngFor="let envio of envios" [value]="envio.precio">{{envio.estado}}</option>
       </select>
       <a class="addfavoritos addfavoritos-responsive" (click)="favoritos(producto)">Agregar a favoritos</a>
     </div>
     <div class="envio envio-responsive">
       <p>Calcular envío</p>
-      <p>{{EnvioValue}}</p>
+      <p>${{EnvioValue}}.00</p>
     </div>
   </div>
 </section>

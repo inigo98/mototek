@@ -23,12 +23,12 @@
     Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
   }
 
-    .productosp h4 {
+    .productosp h5 {
       width: 100%;
       justify-content: flex-start;
       align-items: flex-start;
       align-content: flex-start;
-      font-size: 20px;
+      font-size: 10px;
       Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
     }
 
@@ -133,8 +133,8 @@
   }
 
   .imgprod {
-    width: 80%;
-    height: 80%;
+    width: 80px;
+    height: 80px;
     align-content: center;
   }
 }
@@ -275,8 +275,8 @@
   }
 
   .imgprod {
-    width: 80%;
-    height: 80%;
+    width: 120px;
+    height: 120px;
     align-content: center;
   }
 }
@@ -416,8 +416,8 @@
   }
 
   .imgprod {
-    width: 80%;
-    height: 80%;
+    width: 130px;
+    height: 130px;
     align-content: center;
   }
 
@@ -554,8 +554,8 @@
   }
 
   .imgprod {
-    width: 80%;
-    height: 80%;
+    width: 180px;
+    height: 180px;
     align-content: center;
   }
 
@@ -695,8 +695,8 @@
   }
 
   .imgprod {
-    width: 80%;
-    height: 80%;
+    width: 200px;
+    height: 200px;
     align-content: center;
   }
 

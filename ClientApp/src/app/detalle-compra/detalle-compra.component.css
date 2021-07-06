@@ -1003,6 +1003,7 @@
     -webkit-align-items: flex-start;
     -ms-flex-align: start;
     align-items: flex-start;
+    width: 85%;
   }
 
   .resumencompra {
@@ -1281,16 +1282,18 @@
     }
 
   .prod {
-    width: 15%;
-    height: 55px;
+    width: 80px;
+    height: 80px;
   }
 
   .nombre {
     width: 50%;
+
   }
 
   .precio {
     width: 25%;
+    font-size: 13px;
   }
 
   .costoenvio {
@@ -1316,6 +1319,7 @@
     align-items: baseline;
     border: 2px solid black;
     border-radius: 20px;
+    font-size: 13px;
   }
 
   .right {
@@ -1365,6 +1369,8 @@
     -webkit-align-items: flex-start;
     -ms-flex-align: start;
     align-items: flex-start;
+    width: 85%;
+    font-size: 12px;
   }
 
   .resumencompra {
@@ -1642,8 +1648,8 @@
     }
 
   .prod {
-    width: 15%;
-    height: 55px;
+    width: 100px;
+    height: 100px;
   }
 
   .nombre {
@@ -1652,6 +1658,7 @@
 
   .precio {
     width: 25%;
+    font-size: 15px;
   }
 
   .costoenvio {
@@ -1677,6 +1684,7 @@
     align-items: baseline;
     border: 2px solid black;
     border-radius: 20px;
+    font-size: 15px;
   }
 
   .right {
@@ -1726,15 +1734,21 @@
     -webkit-align-items: flex-start;
     -ms-flex-align: start;
     align-items: flex-start;
+    width: 80%;
+    font-size: 15px;
   }
 
-  .resumencompra {
-    border-bottom: solid 2px black;
-    padding-bottom: 10px;
-    padding-top: 10px;
-    width: 100%;
-    Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
-  }
+    .inforesumen h5 {
+      font-size: 17px;
+    }
+
+    .resumencompra {
+      border-bottom: solid 2px black;
+      padding-bottom: 10px;
+      padding-top: 10px;
+      width: 100%;
+      Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
+    }
 
   .montos {
     border-bottom: solid 2px black;

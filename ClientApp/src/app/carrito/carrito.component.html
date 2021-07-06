@@ -21,7 +21,7 @@
         <p>Disponibles: {{producto.stock}}</p>
       </div>
       <div class="precio-eliminar precio-eliminar-responsive">
-        <h4>{{producto.total}}</h4>
+        <h4>${{producto.total}}.00</h4>
         <a class="elim elim-responsive" (click)="eliminar(producto.idCarrito)">Eliminar</a>
       </div>
     </div>
@@ -29,7 +29,7 @@
 
   <div class="totalcomprar totalcomprar-responsive">
     <div class="total total-responsive">
-      <h4>TOTAL ${{totalCarrito}}</h4>
+      <h4>TOTAL ${{totalCarrito}}.00</h4>
     </div>
     <div class="comprar comprar-responsive">
       <a class="comp comp-responsive" (click)="comprar()">Comprar</a>

@@ -185,6 +185,7 @@
       </div>
       <div class="eliminar eliminar-responsive">
         <select (change)="changeValHistory($event.srcElement.value, aux.idHistorial)">
+          <option selected="true" disabled="disabled"></option>
           <option *ngFor="let opt of opcionesHistory" [value]="opt.valor">
             {{opt.nombre}}
           </option>
@@ -243,6 +244,7 @@
         </div>
         <div class="modal-body">
           <select (change)="chooseUpdateField($event.srcElement.value)">
+            <option selected="true" disabled="disabled"></option>
             <option *ngFor="let opt of opciones" [value]="opt.valor">
               {{opt.nombre}}
             </option>
@@ -268,15 +270,19 @@
         </div>
         <div class="modal-body">
           <select (change)="changeAddProdVehi($event.srcElement.value)">
+            <option selected="true" disabled="disabled"></option>
             <option *ngFor="let aux of vehiculo" [value]="aux.nombreDeVehiculo">{{aux.nombreDeVehiculo}}</option>
           </select>
           <select (change)="changeAddProdMod($event.srcElement.value)">
+            <option selected="true" disabled="disabled"></option>
             <option *ngFor="let aux of modelo" [value]="aux.nombreDeModelo">{{aux.nombreDeModelo}}</option>
           </select>
           <select (change)="changeAddMarca($event.srcElement.value)">
+            <option selected="true" disabled="disabled"></option>
             <option *ngFor="let aux of marca" [value]="aux.nombreDeMarca">{{aux.nombreDeMarca}}</option>
           </select>
           <select (change)="changeAddProdAnos($event.srcElement.value)">
+            <option selected="true" disabled="disabled"></option>
             <option *ngFor="let aux of anos" [value]="aux.nombreDeAno">{{aux.nombreDeAno}}</option>
           </select>
           <input type="text" (change)="addProdValue($event.srcElement.value, 'NombreDeProducto')" placeholder="nombre de producto" />

@@ -15,6 +15,7 @@ export class NavMenuComponent {
   public islogged: Boolean = false;
 
   public productos = [];
+    buscadorproductos: any[];
 
   getCurrentUser() {
     let user_string = localStorage.getItem("idUsuario");
@@ -46,15 +47,20 @@ export class NavMenuComponent {
 
   buscarPalabra(value) {
     console.log(value)
+    value=value.toLowerCase()
+    this.http.get(this.url + 'producto').subscribe(data => {
+      this.productos = data['data'];
+    })
     var auxProductos = []
     for (let producto of this.productos) {
-      console.log(producto);
-      if (producto['nombreDeProducto'].includes(value)) {
+      console.log(producto['nombreDeProducto'].toLowerCase().includes(value));
+      if (producto['nombreDeProducto'].toLowerCase().includes(value)) {
         auxProductos.push(producto)
+        console.log(auxProductos);
       }
       
     }
-    this.productos = auxProductos
+    this.buscadorproductos = auxProductos
   }
 
   logout() {
@@ -69,6 +75,5 @@ export class NavMenuComponent {
   toggle() {
     this.isExpanded = !this.isExpanded;
   }
-
 
 }
