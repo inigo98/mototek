@@ -29,7 +29,7 @@ namespace mototek
                 options.AddPolicy(name: "MyPolicy",
                     builder =>
                     {
-                        builder.WithOrigins("https://tienda-mototec.com")
+                        builder.WithOrigins("https://teammototec.mx")
                                 .AllowAnyMethod()
                                 .AllowAnyHeader();
                 });

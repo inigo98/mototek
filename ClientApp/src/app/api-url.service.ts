@@ -6,6 +6,6 @@ import { Injectable } from '@angular/core';
 export class ApiUrlService {
   url = 'http://localhost:55376/api/'
   //url = 'https://testmototek-001-site1.btempurl.com/api/'
-  //url = 'https://tienda-mototec.com/api/'
+  //url = 'https://www.teammototec.mx/api/'
   constructor() { }
 }

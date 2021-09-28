@@ -19,6 +19,7 @@ export class ProductosComponent implements OnInit {
 
 
   url = '';
+
   constructor(public http: HttpClient, public apiUrl: ApiUrlService, private router: Router) {
     this.url = apiUrl.url;
     this.http.get(this.url + 'producto').subscribe(data => {

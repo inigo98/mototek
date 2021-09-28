@@ -6,9 +6,9 @@
 
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
-  <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom box-shadow mb-3">
+  <nav class="navbar navbar-expand-md navbar-toggleable-md navbar-light border-bottom box-shadow mb-3">
     <div class="container">
-      <a class="navbar-brand text-white" [routerLink]="['/']">Mototec</a>
+      <a class="navbar-brand text-white" [routerLink]="['/']"><img class="navlogo" src="../../assets/LOGO TEAMMOTOTEC.png" /></a>
       <button class="navbar-toggler"
               type="button"
               data-toggle="collapse"
@@ -20,7 +20,7 @@
       </button>
 
 
-      <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse"
+      <div class="navbar-collapse collapse d-md-inline-flex flex-md-row-reverse"
            [ngClass]="{ show: isExpanded }">
 
         <div *ngIf="!sesioniniciada">
@@ -57,7 +57,7 @@
             <div class="navbar-search">
               <input id="Buscador" type="search" placeholder="Buscar productos" aria-label="Search" (keyup)="buscarPalabra(buscarTexto.value)" #buscarTexto />
             </div>
-            <a class="icono" data-toggle="modal" data-target="#BUSCA"><i class="fas fa-search"></i></a>
+            <a class="icono" data-toggle="modal" data-target="#BUSCA"><i class="fas fa-search fa-2x"></i></a>
           </li>
           <li class="nav-item"
               [routerLinkActive]="['link-active']"

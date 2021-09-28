@@ -1,18 +1,22 @@
 #Buscador {
   background: url(https://cdn0.iconfinder.com/data/icons/slim-square-icons-basics/100/basics-19-32.png) no-repeat 0px 5px;
   background-size: 24px;
-  width: 140px;
+  width: 200px;
   border: transparent;
-  border-bottom: solid 1px #ccc;
+  border-bottom: solid 1px #000000;
   padding: 10px 10px 10px 30px;
   outline: none;
-  color: white;
+  color: black;
+  background-color: white;
+}
+#Buscador::placeholder {
+  color: black;
 }
 
 i {
   background-color: white;
-  width: 30px;
-  height: 11px;
+  width: 35px;
+  height: 19px;
   margin-top: 16px;
 }
 
@@ -86,7 +90,12 @@ a.navbar-brand {
   word-break: break-all;
   Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
   padding: 14px 4px;
-  font-size: 16px;
+  font-size: 25px;
+  width: 20%;
+}
+
+.navlogo{
+    width: 100%;
 }
 
 .navbar-search{
@@ -94,11 +103,11 @@ a.navbar-brand {
 }
 
   .navbar-search input#search {
-    width: 100%;
-    height: 40px;
+    width: 80%;
+    height: 30px;
     background: #2b303b;
     border: none;
-    font-size: 10pt;
+    font-size: 9pt;
     float: left;
     color: #63717f;
     padding-left: 45px;
@@ -121,18 +130,22 @@ a.navbar-brand {
 html {
   font-size: 14px;
 }
-@media (min-width: 800px) {
+@media (min-width: 768px) {
 
   #Buscador {
     background: url(https://cdn0.iconfinder.com/data/icons/slim-square-icons-basics/100/basics-19-32.png) no-repeat 0px 5px;
     background-size: 24px;
-    width: 300px;
+    width: 200px;
     border: transparent;
     border-bottom: solid 1px #ccc;
     padding: 10px 10px 10px 30px;
     outline: none;
-  }
+    background-color: white;
 
+  }
+    #Buscador::placeholder {
+      color: black;
+    }
 
 
 
@@ -163,6 +176,21 @@ html {
   }
   .navbar-search {
     width: 30%;
+    padding-right: 3rem;
+  }
+
+  a.navbar-brand {
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
+    Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
+    padding: 14px 4px;
+    font-size: 25px;
+    width: 10%;
+  }
+
+  .navlogo {
+    width: 100%;
   }
 
   .contenedor-media{
@@ -181,7 +209,7 @@ html {
   word-break: break-all;
   Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
   padding: 14px 4px;
-  font-size: 10px;
+  font-size: 12px;
 }
 
 @media (max-width: 480px){
@@ -212,7 +240,7 @@ html {
   }
 
   .navbar-search {
-    width: 30%;
+    width: 15%;
   }
 
   .navbar-brand {
@@ -238,28 +266,50 @@ html {
   }
 
   .navbar-collapse{
-      width: 30%;
+      width: 20%;
   }
+
+  #Buscador {
+    background: url(https://cdn0.iconfinder.com/data/icons/slim-square-icons-basics/100/basics-19-32.png) no-repeat 0px 5px;
+    background-size: 24px;
+    width: 100px;
+    border: transparent;
+    border-bottom: solid 1px #ccc;
+    padding: 10px 10px 10px 30px;
+    outline: none;
+    background-color: white;
+  }
+
+    #Buscador::placeholder {
+      color: black;
+    }
+
+
+
+
+
+  
+
 }
 
-.box-search{
-    position: fixed;
-    top: 165px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 1200px;
-    background: black;
-    z-index: 8;
-    overflow: hidden;
-    display: block
+.box-search {
+  position: fixed;
+  top: 165px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1200px;
+  background: black;
+  z-index: 8;
+  overflow: hidden;
+  display: block
 }
 
-li{
-    align-self: center;
+li {
+  align-self: center;
 }
 
-.nav-link{
-    backface-visibility: 
+.nav-link {
+  backface-visibility:
 }
 
 .navbar-toggler {
